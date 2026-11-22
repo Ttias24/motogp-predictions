@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T16:05:00.949Z",
+ "updatedAt": "2026-11-22T16:08:31.125Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -12246,199 +12246,331 @@
     "name": "Pedro Acosta",
     "number": 37,
     "country": "ES",
-    "team": "Red Bull KTM Factory Racing"
+    "team": "Red Bull KTM Factory Racing",
+    "numberArt": "https://photos.motogp.com/riders/a/6/a6bdb0dc-5ffa-4275-a399-30d22ea7ab85/number/37_Pedro_Acosta.png",
+    "teamColor": "#ff7e27",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "23e50438-a657-4fb0-a190-3262b5472f29": {
     "name": "Marc Marquez",
     "number": 93,
     "country": "ES",
-    "team": "Ducati Lenovo Team"
+    "team": "Ducati Lenovo Team",
+    "numberArt": "https://photos.motogp.com/riders/3/8/3877c550-4eba-430c-9022-0b81b0d9b91f/number/93.png",
+    "teamColor": "#ad0000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "eec1f7dc-b115-44f6-82aa-73130e5c92cf": {
     "name": "Raul Fernandez",
     "number": 25,
     "country": "ES",
-    "team": "SuperFile Trackhouse MotoGP Team"
+    "team": "SuperFile Trackhouse MotoGP Team",
+    "numberArt": "https://photos.motogp.com/riders/e/b/eb938baa-1e25-41a6-ae24-1682217dd94e/number/25.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "244b6f51-ac33-40ee-876d-9401dc9d1346": {
     "name": "Ai Ogura",
     "number": 79,
     "country": "JP",
-    "team": "SuperFile Trackhouse MotoGP Team"
+    "team": "SuperFile Trackhouse MotoGP Team",
+    "numberArt": "https://photos.motogp.com/riders/c/9/c97f409f-091b-4bb0-84a1-2a5524691eac/number/79_Ai_Ogura.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5b9af34e-da94-4ca2-9c4c-6be0fc8b1bbc": {
     "name": "Jorge Martin",
     "number": 89,
     "country": "ES",
-    "team": "Aprilia Racing"
+    "team": "Aprilia Racing",
+    "numberArt": "https://photos.motogp.com/riders/1/1/11ecf4dc-15ad-4370-8297-5d07e5affa92/number/89.png",
+    "teamColor": "#5f259f",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "ade5ef32-01ea-487c-95ca-491544a668ed": {
     "name": "Brad Binder",
     "number": 33,
     "country": "ZA",
-    "team": "Red Bull KTM Factory Racing"
+    "team": "Red Bull KTM Factory Racing",
+    "numberArt": "https://photos.motogp.com/riders/6/e/6e05cd51-a9e5-433d-98c7-f3868a75e389/number/33.png",
+    "teamColor": "#ff7e27",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "f55f9c34-8621-437b-ae04-ae2418720204": {
     "name": "Joan Mir",
     "number": 36,
     "country": "ES",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": "https://photos.motogp.com/riders/c/d/cd78607d-6bfb-49be-bb76-113e4170be56/number/36.png",
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "525b1551-f10b-4cfd-9b43-59af6fca654b": {
     "name": "Fabio Di Giannantonio",
     "number": 49,
     "country": "IT",
-    "team": "Pertamina Enduro VR46 Racing Team"
+    "team": "Pertamina Enduro VR46 Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/e/5/e53e3913-315d-42b6-88ef-04284a938ddb/number/49.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "66b78301-5826-4986-b11e-fa68a7bd77a7": {
     "name": "Francesco Bagnaia",
     "number": 63,
     "country": "IT",
-    "team": "Ducati Lenovo Team"
+    "team": "Ducati Lenovo Team",
+    "numberArt": "https://photos.motogp.com/riders/2/5/2585fdb8-5fb5-43b6-a12d-ccb5ba31c0a4/number/63_Francesco_Bagnaia.png",
+    "teamColor": "#ad0000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5dfc20db-c3c4-4ecd-9c7c-f6cfd042031a": {
     "name": "Luca Marini",
     "number": 10,
     "country": "IT",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": "https://photos.motogp.com/riders/e/4/e4448080-4f42-4a70-9a12-5f5c77a4e4e5/number/10.png",
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "41195f0f-9817-4a4d-913e-c1fbbb351d9b": {
     "name": "Alex Marquez",
     "number": 73,
     "country": "ES",
-    "team": "BK8 Gresini Racing MotoGP"
+    "team": "BK8 Gresini Racing MotoGP",
+    "numberArt": "https://photos.motogp.com/riders/6/d/6d5849a9-5b0d-48f5-ab1d-1245a4e5ecd1/number/73.png",
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "4a439bde-305a-4995-b3e7-783fa99f784a": {
     "name": "Johann Zarco",
     "number": 5,
     "country": "FR",
-    "team": "Castrol Honda LCR"
+    "team": "Castrol Honda LCR",
+    "numberArt": "https://photos.motogp.com/riders/0/b/0b1f5c74-5cf4-48e9-a78d-f5d1bee34f2b/number/5.png",
+    "teamColor": "#fafafa",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "e2479f8e-dad8-4191-9a6c-9d4aafa8c3a3": {
     "name": "Diogo Moreira",
     "number": 11,
     "country": "BR",
-    "team": "Pro Honda LCR"
+    "team": "Pro Honda LCR",
+    "numberArt": null,
+    "teamColor": "#fafafa",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "4113c5f7-33c5-4246-b05b-3f81f4ddbd8f": {
     "name": "Franco Morbidelli",
     "number": 21,
     "country": "IT",
-    "team": "Pertamina Enduro VR46 Racing Team"
+    "team": "Pertamina Enduro VR46 Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/9/0/90bb67c4-6ff3-4596-a4b7-ddc5870efb50/number/21.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "b0c1fea6-2dd5-4e26-8a18-0ac9fe6870e4": {
     "name": "Jack Miller",
     "number": 43,
     "country": "AU",
-    "team": "Prima Pramac Yamaha MotoGP"
+    "team": "Prima Pramac Yamaha MotoGP",
+    "numberArt": "https://photos.motogp.com/riders/3/4/344f6fc4-253a-4b89-9bc3-51d60ca09db5/number/43.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "bf95d959-6a60-44f1-84b5-ded861e62578": {
     "name": "Fabio Quartararo",
     "number": 20,
     "country": "FR",
-    "team": "Monster Energy Yamaha MotoGP Team"
+    "team": "Monster Energy Yamaha MotoGP Team",
+    "numberArt": "https://photos.motogp.com/riders/8/4/8434cc35-07c1-4c44-a73b-76286f6091d8/number/20.png",
+    "teamColor": "#0a2d82",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "00db2312-15f2-4333-be5c-4bbff9d17aec": {
     "name": "Enea Bastianini",
     "number": 23,
     "country": "IT",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": "https://photos.motogp.com/riders/a/2/a2b905bb-19ff-4092-b4dd-cfb1f2333439/number/23.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "04bf0ce4-5062-44fc-9745-ec85a8d8f8d3": {
     "name": "Alex Rins",
     "number": 42,
     "country": "ES",
-    "team": "Monster Energy Yamaha MotoGP Team"
+    "team": "Monster Energy Yamaha MotoGP Team",
+    "numberArt": "https://photos.motogp.com/riders/2/e/2e07c7da-11af-4fe9-9e50-7872d69a5570/number/42.png",
+    "teamColor": "#0a2d82",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "71df6f0d-51c3-4cdb-9f5c-51939e6f33f2": {
     "name": "Maverick Viñales",
     "number": 12,
     "country": "ES",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": "https://photos.motogp.com/riders/1/3/13e53141-e4b0-4a27-aaa4-bb5aec9cd3ec/number/12.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "c883a3b8-17ce-419d-b71b-32c252f6fc7e": {
     "name": "Toprak Razgatlioglu",
     "number": 7,
     "country": "TR",
-    "team": "Prima Pramac Yamaha MotoGP"
+    "team": "Prima Pramac Yamaha MotoGP",
+    "numberArt": null,
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "7c653b2a-b493-436b-a77e-06a43b37b799": {
     "name": "Michele Pirro",
     "number": 51,
     "country": "IT",
-    "team": "BK8 Gresini Racing MotoGP"
+    "team": "BK8 Gresini Racing MotoGP",
+    "numberArt": "https://photos.motogp.com/riders/c/5/c5664b09-2f93-4b0b-99aa-4575b0d224ce/number/51_Michele_Pirro.png",
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "e622ec5b-5ccf-457c-a67f-ec028f0ddf6e": {
     "name": "Marco Bezzecchi",
     "number": 72,
     "country": "IT",
-    "team": "Aprilia Racing"
+    "team": "Aprilia Racing",
+    "numberArt": "https://photos.motogp.com/riders/4/e/4ed5e1ab-96d4-413c-87b2-448bbc27f897/number/72.png",
+    "teamColor": "#5f259f",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "71052114-5bce-4307-908c-4cc2bd387aac": {
     "name": "Fermin Aldeguer",
     "number": 54,
     "country": "ES",
-    "team": "BK8 Gresini Racing MotoGP"
+    "team": "BK8 Gresini Racing MotoGP",
+    "numberArt": "https://photos.motogp.com/riders/1/f/1fe651c1-1a97-4f89-ab3a-17272be5671a/number/54_Fermin_Aldeguer.png",
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "eb7f90b1-9373-4089-b2f5-adbc234a3526": {
     "name": "Augusto Fernandez",
     "number": 47,
     "country": "ES",
-    "team": "Prima Pramac Yamaha MotoGP"
+    "team": "Prima Pramac Yamaha MotoGP",
+    "numberArt": null,
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "a1311c17-1099-4893-bba0-347bf43226a4": {
     "name": "Lorenzo Savadori",
     "number": 32,
     "country": "IT",
-    "team": "SuperFile Trackhouse MotoGP Team"
+    "team": "SuperFile Trackhouse MotoGP Team",
+    "numberArt": "https://photos.motogp.com/riders/4/f/4f4f825a-16b7-4f57-b654-79e75d757033/number/32-Lorenzo-Savadori.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "93d6c1b8-9853-4939-a926-f26593db8eaf": {
     "name": "Jonas Folger",
     "number": 94,
     "country": "DE",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": "https://photos.motogp.com/riders/c/1/c1528a2d-2a88-4551-8942-550228136a94/number/94_Jonas_Folger.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "ec9adf3a-985f-4eb6-8ffd-54b688f49846": {
     "name": "Cal Crutchlow",
     "number": 35,
     "country": "GB",
-    "team": "Castrol Honda LCR"
+    "team": "Castrol Honda LCR",
+    "numberArt": "https://photos.motogp.com/riders/5/c/5ce11abc-0f67-4388-90c6-81ffade7da55/number/35_Cal_Crutchlow.png",
+    "teamColor": "#fafafa",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "92d574d5-d064-4612-bf3e-421d01572512": {
     "name": "Iker Lecuona",
     "number": 27,
     "country": "ES",
-    "team": "Ducati Lenovo Team"
+    "team": "Ducati Lenovo Team",
+    "numberArt": "https://photos.motogp.com/riders/3/4/349967a7-dd9f-4435-857d-d8d0406c9337/number/27.png",
+    "teamColor": "#ad0000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "b8b255af-e344-4ca7-818b-480c18a11088": {
     "name": "Pol Espargaro",
     "number": 44,
     "country": "ES",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": "https://photos.motogp.com/riders/e/5/e563aa11-bb8a-44d1-9608-858af403cf04/number/44.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "a7b4d63f-45b3-402e-b66c-001ed8a62934": {
     "name": "Takaaki Nakagami",
     "number": 30,
     "country": "JP",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": "https://photos.motogp.com/riders/6/5/6563f20e-22de-488f-a8c8-a1fd3dd11942/number/30.png",
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "fa8ac04c-8fa2-4c43-9aa5-cc79b1f35fb9": {
     "name": "Somkiat Chantra",
     "number": 15,
     "country": "TH",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": null,
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "a2f51450-cb43-4d32-8eef-bda9ebb435ed": {
     "name": "Aleix Espargaro",
     "number": 41,
     "country": "ES",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": "https://photos.motogp.com/riders/1/7/17ee1483-290a-42c7-a581-b382bc2f7faf/number/41.png",
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "35214310-1714-4584-b82a-c56a15bab2ca": {
     "name": "Jake Dixon",
     "number": 96,
     "country": "GB",
-    "team": "Honda HRC Castrol"
+    "team": "Honda HRC Castrol",
+    "numberArt": "https://photos.motogp.com/riders/a/d/ad8b38b7-173e-4fbf-832d-06e2d7e16e41/number/96_Jake_Dixon_01.png",
+    "teamColor": "#e50000",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    }
   },
   "Moto2": {
@@ -12446,211 +12578,351 @@
     "name": "Senna Agius",
     "number": 81,
     "country": "AU",
-    "team": "LIQUI MOLY Dynavolt Intact GP"
+    "team": "LIQUI MOLY Dynavolt Intact GP",
+    "numberArt": null,
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "dd56704e-b40e-4202-8af2-a81b7fd6a82d": {
     "name": "Celestino Vietti",
     "number": 13,
     "country": "IT",
-    "team": "BETA Tools SpeedRS Team"
+    "team": "BETA Tools SpeedRS Team",
+    "numberArt": "https://photos.motogp.com/riders/a/7/a7efba4d-ba4c-4bf6-bf3f-7ed241ae49d6/number/13_Celestino_Vietti.png",
+    "teamColor": "#f24d44",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "28d22e58-56c2-4c94-97fc-09453bfa089f": {
     "name": "Izan Guevara",
     "number": 28,
     "country": "ES",
-    "team": "BLU CRU Pramac Yamaha Moto2"
+    "team": "BLU CRU Pramac Yamaha Moto2",
+    "numberArt": "https://photos.motogp.com/riders/4/3/43d453f2-1480-4436-a3a4-bdc4c984d525/number/28_Izan_Guevara.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "96d9b2b4-a26b-427f-b76a-6e1294c341c0": {
     "name": "David Alonso",
     "number": 80,
     "country": "CO",
-    "team": "CFMOTO Power Electronics Aspar Team"
+    "team": "CFMOTO Power Electronics Aspar Team",
+    "numberArt": "https://photos.motogp.com/riders/4/4/447793df-b2b1-4617-9df9-6d7f9b3ec30c/number/80_David_Alonso.png",
+    "teamColor": "#009bb4",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "96edcb06-aa78-4976-9559-62186821e48e": {
     "name": "Manuel Gonzalez",
     "number": 18,
     "country": "ES",
-    "team": "LIQUI MOLY Dynavolt Intact GP"
+    "team": "LIQUI MOLY Dynavolt Intact GP",
+    "numberArt": "https://photos.motogp.com/riders/2/f/2f3f4efc-d727-47e0-9808-7252bd880761/number/18_Manuel_Gonzalez.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "31d9d715-4dbc-4d12-8a21-f2daffb62d7f": {
     "name": "Barry Baltus",
     "number": 7,
     "country": "BE",
-    "team": "REDS Fantic Racing"
+    "team": "REDS Fantic Racing",
+    "numberArt": "https://photos.motogp.com/riders/e/3/e347598d-0df8-4695-916f-7d23cc85761c/number/7_Barry_Baltus.png",
+    "teamColor": "#afb9b9",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "88ec0ae1-53e4-48d4-8c60-6b74210d7552": {
     "name": "Alonso Lopez",
     "number": 21,
     "country": "ES",
-    "team": "ITALJET Gresini Moto2"
+    "team": "ITALJET Gresini Moto2",
+    "numberArt": "https://photos.motogp.com/riders/7/f/7fb0eddd-afb0-4b4c-b729-737751468720/number/21_Alonso_Lopez.png",
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "57787b04-f675-4877-a72a-b5340a45109a": {
     "name": "Alex Escrig",
     "number": 11,
     "country": "ES",
-    "team": "KLINT Racing Team"
+    "team": "KLINT Racing Team",
+    "numberArt": null,
+    "teamColor": "#73cdba",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "3157c88e-bd94-4851-9fe2-1d7458f65a1e": {
     "name": "Joe Roberts",
     "number": 16,
     "country": "US",
-    "team": "OnlyFans American Racing Team"
+    "team": "OnlyFans American Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/a/8/a808cf9f-db18-4553-896a-c8297db50118/number/16_Joe_Roberts.png",
+    "teamColor": "#0d34b2",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5c8bbc11-a1aa-4f55-b9dc-f2e8b7c33ceb": {
     "name": "Tony Arbolino",
     "number": 14,
     "country": "IT",
-    "team": "REDS Fantic Racing"
+    "team": "REDS Fantic Racing",
+    "numberArt": "https://photos.motogp.com/riders/c/d/cd19ab2a-0c40-466b-b798-1d78e66e6de6/number/14_Tony_Arbolino.png",
+    "teamColor": "#afb9b9",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "6b517083-20d8-40da-9d92-aeb63cdee89d": {
     "name": "Ivan Ortola",
     "number": 4,
     "country": "ES",
-    "team": "QJMOTOR - MSI"
+    "team": "QJMOTOR - MSI",
+    "numberArt": null,
+    "teamColor": "#d80c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "8293f58c-2182-4c77-958f-6de9e9dca168": {
     "name": "Adrian Huertas",
     "number": 99,
     "country": "ES",
-    "team": "Italtrans Racing Team"
+    "team": "Italtrans Racing Team",
+    "numberArt": null,
+    "teamColor": "#106ba9",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "12e072c6-c19b-4c35-a9c4-2c7deba15cb0": {
     "name": "Aron Canet",
     "number": 44,
     "country": "ES",
-    "team": "ELF Marc VDS Racing Team"
+    "team": "ELF Marc VDS Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/7/c/7cef0cd4-4ca0-4334-86c5-3c6ecd635f03/number/_0021_44_Aron_Canet.png",
+    "teamColor": "#682a38",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "be57d739-ceff-4bd4-b612-08100cae9990": {
     "name": "Daniel Muñoz",
     "number": 17,
     "country": "ES",
-    "team": "Italtrans Racing Team"
+    "team": "Italtrans Racing Team",
+    "numberArt": null,
+    "teamColor": "#106ba9",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "553b174a-1c06-4bed-82b4-efcc035f1a4e": {
     "name": "Jose Antonio Rueda",
     "number": 98,
     "country": "ES",
-    "team": "Red Bull KTM Ajo"
+    "team": "Red Bull KTM Ajo",
+    "numberArt": null,
+    "teamColor": "#ff6600",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "845c70b2-fe9b-40b6-a558-692cf5f9e6da": {
     "name": "Daniel Holgado",
     "number": 96,
     "country": "ES",
-    "team": "CFMOTO Power Electronics Aspar Team"
+    "team": "CFMOTO Power Electronics Aspar Team",
+    "numberArt": "https://photos.motogp.com/riders/c/a/ca923a83-86a6-4f1b-bbd5-f3682f620b41/number/96_Daniel_Holgado.png",
+    "teamColor": "#009bb4",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "ae003ef7-aff4-4903-ab7a-0c40997baa0a": {
     "name": "Ayumu Sasaki",
     "number": 71,
     "country": "JP",
-    "team": "Momoven Idrofoglia RW Racing Team"
+    "team": "Momoven Idrofoglia RW Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/8/c/8c8fcd97-b5dd-4288-b36b-2744dac54c4b/number/71_Ayumu_Sasaki.png",
+    "teamColor": "#eb5b1d",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "e983f2ed-5bac-4ae7-9b54-3ab5fc357500": {
     "name": "Taiyo Furusato",
     "number": 72,
     "country": "JP",
-    "team": "Idemitsu Honda Team Asia"
+    "team": "Idemitsu Honda Team Asia",
+    "numberArt": "https://photos.motogp.com/riders/7/d/7d24e6c9-54d0-4b01-86c0-b64a51da8fd3/number/72_Taiyo_Furusato.png",
+    "teamColor": "#fafafa",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "a90f6d5b-cba7-45cd-932e-308514518b80": {
     "name": "Dennis Foggia",
     "number": 8,
     "country": "IT",
-    "team": "HDR SpeedRS Team"
+    "team": "HDR SpeedRS Team",
+    "numberArt": null,
+    "teamColor": "#f24d44",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "7f2593e1-d17e-4a83-9890-d9c383b29898": {
     "name": "Deniz öncü",
     "number": 53,
     "country": "TR",
-    "team": "ELF Marc VDS Racing Team"
+    "team": "ELF Marc VDS Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/6/8/68315d34-175c-48f0-a1b5-0f94835a1b07/number/53_Deniz_Oncu.png",
+    "teamColor": "#682a38",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "48af1e5c-5376-43ad-9b26-9a860bef4e1d": {
     "name": "Filip Salac",
     "number": 12,
     "country": "CZ",
-    "team": "OnlyFans American Racing Team"
+    "team": "OnlyFans American Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/6/d/6d8fdcde-a448-4e27-980e-23ea050e3c7c/number/12_Filip_Salac.png",
+    "teamColor": "#0d34b2",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "206c1c78-6d79-4e13-9568-5a90138ece2b": {
     "name": "Zonta Vd Goorbergh",
     "number": 84,
     "country": "NL",
-    "team": "Momoven Idrofoglia RW Racing Team"
+    "team": "Momoven Idrofoglia RW Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/f/5/f52237d5-4b0d-4a49-882e-709e416af713/number/84_Zonta.png",
+    "teamColor": "#eb5b1d",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "59d0a2fb-df55-46d8-a57f-bf81ca690a5b": {
     "name": "Mario Aji",
     "number": 64,
     "country": "ID",
-    "team": "Idemitsu Honda Team Asia"
+    "team": "Idemitsu Honda Team Asia",
+    "numberArt": "https://photos.motogp.com/riders/4/9/4919d2f3-8807-495a-9fae-9f2c8e1065ec/number/64_Mario_Aji.png",
+    "teamColor": "#fafafa",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "57f4c236-d465-4161-8e22-7426f4da36eb": {
     "name": "Jorge Navarro",
     "number": 9,
     "country": "ES",
-    "team": "REDS Fantic Racing"
+    "team": "REDS Fantic Racing",
+    "numberArt": "https://photos.motogp.com/riders/7/e/7e84a5c0-bfa0-42e7-a9bd-32a808ae7aeb/number/9_Jorge_Navarro.png",
+    "teamColor": "#afb9b9",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "08783adb-15e8-49e4-a6ea-c3ede3d94e7c": {
     "name": "Collin Veijer",
     "number": 95,
     "country": "NL",
-    "team": "Red Bull KTM Ajo"
+    "team": "Red Bull KTM Ajo",
+    "numberArt": "https://photos.motogp.com/riders/5/3/5319ebe2-0ea3-48d1-8075-cf67c98a4be4/number/95_Collin_Veijer.png",
+    "teamColor": "#ff6600",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "97116ba3-5971-4304-be84-451bdc9a563c": {
     "name": "Angel Piqueras",
     "number": 36,
     "country": "ES",
-    "team": "QJMOTOR - MSI"
+    "team": "QJMOTOR - MSI",
+    "numberArt": null,
+    "teamColor": "#d80c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "6251aee5-6e36-455c-8b43-e6fd1753fd8d": {
     "name": "Sergio Garcia",
     "number": 3,
     "country": "ES",
-    "team": "ITALJET Gresini Moto2"
+    "team": "ITALJET Gresini Moto2",
+    "numberArt": null,
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "c534aae8-f63b-4f14-8a7e-4c6780c80685": {
     "name": "Alberto Ferrandez",
     "number": 54,
     "country": "ES",
-    "team": "BLU CRU Pramac Yamaha Moto2"
+    "team": "BLU CRU Pramac Yamaha Moto2",
+    "numberArt": null,
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "711cd7a3-7e13-413b-8de2-08d5bf4070f4": {
     "name": "Marcos Ramirez",
     "number": 24,
     "country": "ES",
-    "team": "KLINT Racing Team"
+    "team": "KLINT Racing Team",
+    "numberArt": "https://photos.motogp.com/riders/c/5/c5df0356-4d80-4b19-ad78-f202fd5f03b6/number/24_Marcos_Ramirez_01.png",
+    "teamColor": "#73cdba",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "4023fb10-6a03-420b-a9e1-9926066ab154": {
     "name": "Luca Lunetta",
     "number": 32,
     "country": "IT",
-    "team": "BETA Tools SpeedRS Team"
+    "team": "BETA Tools SpeedRS Team",
+    "numberArt": null,
+    "teamColor": "#f24d44",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "a357a14a-bdd0-4b0a-8c75-948b5233cbad": {
     "name": "Unai Orradre",
     "number": 10,
     "country": "ES",
-    "team": "QJMOTOR - JP Financial - MSI"
+    "team": "QJMOTOR - JP Financial - MSI",
+    "numberArt": null,
+    "teamColor": "#d80c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "8861fef1-5380-4d96-b45d-b5c469c04df2": {
     "name": "Xabi Zurutuza",
     "number": 85,
     "country": "ES",
-    "team": "KLINT Racing Team"
+    "team": "KLINT Racing Team",
+    "numberArt": null,
+    "teamColor": "#73cdba",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "2d9bd73c-a0ef-4ade-8ab4-f91b0a085c4f": {
     "name": "Jacob Roulstone",
     "number": 22,
     "country": "AU",
-    "team": "ELF Marc VDS Racing Team"
+    "team": "ELF Marc VDS Racing Team",
+    "numberArt": null,
+    "teamColor": "#682a38",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "949e1296-9cf4-4569-8923-dc62beb5521f": {
     "name": "Milan Pawelec",
     "number": 40,
     "country": "PL",
-    "team": "Red Bull KTM Ajo"
+    "team": "Red Bull KTM Ajo",
+    "numberArt": null,
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "68c041fe-d813-48ae-9876-b451d89924ec": {
     "name": "Matteo Ferrari",
     "number": 23,
     "country": "IT",
-    "team": "ITALJET Gresini Moto2"
+    "team": "ITALJET Gresini Moto2",
+    "numberArt": null,
+    "teamColor": "#9baee4",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    }
   },
   "Moto3": {
@@ -12658,205 +12930,341 @@
     "name": "Guido Pini",
     "number": 94,
     "country": "IT",
-    "team": "Leopard Racing"
+    "team": "Leopard Racing",
+    "numberArt": null,
+    "teamColor": "#75cbd1",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "01f85422-d97e-4901-9492-1be9694a4cc2": {
     "name": "Maximo Quiles",
     "number": 28,
     "country": "ES",
-    "team": "CFMOTO Gaviota Aspar Team"
+    "team": "CFMOTO Gaviota Aspar Team",
+    "numberArt": null,
+    "teamColor": "#009bb4",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "992cadcb-08e5-47cf-8b29-cf28d3e941ca": {
     "name": "Alvaro Carpe",
     "number": 83,
     "country": "ES",
-    "team": "Red Bull KTM Ajo"
+    "team": "Red Bull KTM Ajo",
+    "numberArt": null,
+    "teamColor": "#ff6600",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "c1dbeba7-8a56-40fd-ab57-cd6eb37e63f3": {
     "name": "Valentin Perrone",
     "number": 73,
     "country": "AR",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": null,
+    "teamColor": "#d85700",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "587e8e1a-43c4-4372-bde7-34da0b19e0e6": {
     "name": "Adrian Fernandez",
     "number": 31,
     "country": "ES",
-    "team": "Leopard Racing"
+    "team": "Leopard Racing",
+    "numberArt": "https://photos.motogp.com/riders/a/f/afdb5cdf-90a7-4a89-805e-ce5daa818b5f/number/_0016_31_Adrian_Fernandez.png",
+    "teamColor": "#75cbd1",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "a259beac-40f5-4105-acf7-8f7fb3bd9ea0": {
     "name": "Rico Salmela",
     "number": 27,
     "country": "FI",
-    "team": "Red Bull KTM Tech3"
+    "team": "Red Bull KTM Tech3",
+    "numberArt": null,
+    "teamColor": "#d85700",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "6052c038-a2a3-4eab-9ee0-79bd5f5be209": {
     "name": "Brian Uriarte",
     "number": 51,
     "country": "ES",
-    "team": "Red Bull KTM Ajo"
+    "team": "Red Bull KTM Ajo",
+    "numberArt": null,
+    "teamColor": "#ff6600",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "769510fc-e823-4bf1-8cda-08c1873935e6": {
     "name": "Adrian Cruces",
     "number": 11,
     "country": "ES",
-    "team": "CIP Green Power"
+    "team": "CIP Green Power",
+    "numberArt": null,
+    "teamColor": "#77cd5c",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "fb584b95-a9ed-4d23-8db3-4a946db60fe8": {
     "name": "Matteo Bertelle",
     "number": 18,
     "country": "IT",
-    "team": "LEVEL UP - MTA"
+    "team": "LEVEL UP - MTA",
+    "numberArt": "https://photos.motogp.com/riders/a/a/aa2dc4d7-e42f-4a2b-afcc-023da97f3cba/number/18_Matteo_Bertelle.png",
+    "teamColor": "#e04f4f",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "f261e368-80bd-4830-9a2e-1cee3e6b0be4": {
     "name": "Scott Ogden",
     "number": 19,
     "country": "GB",
-    "team": "CIP Green Power"
+    "team": "CIP Green Power",
+    "numberArt": "https://photos.motogp.com/riders/2/a/2a0a6017-97df-46d4-9804-faa5cd373d41/number/19_Scott_Ogden.png",
+    "teamColor": "#77cd5c",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "99fb2930-285a-4300-a251-ccabc60e9af3": {
     "name": "Eddie O'shea",
     "number": 8,
     "country": "GB",
-    "team": "GRYD Racing"
+    "team": "GRYD Racing",
+    "numberArt": null,
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "101ad37a-28d8-4bcc-bf16-dffdd51f1375": {
     "name": "Marco Morelli",
     "number": 97,
     "country": "AR",
-    "team": "CFMOTO Gaviota Aspar Team"
+    "team": "CFMOTO Gaviota Aspar Team",
+    "numberArt": null,
+    "teamColor": "#009bb4",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5d81cf1f-1708-47a9-984e-9430afd4a814": {
     "name": "Hakim Danish",
     "number": 13,
     "country": "MY",
-    "team": "AEON Credit - MT Helmets - MSI"
+    "team": "AEON Credit - MT Helmets - MSI",
+    "numberArt": null,
+    "teamColor": "#ff4133",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "c4708bf4-0ca8-4296-8ee3-f153a0fe89b8": {
     "name": "Marcos Uriarte",
     "number": 88,
     "country": "ES",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#535357",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "db613c78-69b0-46b4-98aa-20924c32cfba": {
     "name": "Jesus Rios",
     "number": 54,
     "country": "ES",
-    "team": "Rivacold Snipers Team"
+    "team": "Rivacold Snipers Team",
+    "numberArt": null,
+    "teamColor": "#ffe000",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "821c7e78-24dd-4715-a7b6-966b6da2c4d8": {
     "name": "Ruche Moodley",
     "number": 21,
     "country": "ZA",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "368ea111-05a4-4102-8564-e59905ae2858": {
     "name": "Nicola Carraro",
     "number": 10,
     "country": "IT",
-    "team": "Rivacold Snipers Team"
+    "team": "Rivacold Snipers Team",
+    "numberArt": null,
+    "teamColor": "#ffe000",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "b2570616-5431-4eb3-be49-d79fd4ff86e2": {
     "name": "Ryusei Yamanaka",
     "number": 6,
     "country": "JP",
-    "team": "AEON Credit - MT Helmets - MSI"
+    "team": "AEON Credit - MT Helmets - MSI",
+    "numberArt": "https://photos.motogp.com/riders/0/f/0f695703-c300-4349-aff5-74406dbfcb82/number/6_Ryusei_Yamanaka.png",
+    "teamColor": "#ff4133",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "a7d44fd6-d27c-4fea-ac27-85953cd45f86": {
     "name": "Cormac Buchanan",
     "number": 14,
     "country": "NZ",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "8aef18e2-3cb9-4321-ba88-2eeac2b7a7f3": {
     "name": "Leo Rammerstorfer",
     "number": 5,
     "country": "AT",
-    "team": "SIC58 Squadra Corse"
+    "team": "SIC58 Squadra Corse",
+    "numberArt": null,
+    "teamColor": "#e42327",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "11af471d-9074-4d43-8b5e-f33957486f08": {
     "name": "Zen Mitani",
     "number": 32,
     "country": "JP",
-    "team": "Honda Team Asia"
+    "team": "Honda Team Asia",
+    "numberArt": null,
+    "teamColor": "#ffffff",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "b909706a-1f29-4f38-8a76-40b1fe651d9c": {
     "name": "Casey O'gorman",
     "number": 67,
     "country": "IE",
-    "team": "SIC58 Squadra Corse"
+    "team": "SIC58 Squadra Corse",
+    "numberArt": null,
+    "teamColor": "#e42327",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "15049794-9e9a-45da-a2d5-a52d684914a7": {
     "name": "Joel Esteban",
     "number": 78,
     "country": "ES",
-    "team": "LEVEL UP - MTA"
+    "team": "LEVEL UP - MTA",
+    "numberArt": null,
+    "teamColor": "#e04f4f",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5b5fb07a-f0b6-4f7f-9533-18cad7f0c8f2": {
     "name": "Joel Kelso",
     "number": 66,
     "country": "AU",
-    "team": "GRYD Racing"
+    "team": "GRYD Racing",
+    "numberArt": "https://photos.motogp.com/riders/3/3/339d2550-d068-41a6-a71e-db2ef8d94b42/number/66_Joel_Kelso.png",
+    "teamColor": "#262626",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "73085df9-f749-42c4-90b6-6d9863c0f6f4": {
     "name": "Veda Pratama",
     "number": 9,
     "country": "ID",
-    "team": "Honda Team Asia"
+    "team": "Honda Team Asia",
+    "numberArt": null,
+    "teamColor": "#ffffff",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "3061875e-1a3f-4b9d-a974-603becd903a7": {
     "name": "David Muñoz",
     "number": 64,
     "country": "ES",
-    "team": "Liqui Moly Dynavolt Intact GP"
+    "team": "Liqui Moly Dynavolt Intact GP",
+    "numberArt": null,
+    "teamColor": "#535357",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "ed2d5631-8fe0-4a21-8449-463657eb7901": {
     "name": "David Almansa",
     "number": 22,
     "country": "ES",
-    "team": "Liqui Moly Dynavolt Intact GP"
+    "team": "Liqui Moly Dynavolt Intact GP",
+    "numberArt": null,
+    "teamColor": "#535357",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "5f493d5b-0f90-4649-8058-8e78e71ce8a0": {
     "name": "Eduardo Gutierrez",
     "number": 41,
     "country": "ES",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "cdeb7f8b-c40e-43dd-b3a7-e3a7a859781a": {
     "name": "David Gonzalez",
     "number": 71,
     "country": "ES",
-    "team": "Liqui Moly Dynavolt Intact GP"
+    "team": "Liqui Moly Dynavolt Intact GP",
+    "numberArt": null,
+    "teamColor": "#535357",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "d0314e82-c2fc-4e5d-9237-c3b2b65273f2": {
     "name": "Kiattisak Singhapong",
     "number": 85,
     "country": "TH",
-    "team": "Rivacold Snipers Team"
+    "team": "Rivacold Snipers Team",
+    "numberArt": null,
+    "teamColor": "#ffffff",
+    "teamTextColor": "#383838",
+    "profileFetched": "2026-11-22"
    },
    "d661a08c-9a5d-413f-9bf3-7e52cb6a5eb2": {
     "name": "Leonardo Abruzzo",
     "number": 25,
     "country": "IT",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "cf726ae9-7a34-44d4-b0d3-d18e47fbdc2b": {
     "name": "Ryota Ogiwara",
     "number": 79,
     "country": "JP",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "bfcd17e6-e9af-47c7-aeeb-9787bae55081": {
     "name": "Beñat Fernandez",
     "number": 7,
     "country": "ES",
-    "team": "LEVEL UP - MTA"
+    "team": "LEVEL UP - MTA",
+    "numberArt": null,
+    "teamColor": "#e04f4f",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    },
    "710de739-eff1-4f3d-af88-3192aabd4d5e": {
     "name": "Kgopotso Mononyane",
     "number": 45,
     "country": "ZA",
-    "team": "CODE Motorsports"
+    "team": "CODE Motorsports",
+    "numberArt": null,
+    "teamColor": "#ed1c24",
+    "teamTextColor": "#ffffff",
+    "profileFetched": "2026-11-22"
    }
   }
  },

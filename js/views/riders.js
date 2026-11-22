@@ -1,6 +1,6 @@
 import { t, fmt } from "../i18n.js";
 import { SESSION_TYPES, normalizeName, riderStats } from "../scoring.js";
-import { esc, chip, classTabs, segmented, resultCell, playerName, roundTitle, riderLink, flag } from "../ui.js";
+import { esc, chip, classTabs, segmented, resultCell, playerName, roundTitle, riderLink, flag, numberBadge } from "../ui.js";
 
 
 /** Vilka spelare som valt en förare, och i vilken roll (plats 1–5, BU, DNF, ersatt). */
@@ -132,7 +132,7 @@ export function renderRiderDialog(ctx, cls, key) {
 
   return `<div class="dlg-head">
       <div>
-        <h2>${r.number ? `<span class="num-badge">${esc(r.number)}</span>` : ""}${flag(r.country)}${esc(r.name)}</h2>
+        <h2>${numberBadge(r, "lg")}${flag(r.country)}${esc(r.name)}</h2>
         <div class="muted">${esc(r.team)} · ${esc(r.country)} · ${cls}</div>
       </div>
       <button type="button" class="icon-btn" data-action="close-dialog" aria-label="${esc(t("close"))}">✕</button>

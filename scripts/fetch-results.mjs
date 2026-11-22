@@ -12,7 +12,8 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const API = "https://api.motogp.pulselive.com/motogp/v1/results";
+const API_ROOT = "https://api.motogp.pulselive.com/motogp/v1";
+const API = `${API_ROOT}/results`;
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CLASSES = ["MotoGP", "Moto2", "Moto3"];
 // Avslutade rundor äldre än så här hämtas inte om (om de redan finns i filen).
@@ -25,7 +26,7 @@ const yearArg = args.includes("--year") ? Number(args[args.indexOf("--year") + 1
 async function get(path, tries = 4) {
   for (let i = 1; ; i++) {
     try {
-      const res = await fetch(API + path, { headers: { accept: "application/json" } });
+      const res = await fetch(path.startsWith("http") ? path : API + path, { headers: { accept: "application/json" } });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
     } catch (err) {
@@ -113,6 +114,42 @@ function repairMissingPoints(rounds, standings) {
     if (Number.isFinite(best.err) && best.err > 0)
       console.log(`  Obs: ${cls} skiljer sig ${best.err} p totalt mot officiell ställning.`);
   }
+}
+
+// Nummergrafik och teamfärger från förarprofilerna (samma som på motogp.com).
+// Hämtas om högst var 14:e dag per förare, annars återanvänds det som redan finns i filen.
+const PROFILE_MAX_AGE_DAYS = 14;
+async function addRiderProfiles(riders, year) {
+  const todo = [];
+  for (const cls of CLASSES)
+    for (const [key, r] of Object.entries(riders[cls])) {
+      const age = r.profileFetched ? (Date.now() - Date.parse(r.profileFetched)) / 86400000 : Infinity;
+      if (age > PROFILE_MAX_AGE_DAYS) todo.push({ cls, key, r });
+    }
+  let ok = 0;
+  await pool(todo, 4, async ({ cls, key, r }) => {
+    try {
+      const d = await get(`${API_ROOT}/riders/${key}`);
+      const career = d.career ?? [];
+      const step =
+        career.find((s) => s.season === year && className(s.category?.name ?? "") === cls) ??
+        career.find((s) => s.current) ??
+        career.at(-1);
+      const number = step?.number ?? r.number;
+      // Nyaste nummergrafiken för förarens nuvarande nummer (finns ofta från en tidigare säsong).
+      const art = [...career]
+        .filter((s) => s.pictures?.number && s.number === number)
+        .sort((a, b) => b.season - a.season)[0]?.pictures?.number;
+      r.numberArt = art ?? null;
+      r.teamColor = step?.team?.color ?? null;
+      r.teamTextColor = step?.team?.text_color ?? null;
+      r.profileFetched = new Date().toISOString().slice(0, 10);
+      ok++;
+    } catch (err) {
+      console.warn(`  Kunde inte hämta profil för ${r.name}: ${err.message}`);
+    }
+  });
+  if (todo.length) console.log(`  Förarprofiler: ${ok}/${todo.length} uppdaterade.`);
 }
 
 async function main() {
@@ -208,6 +245,7 @@ async function main() {
         round.results[cls][type] = list.map((row) => {
           const key = riderKey(row.rider);
           riders[cls][key] = {
+            ...riders[cls][key], // behåll nummergrafik/teamfärg från förra körningen
             name: row.rider.full_name,
             number: row.rider.number ?? null,
             country: row.rider.country?.iso ?? "",
@@ -252,6 +290,7 @@ async function main() {
   }
 
   repairMissingPoints(rounds, standings);
+  await addRiderProfiles(riders, year);
 
   const output = {
     season: year,
