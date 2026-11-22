@@ -119,6 +119,54 @@ function repairMissingPoints(rounds, standings) {
 // Nummergrafik och teamfärger från förarprofilerna (samma som på motogp.com).
 // Hämtas om högst var 14:e dag per förare, annars återanvänds det som redan finns i filen.
 const PROFILE_MAX_AGE_DAYS = 14;
+// Karriärstatistik (VM-titlar, starter, segrar …) – samma siffror som förarsidorna på motogp.com.
+// Ändras efter varje race, så den hämtas om var 3:e dag.
+const CAREER_MAX_AGE_DAYS = 3;
+function condenseCareer(s) {
+  const list = (x) => (Array.isArray(x) ? x : x?.categories ?? []);
+  const total = (x) => x?.total ?? list(x).reduce((a, c) => a + (c.count || 0), 0);
+  const byClass = (x) =>
+    Object.fromEntries(
+      list(x)
+        .filter((c) => c.count)
+        .map((c) => [className(c.category?.name ?? "?"), c.count])
+    );
+  return {
+    titles: total(s.world_championship_wins),
+    starts: total(s.all_races),
+    wins: total(s.grand_prix_victories),
+    podiums: total(s.podiums),
+    poles: total(s.poles),
+    fastestLaps: total(s.race_fastest_laps),
+    sprintWins: total(s.sprint_victories),
+    debut: Number(s.first_grand_prix?.[0]?.event?.season) || null,
+    titlesByClass: byClass(s.world_championship_wins),
+    winsByClass: byClass(s.grand_prix_victories),
+    startsByClass: byClass(s.all_races),
+  };
+}
+
+async function addCareerStats(riders) {
+  const todo = [];
+  for (const cls of CLASSES)
+    for (const r of Object.values(riders[cls])) {
+      if (!r.legacyId) continue;
+      const age = r.careerFetched ? (Date.now() - Date.parse(r.careerFetched)) / 86400000 : Infinity;
+      if (age > CAREER_MAX_AGE_DAYS) todo.push(r);
+    }
+  let ok = 0;
+  await pool(todo, 4, async (r) => {
+    try {
+      r.career = condenseCareer(await get(`${API_ROOT}/riders/${r.legacyId}/stats`));
+      r.careerFetched = new Date().toISOString().slice(0, 10);
+      ok++;
+    } catch (err) {
+      console.warn(`  Kunde inte hämta karriär för ${r.name}: ${err.message}`);
+    }
+  });
+  if (todo.length) console.log(`  Karriärstatistik: ${ok}/${todo.length} uppdaterade.`);
+}
+
 async function addRiderProfiles(riders, year) {
   const todo = [];
   for (const cls of CLASSES)
@@ -141,6 +189,7 @@ async function addRiderProfiles(riders, year) {
         .filter((s) => s.pictures?.number && s.number === number)
         .sort((a, b) => b.season - a.season)[0]?.pictures?.number;
       r.numberArt = art ?? null;
+      r.legacyId = d.legacy_id ?? r.legacyId ?? null;
       r.teamColor = step?.team?.color ?? null;
       r.teamTextColor = step?.team?.text_color ?? null;
       r.profileFetched = new Date().toISOString().slice(0, 10);
@@ -291,6 +340,7 @@ async function main() {
 
   repairMissingPoints(rounds, standings);
   await addRiderProfiles(riders, year);
+  await addCareerStats(riders);
 
   const output = {
     season: year,

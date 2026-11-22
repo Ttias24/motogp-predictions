@@ -98,7 +98,7 @@ export function renderRiders(ctx) {
 
   return `<section class="card">
     <div class="card-head">
-      <h2>${t("nav.riders")}</h2>
+      <h2>${t("ridersTitle")}</h2>
       <div class="controls">
         ${classTabs(ctx.classes, cls)}
         ${segmented("display", [["points", t("showPoints")], ["pos", t("showPos")]], mode, t("show"))}
@@ -119,6 +119,37 @@ export function renderRiders(ctx) {
   </section>`;
 }
 
+/** Karriärstatistik (alla klasser, från motogp.com) överst i förardialogen. */
+function careerSection(c) {
+  if (!c) return "";
+  const split = (o) =>
+    Object.entries(o ?? {})
+      .map(([k, v]) => `${v} ${esc(k)}`)
+      .join(" · ");
+  const box = (value, label, title = "") =>
+    `<div class="stat"${title ? ` title="${esc(title)}"` : ""}><b>${fmt(value ?? 0)}</b><span>${label}</span></div>`;
+  return `<h3 class="career-head">${t("career")}${c.debut ? ` <span class="muted small">· ${t("careerDebut", { year: c.debut })}</span>` : ""}</h3>
+    <div class="stat-row six">
+      ${box(c.titles, t("careerTitles"), split(c.titlesByClass))}
+      ${box(c.starts, t("careerStarts"), split(c.startsByClass))}
+      ${box(c.wins, t("careerWins"), split(c.winsByClass))}
+      ${box(c.podiums, t("careerPodiums"))}
+      ${box(c.poles, t("careerPoles"))}
+      ${box(c.fastestLaps, t("careerFastest"))}
+    </div>
+    ${
+      c.titles || c.sprintWins
+        ? `<p class="muted small career-note">${[
+            c.titles ? `${t("careerTitles")}: ${split(c.titlesByClass)}` : "",
+            c.sprintWins ? `${t("careerSprintWins")}: ${c.sprintWins}` : "",
+          ]
+            .filter(Boolean)
+            .join(" · ")}</p>`
+        : ""
+    }
+    <hr class="divider">`;
+}
+
 /** Innehåll i förardialogen. */
 export function renderRiderDialog(ctx, cls, key) {
   const r = ctx.results.riders[cls]?.[key];
@@ -137,6 +168,8 @@ export function renderRiderDialog(ctx, cls, key) {
       </div>
       <button type="button" class="icon-btn" data-action="close-dialog" aria-label="${esc(t("close"))}">✕</button>
     </div>
+    ${careerSection(r.career)}
+    <h3 class="season-head">${t("thisSeason", { year: ctx.year })}</h3>
     <div class="stat-row">
       <div class="stat"><b>${pos ?? "–"}</b><span>${t("champPos")}</span></div>
       <div class="stat"><b>${fmt(stats.points)}</b><span>${t("points")}</span></div>

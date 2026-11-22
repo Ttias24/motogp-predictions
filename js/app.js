@@ -228,6 +228,7 @@ function render() {
   if (view === "join") ensureJoin(param);
   if (view === "admin") ensureAdmin();
   document.body.classList.toggle("preseason", !ctx.lastRound);
+  document.body.dataset.view = view;
 
   let body;
   if (view === "edit" && state.dbSeason) body = `<section class="card"><p>${t("editUseAdmin")} <a href="#/admin">Admin</a></p></section>`;
@@ -708,6 +709,25 @@ document.addEventListener(
     img.replaceWith(img.dataset.fallback);
   },
   true
+);
+
+// Mushjulet över ett resultatrutnät som inte får plats bläddrar i sidled. När rutnätet
+// är vid kanten (eller får plats) bläddrar hjulet sidan som vanligt.
+document.addEventListener(
+  "wheel",
+  (e) => {
+    const wrap = e.target.closest?.(".grid-wrap");
+    if (!wrap || e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    const max = wrap.scrollWidth - wrap.clientWidth;
+    if (max <= 1) return;
+    const dy = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaY;
+    const atStart = wrap.scrollLeft <= 0 && dy < 0;
+    const atEnd = wrap.scrollLeft >= max - 1 && dy > 0;
+    if (atStart || atEnd) return;
+    wrap.scrollLeft += dy;
+    e.preventDefault();
+  },
+  { passive: false }
 );
 
 function closeDialog() {

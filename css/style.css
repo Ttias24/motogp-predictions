@@ -16,6 +16,7 @@
   --silver: #c9d1db;
   --bronze: #d9925b;
   --radius: 12px;
+  --page-max: 1280px;
   --font: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-cond: "Barlow Condensed", "Barlow", system-ui, sans-serif;
   color-scheme: dark;
@@ -53,7 +54,7 @@ code { background: var(--surface-3); padding: 1px 5px; border-radius: 0; font-si
   border-bottom: 1px solid var(--line);
 }
 .topbar-inner {
-  max-width: 1280px;
+  max-width: var(--page-max);
   margin: 0 auto;
   padding: 10px 16px 4px;
   display: flex;
@@ -86,7 +87,7 @@ code { background: var(--surface-3); padding: 1px 5px; border-radius: 0; font-si
 .lang button[aria-pressed="true"] { background: var(--active-bg); color: #fff; }
 
 .nav {
-  max-width: 1280px;
+  max-width: var(--page-max);
   margin: 0 auto;
   padding: 0 10px;
   display: flex;
@@ -107,7 +108,7 @@ code { background: var(--surface-3); padding: 1px 5px; border-radius: 0; font-si
 .nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
 
 .statusbar {
-  max-width: 1280px;
+  max-width: var(--page-max);
   margin: 0 auto;
   padding: 12px 16px 0;
   display: flex;
@@ -130,7 +131,7 @@ select, input[type="text"], input[type="number"] {
 select:focus, input:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
 /* ---------- Layout ---------- */
-.main { max-width: 1280px; margin: 0 auto; padding: 14px 16px 60px; display: grid; gap: 16px; }
+.main { max-width: var(--page-max); margin: 0 auto; padding: 14px 16px 60px; display: grid; gap: 16px; }
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -297,7 +298,7 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
 /* ---------- Dialog ---------- */
 .dialog {
   background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 18px; width: min(520px, calc(100vw - 24px)); max-height: calc(100vh - 40px);
+  padding: 18px; width: min(620px, calc(100vw - 24px)); max-height: calc(100vh - 40px);
 }
 .dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
 .dialog h3 { margin: 16px 0 6px; }
@@ -370,3 +371,16 @@ ul.submitted { list-style: none; padding: 0; margin: 6px 0 0; display: flex; fle
 a.btn { display: inline-block; text-decoration: none; }
 /* Före första racet finns inga resultat att matcha namn mot – visa namnen neutralt. */
 .preseason .unknown { color: inherit; border-bottom: 0; }
+
+/* Sidor med stora resultatrutnät får använda breda skärmar fullt ut. */
+body[data-view="riders"], body[data-view="championship"] { --page-max: 1960px; }
+
+/* Förardialogen: karriär överst, säsongen under en avdelare. */
+.stat-row.six { grid-template-columns: repeat(6, 1fr); }
+.dialog h3.career-head { margin-top: 14px; }
+.career-note { margin: 8px 0 0; }
+hr.divider { border: 0; border-top: 1px solid var(--line); margin: 16px 0 4px; }
+.dialog h3.season-head { margin-top: 10px; }
+@media (max-width: 640px) {
+  .stat-row.six { grid-template-columns: repeat(3, 1fr); }
+}
