@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T20:08:38.967Z",
+ "updatedAt": "2026-11-22T23:38:14.495Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -16499,7 +16499,7 @@
     "name": "Kiattisak Singhapong",
     "number": 85,
     "country": "TH",
-    "team": "Honda Team Asia",
+    "team": "Rivacold Snipers Team",
     "numberArt": null,
     "teamColor": "#ffffff",
     "teamTextColor": "#383838",
