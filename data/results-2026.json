@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T20:07:29.655Z",
+ "updatedAt": "2026-11-22T20:08:38.967Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -12251,7 +12251,6 @@
     "teamColor": "#ff7e27",
     "teamTextColor": "#383838",
     "legacyId": 8658,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 2,
      "starts": 117,
@@ -12296,7 +12295,9 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-05-25",
+    "profileFetched": "2026-11-22"
    },
    "23e50438-a657-4fb0-a190-3262b5472f29": {
     "name": "Marc Marquez",
@@ -12307,7 +12308,6 @@
     "teamColor": "#ad0000",
     "teamTextColor": "#ffffff",
     "legacyId": 7444,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 10,
      "starts": 303,
@@ -12353,7 +12353,9 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1993-02-17",
+    "profileFetched": "2026-11-22"
    },
    "eec1f7dc-b115-44f6-82aa-73130e5c92cf": {
     "name": "Raul Fernandez",
@@ -12364,7 +12366,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8269,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 157,
@@ -12406,7 +12407,9 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2000-10-23",
+    "profileFetched": "2026-11-22"
    },
    "244b6f51-ac33-40ee-876d-9401dc9d1346": {
     "name": "Ai Ogura",
@@ -12417,7 +12420,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8680,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 147,
@@ -12460,7 +12462,9 @@
      "pos": 16
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-01-26",
+    "profileFetched": "2026-11-22"
    },
    "5b9af34e-da94-4ca2-9c4c-6be0fc8b1bbc": {
     "name": "Jorge Martin",
@@ -12471,7 +12475,6 @@
     "teamColor": "#5f259f",
     "teamTextColor": "#ffffff",
     "legacyId": 8146,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 2,
      "starts": 199,
@@ -12516,7 +12519,9 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1998-01-29",
+    "profileFetched": "2026-11-22"
    },
    "ade5ef32-01ea-487c-95ca-491544a668ed": {
     "name": "Brad Binder",
@@ -12527,7 +12532,6 @@
     "teamColor": "#ff7e27",
     "teamTextColor": "#383838",
     "legacyId": 7646,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 278,
@@ -12571,7 +12575,9 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1995-08-11",
+    "profileFetched": "2026-11-22"
    },
    "f55f9c34-8621-437b-ae04-ae2418720204": {
     "name": "Joan Mir",
@@ -12582,7 +12588,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 8141,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 2,
      "starts": 191,
@@ -12624,7 +12629,9 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-09-01",
+    "profileFetched": "2026-11-22"
    },
    "525b1551-f10b-4cfd-9b43-59af6fca654b": {
     "name": "Fabio Di Giannantonio",
@@ -12635,7 +12642,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8539,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 206,
@@ -12675,7 +12681,9 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1998-10-10",
+    "profileFetched": "2026-11-22"
    },
    "66b78301-5826-4986-b11e-fa68a7bd77a7": {
     "name": "Francesco Bagnaia",
@@ -12686,7 +12694,6 @@
     "teamColor": "#ad0000",
     "teamTextColor": "#ffffff",
     "legacyId": 8273,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 3,
      "starts": 251,
@@ -12731,7 +12738,9 @@
      "pos": 5
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-01-14",
+    "profileFetched": "2026-11-22"
    },
    "5dfc20db-c3c4-4ecd-9c7c-f6cfd042031a": {
     "name": "Luca Marini",
@@ -12742,7 +12751,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 8431,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 201,
@@ -12779,7 +12787,9 @@
      "pos": 13
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-08-10",
+    "profileFetched": "2026-11-22"
    },
    "41195f0f-9817-4a4d-913e-c1fbbb351d9b": {
     "name": "Alex Marquez",
@@ -12790,7 +12800,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 8173,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 2,
      "starts": 262,
@@ -12835,7 +12844,9 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1996-04-23",
+    "profileFetched": "2026-11-22"
    },
    "4a439bde-305a-4995-b3e7-783fa99f784a": {
     "name": "Johann Zarco",
@@ -12846,7 +12857,6 @@
     "teamColor": "#fafafa",
     "teamTextColor": "#383838",
     "legacyId": 7236,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 2,
      "starts": 317,
@@ -12890,7 +12900,9 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1990-07-16",
+    "profileFetched": "2026-11-22"
    },
    "e2479f8e-dad8-4191-9a6c-9d4aafa8c3a3": {
     "name": "Diogo Moreira",
@@ -12901,7 +12913,6 @@
     "teamColor": "#fafafa",
     "teamTextColor": "#383838",
     "legacyId": 10257,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 99,
@@ -12940,7 +12951,9 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-04-23",
+    "profileFetched": "2026-11-22"
    },
    "4113c5f7-33c5-4246-b05b-3f81f4ddbd8f": {
     "name": "Franco Morbidelli",
@@ -12951,7 +12964,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 7741,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 233,
@@ -12990,7 +13002,9 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1994-12-04",
+    "profileFetched": "2026-11-22"
    },
    "b0c1fea6-2dd5-4e26-8a18-0ac9fe6870e4": {
     "name": "Jack Miller",
@@ -13001,7 +13015,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8049,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 272,
@@ -13039,7 +13052,9 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1995-01-18",
+    "profileFetched": "2026-11-22"
    },
    "bf95d959-6a60-44f1-84b5-ded861e62578": {
     "name": "Fabio Quartararo",
@@ -13050,7 +13065,6 @@
     "teamColor": "#0a2d82",
     "teamTextColor": "#ffffff",
     "legacyId": 8520,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 219,
@@ -13092,7 +13106,9 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1999-04-20",
+    "profileFetched": "2026-11-22"
    },
    "00db2312-15f2-4333-be5c-4bbff9d17aec": {
     "name": "Enea Bastianini",
@@ -13103,7 +13119,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8295,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 231,
@@ -13146,7 +13161,9 @@
      "pos": 14
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-12-30",
+    "profileFetched": "2026-11-22"
    },
    "04bf0ce4-5062-44fc-9745-ec85a8d8f8d3": {
     "name": "Alex Rins",
@@ -13157,7 +13174,6 @@
     "teamColor": "#0a2d82",
     "teamTextColor": "#ffffff",
     "legacyId": 8150,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 252,
@@ -13198,7 +13214,9 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1995-12-08",
+    "profileFetched": "2026-11-22"
    },
    "71df6f0d-51c3-4cdb-9f5c-51939e6f33f2": {
     "name": "Maverick Viñales",
@@ -13209,7 +13227,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 7409,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 273,
@@ -13258,7 +13275,9 @@
      "pos": 18
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1995-01-12",
+    "profileFetched": "2026-11-22"
    },
    "c883a3b8-17ce-419d-b71b-32c252f6fc7e": {
     "name": "Toprak Razgatlioglu",
@@ -13269,7 +13288,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8298,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 17,
@@ -13290,7 +13308,9 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1996-10-16",
+    "profileFetched": "2026-11-22"
    },
    "7c653b2a-b493-436b-a77e-06a43b37b799": {
     "name": "Michele Pirro",
@@ -13301,7 +13321,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 6231,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 120,
@@ -13328,7 +13347,9 @@
      },
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1986-07-05",
+    "profileFetched": "2026-11-22"
    },
    "e622ec5b-5ccf-457c-a67f-ec028f0ddf6e": {
     "name": "Marco Bezzecchi",
@@ -13339,7 +13360,6 @@
     "teamColor": "#5f259f",
     "teamTextColor": "#ffffff",
     "legacyId": 8688,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 192,
@@ -13380,7 +13400,9 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1998-11-12",
+    "profileFetched": "2026-11-22"
    },
    "71052114-5bce-4307-908c-4cc2bd387aac": {
     "name": "Fermin Aldeguer",
@@ -13391,7 +13413,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 9867,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 104,
@@ -13427,7 +13448,9 @@
      "pos": 8
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-04-05",
+    "profileFetched": "2026-11-22"
    },
    "eb7f90b1-9373-4089-b2f5-adbc234a3526": {
     "name": "Augusto Fernandez",
@@ -13438,7 +13461,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 9973,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 148,
@@ -13468,7 +13490,9 @@
       "Moto2": 11
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-09-23",
+    "profileFetched": "2026-11-22"
    },
    "a1311c17-1099-4893-bba0-347bf43226a4": {
     "name": "Lorenzo Savadori",
@@ -13479,7 +13503,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 7246,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 74,
@@ -13499,7 +13522,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1993-04-04",
+    "profileFetched": "2026-11-22"
    },
    "93d6c1b8-9853-4939-a926-f26593db8eaf": {
     "name": "Jonas Folger",
@@ -13510,7 +13535,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 7174,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 162,
@@ -13548,7 +13572,9 @@
       "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1993-08-13",
+    "profileFetched": "2026-11-22"
    },
    "ec9adf3a-985f-4eb6-8ffd-54b688f49846": {
     "name": "Cal Crutchlow",
@@ -13559,7 +13585,6 @@
     "teamColor": "#fafafa",
     "teamTextColor": "#383838",
     "legacyId": 8010,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 184,
@@ -13586,7 +13611,9 @@
       "MotoGP": 4
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1985-10-29",
+    "profileFetched": "2026-11-22"
    },
    "92d574d5-d064-4612-bf3e-421d01572512": {
     "name": "Iker Lecuona",
@@ -13597,7 +13624,6 @@
     "teamColor": "#ad0000",
     "teamTextColor": "#ffffff",
     "legacyId": 8947,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 97,
@@ -13619,7 +13645,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2000-01-06",
+    "profileFetched": "2026-11-22"
    },
    "b8b255af-e344-4ca7-818b-480c18a11088": {
     "name": "Pol Espargaro",
@@ -13630,7 +13658,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 7086,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 301,
@@ -13668,7 +13695,9 @@
       "125cc": 5
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1991-06-10",
+    "profileFetched": "2026-11-22"
    },
    "a7b4d63f-45b3-402e-b66c-001ed8a62934": {
     "name": "Takaaki Nakagami",
@@ -13679,7 +13708,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 6976,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 266,
@@ -13709,7 +13737,9 @@
       "Moto2": 1
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1992-02-09",
+    "profileFetched": "2026-11-22"
    },
    "fa8ac04c-8fa2-4c43-9aa5-cc79b1f35fb9": {
     "name": "Somkiat Chantra",
@@ -13720,7 +13750,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 8476,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 125,
@@ -13749,7 +13778,9 @@
       "Moto2": 3
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1998-12-15",
+    "profileFetched": "2026-11-22"
    },
    "a2f51450-cb43-4d32-8eef-bda9ebb435ed": {
     "name": "Aleix Espargaro",
@@ -13760,7 +13791,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 6854,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 344,
@@ -13791,7 +13821,9 @@
       "MotoGP": 5
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1989-07-30",
+    "profileFetched": "2026-11-22"
    },
    "35214310-1714-4584-b82a-c56a15bab2ca": {
     "name": "Jake Dixon",
@@ -13802,7 +13834,6 @@
     "teamColor": "#e50000",
     "teamTextColor": "#ffffff",
     "legacyId": 10012,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 128,
@@ -13830,7 +13861,9 @@
       "Moto2": 4
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1996-01-15",
+    "profileFetched": "2026-11-22"
    }
   },
   "Moto2": {
@@ -13843,7 +13876,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 10048,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 70,
@@ -13875,7 +13907,9 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-06-09",
+    "profileFetched": "2026-11-22"
    },
    "dd56704e-b40e-4202-8af2-a81b7fd6a82d": {
     "name": "Celestino Vietti",
@@ -13886,7 +13920,6 @@
     "teamColor": "#f24d44",
     "teamTextColor": "#ffffff",
     "legacyId": 10132,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 152,
@@ -13923,7 +13956,9 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-10-13",
+    "profileFetched": "2026-11-22"
    },
    "28d22e58-56c2-4c94-97fc-09453bfa089f": {
     "name": "Izan Guevara",
@@ -13934,7 +13969,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 10033,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 118,
@@ -13973,7 +14007,9 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-06-28",
+    "profileFetched": "2026-11-22"
    },
    "96d9b2b4-a26b-427f-b76a-6e1294c341c0": {
     "name": "David Alonso",
@@ -13984,7 +14020,6 @@
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
     "legacyId": 10227,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 83,
@@ -14023,7 +14058,9 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-04-25",
+    "profileFetched": "2026-11-22"
    },
    "96edcb06-aa78-4976-9559-62186821e48e": {
     "name": "Manuel Gonzalez",
@@ -14034,7 +14071,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 8250,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 102,
@@ -14066,7 +14102,9 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2002-08-04",
+    "profileFetched": "2026-11-22"
    },
    "31d9d715-4dbc-4d12-8a21-f2daffb62d7f": {
     "name": "Barry Baltus",
@@ -14077,7 +14115,6 @@
     "teamColor": "#afb9b9",
     "teamTextColor": "#383838",
     "legacyId": 10060,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 122,
@@ -14108,7 +14145,9 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-05-03",
+    "profileFetched": "2026-11-22"
    },
    "88ec0ae1-53e4-48d4-8c60-6b74210d7552": {
     "name": "Alonso Lopez",
@@ -14119,7 +14158,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 8866,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 148,
@@ -14154,7 +14192,9 @@
      "pos": 18
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-12-21",
+    "profileFetched": "2026-11-22"
    },
    "57787b04-f675-4877-a72a-b5340a45109a": {
     "name": "Alex Escrig",
@@ -14165,7 +14205,6 @@
     "teamColor": "#73cdba",
     "teamTextColor": "#383838",
     "legacyId": 8645,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 67,
@@ -14195,7 +14234,9 @@
      "pos": 22
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-02-21",
+    "profileFetched": "2026-11-22"
    },
    "3157c88e-bd94-4851-9fe2-1d7458f65a1e": {
     "name": "Joe Roberts",
@@ -14206,7 +14247,6 @@
     "teamColor": "#0d34b2",
     "teamTextColor": "#ffffff",
     "legacyId": 7946,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 165,
@@ -14238,7 +14278,9 @@
      "pos": 14
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-06-16",
+    "profileFetched": "2026-11-22"
    },
    "5c8bbc11-a1aa-4f55-b9dc-f2e8b7c33ceb": {
     "name": "Tony Arbolino",
@@ -14249,7 +14291,6 @@
     "teamColor": "#afb9b9",
     "teamTextColor": "#383838",
     "legacyId": 8752,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 189,
@@ -14286,7 +14327,9 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2000-08-03",
+    "profileFetched": "2026-11-22"
    },
    "6b517083-20d8-40da-9d92-aeb63cdee89d": {
     "name": "Ivan Ortola",
@@ -14297,7 +14340,6 @@
     "teamColor": "#d80c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10224,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 102,
@@ -14334,7 +14376,9 @@
      "pos": 16
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-08-04",
+    "profileFetched": "2026-11-22"
    },
    "8293f58c-2182-4c77-958f-6de9e9dca168": {
     "name": "Adrian Huertas",
@@ -14345,7 +14389,6 @@
     "teamColor": "#106ba9",
     "teamTextColor": "#ffffff",
     "legacyId": 8660,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 39,
@@ -14369,7 +14412,9 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2003-08-21",
+    "profileFetched": "2026-11-22"
    },
    "12e072c6-c19b-4c35-a9c4-2c7deba15cb0": {
     "name": "Aron Canet",
@@ -14380,7 +14425,6 @@
     "teamColor": "#682a38",
     "teamTextColor": "#ffffff",
     "legacyId": 8525,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 199,
@@ -14417,7 +14461,9 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1999-09-30",
+    "profileFetched": "2026-11-22"
    },
    "be57d739-ceff-4bd4-b612-08100cae9990": {
     "name": "Daniel Muñoz",
@@ -14428,7 +14474,6 @@
     "teamColor": "#106ba9",
     "teamTextColor": "#ffffff",
     "legacyId": 10230,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 41,
@@ -14458,7 +14503,9 @@
      "pos": 20
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-04-28",
+    "profileFetched": "2026-11-22"
    },
    "553b174a-1c06-4bed-82b4-efcc035f1a4e": {
     "name": "Jose Antonio Rueda",
@@ -14469,7 +14516,6 @@
     "teamColor": "#ff6600",
     "teamTextColor": "#383838",
     "legacyId": 10347,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 79,
@@ -14504,7 +14550,9 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-10-29",
+    "profileFetched": "2026-11-22"
    },
    "845c70b2-fe9b-40b6-a558-692cf5f9e6da": {
     "name": "Daniel Holgado",
@@ -14515,7 +14563,6 @@
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
     "legacyId": 8671,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 105,
@@ -14552,7 +14599,9 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-04-27",
+    "profileFetched": "2026-11-22"
    },
    "ae003ef7-aff4-4903-ab7a-0c40997baa0a": {
     "name": "Ayumu Sasaki",
@@ -14563,7 +14612,6 @@
     "teamColor": "#eb5b1d",
     "teamTextColor": "#ffffff",
     "legacyId": 8490,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 179,
@@ -14596,7 +14644,9 @@
      "pos": 23
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2000-10-04",
+    "profileFetched": "2026-11-22"
    },
    "e983f2ed-5bac-4ae7-9b54-3ab5fc357500": {
     "name": "Taiyo Furusato",
@@ -14607,7 +14657,6 @@
     "teamColor": "#fafafa",
     "teamTextColor": "#383838",
     "legacyId": 10220,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 99,
@@ -14640,7 +14689,9 @@
      "pos": 8
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-07-12",
+    "profileFetched": "2026-11-22"
    },
    "a90f6d5b-cba7-45cd-932e-308514518b80": {
     "name": "Dennis Foggia",
@@ -14651,7 +14702,6 @@
     "teamColor": "#f24d44",
     "teamTextColor": "#ffffff",
     "legacyId": 8873,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 153,
@@ -14679,7 +14729,9 @@
       "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-01-07",
+    "profileFetched": "2026-11-22"
    },
    "7f2593e1-d17e-4a83-9890-d9c383b29898": {
     "name": "Deniz öncü",
@@ -14690,7 +14742,6 @@
     "teamColor": "#682a38",
     "teamTextColor": "#ffffff",
     "legacyId": 8829,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 125,
@@ -14725,7 +14776,9 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2003-07-26",
+    "profileFetched": "2026-11-22"
    },
    "48af1e5c-5376-43ad-9b26-9a860bef4e1d": {
     "name": "Filip Salac",
@@ -14736,7 +14789,6 @@
     "teamColor": "#0d34b2",
     "teamTextColor": "#ffffff",
     "legacyId": 8856,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 147,
@@ -14771,7 +14823,9 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-12-12",
+    "profileFetched": "2026-11-22"
    },
    "206c1c78-6d79-4e13-9568-5a90138ece2b": {
     "name": "Zonta Vd Goorbergh",
@@ -14782,7 +14836,6 @@
     "teamColor": "#eb5b1d",
     "teamTextColor": "#ffffff",
     "legacyId": 10160,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 100,
@@ -14806,7 +14859,9 @@
      "pos": 25
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-12-01",
+    "profileFetched": "2026-11-22"
    },
    "59d0a2fb-df55-46d8-a57f-bf81ca690a5b": {
     "name": "Mario Aji",
@@ -14817,7 +14872,6 @@
     "teamColor": "#fafafa",
     "teamTextColor": "#383838",
     "legacyId": 10046,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 87,
@@ -14842,7 +14896,9 @@
      "pos": 26
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-03-16",
+    "profileFetched": "2026-11-22"
    },
    "57f4c236-d465-4161-8e22-7426f4da36eb": {
     "name": "Jorge Navarro",
@@ -14853,7 +14909,6 @@
     "teamColor": "#afb9b9",
     "teamTextColor": "#383838",
     "legacyId": 7742,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 189,
@@ -14884,7 +14939,9 @@
       "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1996-02-03",
+    "profileFetched": "2026-11-22"
    },
    "08783adb-15e8-49e4-a6ea-c3ede3d94e7c": {
     "name": "Collin Veijer",
@@ -14895,7 +14952,6 @@
     "teamColor": "#ff6600",
     "teamTextColor": "#383838",
     "legacyId": 10228,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 77,
@@ -14931,7 +14987,9 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-02-19",
+    "profileFetched": "2026-11-22"
    },
    "97116ba3-5971-4304-be84-451bdc9a563c": {
     "name": "Angel Piqueras",
@@ -14942,7 +15000,6 @@
     "teamColor": "#d80c24",
     "teamTextColor": "#ffffff",
     "legacyId": 9864,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 54,
@@ -14976,7 +15033,9 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-12-01",
+    "profileFetched": "2026-11-22"
    },
    "6251aee5-6e36-455c-8b43-e6fd1753fd8d": {
     "name": "Sergio Garcia",
@@ -14987,7 +15046,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 9958,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 131,
@@ -15024,7 +15082,9 @@
      "pos": 28
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2003-03-22",
+    "profileFetched": "2026-11-22"
    },
    "c534aae8-f63b-4f14-8a7e-4c6780c80685": {
     "name": "Alberto Ferrandez",
@@ -15035,7 +15095,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 9872,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 18,
@@ -15059,7 +15118,9 @@
      "pos": 36
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-09-02",
+    "profileFetched": "2026-11-22"
    },
    "711cd7a3-7e13-413b-8de2-08d5bf4070f4": {
     "name": "Marcos Ramirez",
@@ -15070,7 +15131,6 @@
     "teamColor": "#73cdba",
     "teamTextColor": "#383838",
     "legacyId": 7744,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 183,
@@ -15099,7 +15159,9 @@
       "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-12-16",
+    "profileFetched": "2026-11-22"
    },
    "4023fb10-6a03-420b-a9e1-9926066ab154": {
     "name": "Luca Lunetta",
@@ -15110,7 +15172,6 @@
     "teamColor": "#f24d44",
     "teamTextColor": "#ffffff",
     "legacyId": 10226,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 56,
@@ -15139,7 +15200,9 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-05-27",
+    "profileFetched": "2026-11-22"
    },
    "a357a14a-bdd0-4b0a-8c75-948b5233cbad": {
     "name": "Unai Orradre",
@@ -15150,7 +15213,6 @@
     "teamColor": "#d80c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10408,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 10,
@@ -15169,7 +15231,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-04-09",
+    "profileFetched": "2026-11-22"
    },
    "8861fef1-5380-4d96-b45d-b5c469c04df2": {
     "name": "Xabi Zurutuza",
@@ -15180,7 +15244,6 @@
     "teamColor": "#73cdba",
     "teamTextColor": "#383838",
     "legacyId": 10428,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 35,
@@ -15205,7 +15268,9 @@
      "pos": 35
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-04-07",
+    "profileFetched": "2026-11-22"
    },
    "2d9bd73c-a0ef-4ade-8ab4-f91b0a085c4f": {
     "name": "Jacob Roulstone",
@@ -15216,7 +15281,6 @@
     "teamColor": "#682a38",
     "teamTextColor": "#ffffff",
     "legacyId": 10143,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 42,
@@ -15236,18 +15300,19 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-02-04",
+    "profileFetched": "2026-11-22"
    },
    "949e1296-9cf4-4569-8923-dc62beb5521f": {
     "name": "Milan Pawelec",
     "number": 40,
     "country": "PL",
-    "team": "Red Bull KTM Ajo",
+    "team": " ITALJET Gresini Moto2",
     "numberArt": null,
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 10504,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 5,
@@ -15266,7 +15331,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-04-04",
+    "profileFetched": "2026-11-22"
    },
    "68c041fe-d813-48ae-9876-b451d89924ec": {
     "name": "Matteo Ferrari",
@@ -15277,7 +15344,6 @@
     "teamColor": "#9baee4",
     "teamTextColor": "#383838",
     "legacyId": 8272,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 53,
@@ -15297,7 +15363,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "1997-02-12",
+    "profileFetched": "2026-11-22"
    }
   },
   "Moto3": {
@@ -15310,7 +15378,6 @@
     "teamColor": "#75cbd1",
     "teamTextColor": "#383838",
     "legacyId": 10441,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 41,
@@ -15342,7 +15409,9 @@
      "pos": 13
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-01-09",
+    "profileFetched": "2026-11-22"
    },
    "01f85422-d97e-4901-9492-1be9694a4cc2": {
     "name": "Maximo Quiles",
@@ -15353,7 +15422,6 @@
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
     "legacyId": 10392,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 1,
      "starts": 37,
@@ -15387,7 +15455,9 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-03-19",
+    "profileFetched": "2026-11-22"
    },
    "992cadcb-08e5-47cf-8b29-cf28d3e941ca": {
     "name": "Alvaro Carpe",
@@ -15398,7 +15468,6 @@
     "teamColor": "#ff6600",
     "teamTextColor": "#383838",
     "legacyId": 10445,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 43,
@@ -15428,7 +15497,9 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-06-05",
+    "profileFetched": "2026-11-22"
    },
    "c1dbeba7-8a56-40fd-ab57-cd6eb37e63f3": {
     "name": "Valentin Perrone",
@@ -15439,7 +15510,6 @@
     "teamColor": "#d85700",
     "teamTextColor": "#ffffff",
     "legacyId": 10509,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 41,
@@ -15469,7 +15539,9 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-12-28",
+    "profileFetched": "2026-11-22"
    },
    "587e8e1a-43c4-4372-bde7-34da0b19e0e6": {
     "name": "Adrian Fernandez",
@@ -15480,7 +15552,6 @@
     "teamColor": "#75cbd1",
     "teamTextColor": "#383838",
     "legacyId": 8649,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 106,
@@ -15512,7 +15583,9 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-01-31",
+    "profileFetched": "2026-11-22"
    },
    "a259beac-40f5-4105-acf7-8f7fb3bd9ea0": {
     "name": "Rico Salmela",
@@ -15523,7 +15596,6 @@
     "teamColor": "#d85700",
     "teamTextColor": "#ffffff",
     "legacyId": 10391,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 20,
@@ -15546,7 +15618,9 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-02-14",
+    "profileFetched": "2026-11-22"
    },
    "6052c038-a2a3-4eab-9ee0-79bd5f5be209": {
     "name": "Brian Uriarte",
@@ -15557,7 +15631,6 @@
     "teamColor": "#ff6600",
     "teamTextColor": "#383838",
     "legacyId": 10506,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 24,
@@ -15589,7 +15662,9 @@
      "pos": 28
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-08-11",
+    "profileFetched": "2026-11-22"
    },
    "769510fc-e823-4bf1-8cda-08c1873935e6": {
     "name": "Adrian Cruces",
@@ -15600,7 +15675,6 @@
     "teamColor": "#77cd5c",
     "teamTextColor": "#383838",
     "legacyId": 10337,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 26,
@@ -15624,7 +15698,9 @@
      "pos": 26
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-08-09",
+    "profileFetched": "2026-11-22"
    },
    "fb584b95-a9ed-4d23-8db3-4a946db60fe8": {
     "name": "Matteo Bertelle",
@@ -15635,7 +15711,6 @@
     "teamColor": "#e04f4f",
     "teamTextColor": "#ffffff",
     "legacyId": 10154,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 78,
@@ -15665,7 +15740,9 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-02-18",
+    "profileFetched": "2026-11-22"
    },
    "f261e368-80bd-4830-9a2e-1cee3e6b0be4": {
     "name": "Scott Ogden",
@@ -15676,7 +15753,6 @@
     "teamColor": "#77cd5c",
     "teamTextColor": "#383838",
     "legacyId": 10114,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 100,
@@ -15702,7 +15778,9 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2003-10-16",
+    "profileFetched": "2026-11-22"
    },
    "99fb2930-285a-4300-a251-ccabc60e9af3": {
     "name": "Eddie O'shea",
@@ -15713,7 +15791,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 10193,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 46,
@@ -15737,7 +15814,9 @@
      "pos": 32
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-09-25",
+    "profileFetched": "2026-11-22"
    },
    "101ad37a-28d8-4bcc-bf16-dffdd51f1375": {
     "name": "Marco Morelli",
@@ -15748,7 +15827,6 @@
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
     "legacyId": 10442,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 28,
@@ -15776,7 +15854,9 @@
      "pos": 24
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-07-03",
+    "profileFetched": "2026-11-22"
    },
    "5d81cf1f-1708-47a9-984e-9430afd4a814": {
     "name": "Hakim Danish",
@@ -15787,7 +15867,6 @@
     "teamColor": "#ff4133",
     "teamTextColor": "#ffffff",
     "legacyId": 10239,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 23,
@@ -15817,18 +15896,19 @@
      "pos": 31
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-07-30",
+    "profileFetched": "2026-11-22"
    },
    "c4708bf4-0ca8-4296-8ee3-f153a0fe89b8": {
     "name": "Marcos Uriarte",
     "number": 88,
     "country": "ES",
-    "team": "CODE Motorsports",
+    "team": "Liqui Moly Dynavolt Intact GP",
     "numberArt": null,
     "teamColor": "#535357",
     "teamTextColor": "#ffffff",
     "legacyId": 8669,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 19,
@@ -15847,7 +15927,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-12-07",
+    "profileFetched": "2026-11-22"
    },
    "db613c78-69b0-46b4-98aa-20924c32cfba": {
     "name": "Jesus Rios",
@@ -15858,7 +15940,6 @@
     "teamColor": "#ffe000",
     "teamTextColor": "#383838",
     "legacyId": 10537,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 22,
@@ -15882,7 +15963,9 @@
      "pos": 30
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-10-29",
+    "profileFetched": "2026-11-22"
    },
    "821c7e78-24dd-4715-a7b6-966b6da2c4d8": {
     "name": "Ruche Moodley",
@@ -15893,7 +15976,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10390,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 35,
@@ -15917,7 +15999,9 @@
      "pos": 27
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-12-16",
+    "profileFetched": "2026-11-22"
    },
    "368ea111-05a4-4102-8564-e59905ae2858": {
     "name": "Nicola Carraro",
@@ -15928,7 +16012,6 @@
     "teamColor": "#ffe000",
     "teamTextColor": "#383838",
     "legacyId": 10161,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 66,
@@ -15952,7 +16035,9 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2002-05-21",
+    "profileFetched": "2026-11-22"
    },
    "b2570616-5431-4eb3-be49-d79fd4ff86e2": {
     "name": "Ryusei Yamanaka",
@@ -15963,7 +16048,6 @@
     "teamColor": "#ff4133",
     "teamTextColor": "#ffffff",
     "legacyId": 8681,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 135,
@@ -15993,7 +16077,9 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2001-11-06",
+    "profileFetched": "2026-11-22"
    },
    "a7d44fd6-d27c-4fea-ac27-85953cd45f86": {
     "name": "Cormac Buchanan",
@@ -16004,7 +16090,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10251,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 35,
@@ -16028,7 +16113,9 @@
      "pos": 20
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-08-23",
+    "profileFetched": "2026-11-22"
    },
    "8aef18e2-3cb9-4321-ba88-2eeac2b7a7f3": {
     "name": "Leo Rammerstorfer",
@@ -16039,7 +16126,6 @@
     "teamColor": "#e42327",
     "teamTextColor": "#ffffff",
     "legacyId": 10291,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 19,
@@ -16060,7 +16146,9 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2004-08-13",
+    "profileFetched": "2026-11-22"
    },
    "11af471d-9074-4d43-8b5e-f33957486f08": {
     "name": "Zen Mitani",
@@ -16071,7 +16159,6 @@
     "teamColor": "#ffffff",
     "teamTextColor": "#383838",
     "legacyId": 10473,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 21,
@@ -16095,7 +16182,9 @@
      "pos": 38
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-03-27",
+    "profileFetched": "2026-11-22"
    },
    "b909706a-1f29-4f38-8a76-40b1fe651d9c": {
     "name": "Casey O'gorman",
@@ -16106,7 +16195,6 @@
     "teamColor": "#e42327",
     "teamTextColor": "#ffffff",
     "legacyId": 10335,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 24,
@@ -16132,7 +16220,9 @@
      "pos": 25
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-08-07",
+    "profileFetched": "2026-11-22"
    },
    "15049794-9e9a-45da-a2d5-a52d684914a7": {
     "name": "Joel Esteban",
@@ -16143,7 +16233,6 @@
     "teamColor": "#e04f4f",
     "teamTextColor": "#ffffff",
     "legacyId": 10041,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 47,
@@ -16171,7 +16260,9 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-08-07",
+    "profileFetched": "2026-11-22"
    },
    "5b5fb07a-f0b6-4f7f-9533-18cad7f0c8f2": {
     "name": "Joel Kelso",
@@ -16182,7 +16273,6 @@
     "teamColor": "#262626",
     "teamTextColor": "#ffffff",
     "legacyId": 10284,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 101,
@@ -16212,7 +16302,9 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2003-06-12",
+    "profileFetched": "2026-11-22"
    },
    "73085df9-f749-42c4-90b6-6d9863c0f6f4": {
     "name": "Veda Pratama",
@@ -16223,7 +16315,6 @@
     "teamColor": "#ffffff",
     "teamTextColor": "#383838",
     "legacyId": 10352,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 20,
@@ -16250,7 +16341,9 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-11-23",
+    "profileFetched": "2026-11-22"
    },
    "3061875e-1a3f-4b9d-a974-603becd903a7": {
     "name": "David Muñoz",
@@ -16261,7 +16354,6 @@
     "teamColor": "#535357",
     "teamTextColor": "#ffffff",
     "legacyId": 9869,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 80,
@@ -16293,7 +16385,9 @@
      "pos": 5
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-05-15",
+    "profileFetched": "2026-11-22"
    },
    "ed2d5631-8fe0-4a21-8449-463657eb7901": {
     "name": "David Almansa",
@@ -16304,7 +16398,6 @@
     "teamColor": "#535357",
     "teamTextColor": "#ffffff",
     "legacyId": 10424,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 62,
@@ -16336,7 +16429,9 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2006-01-22",
+    "profileFetched": "2026-11-22"
    },
    "5f493d5b-0f90-4649-8058-8e78e71ce8a0": {
     "name": "Eduardo Gutierrez",
@@ -16347,7 +16442,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10687,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 1,
@@ -16366,7 +16460,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-05-03",
+    "profileFetched": "2026-11-22"
    },
    "cdeb7f8b-c40e-43dd-b3a7-e3a7a859781a": {
     "name": "David Gonzalez",
@@ -16377,7 +16473,6 @@
     "teamColor": "#535357",
     "teamTextColor": "#ffffff",
     "legacyId": 10702,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 3,
@@ -16396,18 +16491,19 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-02-11",
+    "profileFetched": "2026-11-22"
    },
    "d0314e82-c2fc-4e5d-9237-c3b2b65273f2": {
     "name": "Kiattisak Singhapong",
     "number": 85,
     "country": "TH",
-    "team": "Rivacold Snipers Team",
+    "team": "Honda Team Asia",
     "numberArt": null,
     "teamColor": "#ffffff",
     "teamTextColor": "#383838",
     "legacyId": 10488,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 6,
@@ -16426,7 +16522,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2005-09-05",
+    "profileFetched": "2026-11-22"
    },
    "d661a08c-9a5d-413f-9bf3-7e52cb6a5eb2": {
     "name": "Leonardo Abruzzo",
@@ -16437,7 +16535,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10534,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 5,
@@ -16456,7 +16553,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-02-16",
+    "profileFetched": "2026-11-22"
    },
    "cf726ae9-7a34-44d4-b0d3-d18e47fbdc2b": {
     "name": "Ryota Ogiwara",
@@ -16467,7 +16566,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10480,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 2,
@@ -16486,7 +16584,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2008-09-07",
+    "profileFetched": "2026-11-22"
    },
    "bfcd17e6-e9af-47c7-aeeb-9787bae55081": {
     "name": "Beñat Fernandez",
@@ -16497,7 +16597,6 @@
     "teamColor": "#e04f4f",
     "teamTextColor": "#ffffff",
     "legacyId": 10724,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 1,
@@ -16516,7 +16615,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-11-19",
+    "profileFetched": "2026-11-22"
    },
    "710de739-eff1-4f3d-af88-3192aabd4d5e": {
     "name": "Kgopotso Mononyane",
@@ -16527,7 +16628,6 @@
     "teamColor": "#ed1c24",
     "teamTextColor": "#ffffff",
     "legacyId": 10505,
-    "profileFetched": "2026-11-22",
     "career": {
      "titles": 0,
      "starts": 1,
@@ -16546,7 +16646,9 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22"
+    "careerFetched": "2026-11-22",
+    "birthDate": "2007-06-07",
+    "profileFetched": "2026-11-22"
    }
   }
  },

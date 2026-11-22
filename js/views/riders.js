@@ -119,6 +119,16 @@ export function renderRiders(ctx) {
   </section>`;
 }
 
+/** Ålder i dag utifrån födelsedatum ("YYYY-MM-DD"). */
+function age(birthDate) {
+  const m = String(birthDate ?? "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return null;
+  const now = new Date();
+  let a = now.getFullYear() - Number(m[1]);
+  if (now.getMonth() + 1 < Number(m[2]) || (now.getMonth() + 1 === Number(m[2]) && now.getDate() < Number(m[3]))) a--;
+  return a;
+}
+
 /** Karriärstatistik (alla klasser, från motogp.com) överst i förardialogen. */
 function careerSection(c) {
   if (!c) return "";
@@ -163,7 +173,7 @@ export function renderRiderDialog(ctx, cls, key) {
 
   return `<div class="dlg-head">
       <div>
-        <h2>${numberBadge(r, "lg")}${flag(r.country)}${esc(r.name)}</h2>
+        <h2>${numberBadge(r, "lg")}${flag(r.country)}${esc(r.name)}${age(r.birthDate) != null ? ` <span class="age">- ${age(r.birthDate)}</span>` : ""}</h2>
         <div class="muted">${esc(r.team)} · ${esc(r.country)} · ${cls}</div>
       </div>
       <button type="button" class="icon-btn" data-action="close-dialog" aria-label="${esc(t("close"))}">✕</button>

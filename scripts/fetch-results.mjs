@@ -193,6 +193,7 @@ async function addRiderProfiles(riders, year) {
         .sort((a, b) => b.season - a.season)[0]?.pictures?.number;
       r.numberArt = art ?? null;
       r.legacyId = d.legacy_id ?? r.legacyId ?? null;
+      r.birthDate = d.birth_date ?? r.birthDate ?? null;
       r.teamColor = step?.team?.color ?? r.teamColor ?? null;
       r.teamTextColor = step?.team?.text_color ?? r.teamTextColor ?? null;
       if (step?.season === year) {

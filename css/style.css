@@ -486,3 +486,5 @@ hr.divider { border: 0; border-top: 1px solid var(--line); margin: 16px 0 4px; }
   .window-rule { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .pk-card, .pk-slot { transition: none; } }
+
+.dlg-head h2 .age { font-weight: 600; color: var(--muted); }
