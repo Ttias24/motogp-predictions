@@ -1,7 +1,7 @@
 // Översättningar. Svenska är standard; engelska via knappen i sidhuvudet.
 const STRINGS = {
   sv: {
-    appTitle: "MotoGP-tipset",
+    appTitle: "MotoGP Predictions",
     "nav.leaderboard": "Ställning",
     "nav.picks": "Tipsen",
     "nav.riders": "Förare",
