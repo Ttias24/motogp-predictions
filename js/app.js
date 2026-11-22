@@ -83,6 +83,25 @@ function storedToken() {
   return pref(TOKEN_KEY, "");
 }
 
+// Admin-fliken visas så länge man är inloggad som admin. Bedöms utan att ladda Supabase:
+// inloggningen ligger kvar i webbläsaren (sb-…-auth-token) och "is-admin" sparas när
+// adminsidan har bekräftat behörigheten. Skyddet sitter ändå i databasen.
+const ADMIN_KEY = "is-admin";
+function adminTabVisible() {
+  if (!remote.isConfigured() || pref(ADMIN_KEY, "") !== "1") return false;
+  try {
+    return Object.keys(localStorage).some((k) => k.startsWith("sb-") && k.endsWith("-auth-token"));
+  } catch {
+    return false;
+  }
+}
+function setAdminFlag(on) {
+  try {
+    if (on) localStorage.setItem(ADMIN_KEY, "1");
+    else localStorage.removeItem(ADMIN_KEY);
+  } catch {}
+}
+
 function buildContext() {
   const { results, picks } = state;
   const done = roundsWithResults(results);
@@ -147,6 +166,7 @@ function renderHeader() {
 
   const nav = [...NAV];
   if (storedToken() && remote.isConfigured()) nav.push("predict");
+  if (adminTabVisible() && !nav.includes("admin")) nav.push("admin");
   if (!nav.includes(view)) nav.push(view); // t.ex. Admin när man är där
   document.getElementById("nav").innerHTML = nav
     .map((v) => {
@@ -344,8 +364,9 @@ async function ensureAdmin() {
   const a = state.admin;
   try {
     a.session = await remote.getSession();
+    if (a.session) a.isAdmin = await remote.isAdmin();
+    setAdminFlag(Boolean(a.session && a.isAdmin));
     if (a.session) {
-      a.isAdmin = await remote.isAdmin();
       if (a.isAdmin) {
         const from = state.databaseFrom ?? state.currentSeason;
         const def = Math.max(state.currentSeason, from);
@@ -542,6 +563,7 @@ document.addEventListener("click", async (e) => {
     }
     case "admin-logout":
       await remote.signOut();
+      setAdminFlag(false);
       state.admin = null;
       render();
       break;
