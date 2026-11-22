@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T15:15:57.627Z",
+ "updatedAt": "2026-11-22T15:49:36.019Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -11889,6 +11889,178 @@
        "rider": "4a439bde-305a-4995-b3e7-783fa99f784a",
        "pts": 0,
        "status": "NOTFINISHFIRST"
+      }
+     ]
+    },
+    "Moto2": {
+     "RAC": [
+      {
+       "pos": 1,
+       "rider": "be57d739-ceff-4bd4-b612-08100cae9990",
+       "pts": 25,
+       "status": "INSTND"
+      },
+      {
+       "pos": 2,
+       "rider": "88ec0ae1-53e4-48d4-8c60-6b74210d7552",
+       "pts": 20,
+       "status": "INSTND"
+      },
+      {
+       "pos": 3,
+       "rider": "b6abeabd-e023-4537-b808-92844d2b6bd4",
+       "pts": 16,
+       "status": "INSTND"
+      },
+      {
+       "pos": 4,
+       "rider": "96d9b2b4-a26b-427f-b76a-6e1294c341c0",
+       "pts": 13,
+       "status": "INSTND"
+      },
+      {
+       "pos": 5,
+       "rider": "6b517083-20d8-40da-9d92-aeb63cdee89d",
+       "pts": 11,
+       "status": "INSTND"
+      },
+      {
+       "pos": 6,
+       "rider": "845c70b2-fe9b-40b6-a558-692cf5f9e6da",
+       "pts": 10,
+       "status": "INSTND"
+      },
+      {
+       "pos": 7,
+       "rider": "28d22e58-56c2-4c94-97fc-09453bfa089f",
+       "pts": 9,
+       "status": "INSTND"
+      },
+      {
+       "pos": 8,
+       "rider": "8293f58c-2182-4c77-958f-6de9e9dca168",
+       "pts": 8,
+       "status": "INSTND"
+      },
+      {
+       "pos": 9,
+       "rider": "08783adb-15e8-49e4-a6ea-c3ede3d94e7c",
+       "pts": 7,
+       "status": "INSTND"
+      },
+      {
+       "pos": 10,
+       "rider": "206c1c78-6d79-4e13-9568-5a90138ece2b",
+       "pts": 6,
+       "status": "INSTND"
+      },
+      {
+       "pos": 11,
+       "rider": "57787b04-f675-4877-a72a-b5340a45109a",
+       "pts": 5,
+       "status": "INSTND"
+      },
+      {
+       "pos": 12,
+       "rider": "97116ba3-5971-4304-be84-451bdc9a563c",
+       "pts": 4,
+       "status": "INSTND"
+      },
+      {
+       "pos": 13,
+       "rider": "c534aae8-f63b-4f14-8a7e-4c6780c80685",
+       "pts": 3,
+       "status": "INSTND"
+      },
+      {
+       "pos": 14,
+       "rider": "12e072c6-c19b-4c35-a9c4-2c7deba15cb0",
+       "pts": 2,
+       "status": "INSTND"
+      },
+      {
+       "pos": 15,
+       "rider": "8861fef1-5380-4d96-b45d-b5c469c04df2",
+       "pts": 1,
+       "status": "INSTND"
+      },
+      {
+       "pos": 16,
+       "rider": "7f2593e1-d17e-4a83-9890-d9c383b29898",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 17,
+       "rider": "dd56704e-b40e-4202-8af2-a81b7fd6a82d",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 18,
+       "rider": "59d0a2fb-df55-46d8-a57f-bf81ca690a5b",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 19,
+       "rider": "5c8bbc11-a1aa-4f55-b9dc-f2e8b7c33ceb",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 20,
+       "rider": "ae003ef7-aff4-4903-ab7a-0c40997baa0a",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 21,
+       "rider": "3157c88e-bd94-4851-9fe2-1d7458f65a1e",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 22,
+       "rider": "68c041fe-d813-48ae-9876-b451d89924ec",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 23,
+       "rider": "4023fb10-6a03-420b-a9e1-9926066ab154",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": 24,
+       "rider": "e983f2ed-5bac-4ae7-9b54-3ab5fc357500",
+       "pts": 0,
+       "status": "INSTND"
+      },
+      {
+       "pos": null,
+       "rider": "31d9d715-4dbc-4d12-8a21-f2daffb62d7f",
+       "pts": 0,
+       "status": "OUTSTND"
+      },
+      {
+       "pos": null,
+       "rider": "553b174a-1c06-4bed-82b4-efcc035f1a4e",
+       "pts": 0,
+       "status": "NOTONRESTARTGRID"
+      },
+      {
+       "pos": null,
+       "rider": "96edcb06-aa78-4976-9559-62186821e48e",
+       "pts": 0,
+       "status": "NOTONRESTARTGRID"
+      },
+      {
+       "pos": null,
+       "rider": "48af1e5c-5376-43ad-9b26-9a860bef4e1d",
+       "pts": 0,
+       "status": "NOTONRESTARTGRID"
       }
      ]
     },
