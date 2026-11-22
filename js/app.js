@@ -487,7 +487,13 @@ document.addEventListener("click", async (e) => {
     case "select-player":
       state.player = el.dataset.id;
       setPref("player", state.player);
-      render();
+      {
+        // Behåll listans rullläge när sidan ritas om.
+        const top = document.querySelector(".player-list ol")?.scrollTop ?? 0;
+        render();
+        const ol = document.querySelector(".player-list ol");
+        if (ol) ol.scrollTop = top;
+      }
       if (window.matchMedia("(max-width: 860px)").matches)
         document.querySelector(".player-card")?.scrollIntoView({ behavior: "smooth", block: "start" });
       break;

@@ -22,10 +22,12 @@ export function renderPicks(ctx) {
     .join("");
 
   return `<div class="picks-layout">
-    <aside class="card player-list">
-      <h2>${t("player")}</h2>
-      <ol>${list}</ol>
-    </aside>
+    <div class="player-list-wrap">
+      <aside class="card player-list">
+        <h2>${t("player")}</h2>
+        <ol>${list}</ol>
+      </aside>
+    </div>
     ${playerCard(ctx, selected, meta.get(selected.id))}
   </div>`;
 }
