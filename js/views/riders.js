@@ -171,7 +171,7 @@ export function renderRiderDialog(ctx, cls, key) {
     ${careerSection(r.career)}
     <h3 class="season-head">${t("thisSeason", { year: ctx.year })}</h3>
     <div class="stat-row">
-      <div class="stat"><b>${pos ?? "–"}</b><span>${t("champPos")}</span></div>
+      <div class="stat"><b>${pos ?? "–"}</b><span>${t("seasonPosition")}</span></div>
       <div class="stat"><b>${fmt(stats.points)}</b><span>${t("points")}</span></div>
       <div class="stat"><b>${wins}</b><span>${t("wins")}</span></div>
       <div class="stat"><b>${podiums}</b><span>${t("podiums")}</span></div>
