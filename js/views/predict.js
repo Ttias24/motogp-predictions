@@ -2,7 +2,8 @@
 import { t, fmtDate } from "../i18n.js";
 import { CLASSES, normalizeName } from "../scoring.js";
 import { esc, empty } from "../ui.js";
-import { classForm, riderDatalists } from "./edit.js";
+import { renderPicker } from "./picker.js";
+import { isPublished } from "../entrylist.js";
 import { isConfigured } from "../remote.js";
 
 export const emptyClassDraft = () => ({ top5: ["", "", "", "", ""], backup: "", bowling: "", backupActivated: null });
@@ -97,41 +98,29 @@ export function renderPredict(ctx) {
 
   const e = st.entry;
   const now = Date.now() + (st.offset ?? 0);
-  const opens = Date.parse(e.opensAt);
-  const closes = Date.parse(e.closesAt);
-  const head = `<div class="card-head"><h2>${e.name ? t("predictHello", { name: esc(e.name) }) : t("predictHelloNoName")}</h2><span class="muted">${t("season")} ${e.season}</span></div>${
-    e.approved === false ? `<p class="warn">${t("joinPending")}</p>` : ""
-  }`;
+  const opens = e.opensAt ? Date.parse(e.opensAt) : null;
+  const closes = e.closesAt ? Date.parse(e.closesAt) : null;
+  const pending = e.approved === false ? `<div class="banner warn">${t("joinPending")}</div>` : "";
+  const head = `<div class="card-head"><h2>${e.name ? t("predictHello", { name: esc(e.name) }) : t("predictHelloNoName")}</h2><span class="muted">${t("season")} ${e.season}</span></div>`;
 
-  if (now < opens) {
-    return `<section class="card">${head}<p>${t("predictOpensAt", { date: fmtDate(e.opensAt, DATE_TIME) })}</p></section>`;
-  }
+  // Inte öppet än: väntar på startlistan eller på öppningsdatumet.
+  if (opens == null) return `<section class="card">${head}<p>${t("predictWaitList", { year: e.season })}</p></section>${pending}`;
+  if (now < opens) return `<section class="card">${head}<p>${t("predictOpensAt", { date: fmtDate(e.opensAt, DATE_TIME) })}</p></section>${pending}`;
 
-  if (now < closes) {
-    const status = e.picks
-      ? t("predictSaved", { date: fmtDate(e.updatedAt, DATE_TIME) })
-      : `<b>${t("predictNotSaved")}</b>`;
-    return `<section class="card">
-        ${head}
-        <p>${t("predictDeadline", { date: fmtDate(e.closesAt, DATE_TIME), left: countdown(closes - now) })}</p>
-        <p class="muted">${status}</p>
-        <details class="rules"><summary>${t("rulesTitle")}</summary><ul>${t("rules").map((r) => `<li>${r}</li>`).join("")}</ul></details>
-      </section>
-      <section class="card">
-        <label class="name-field">${t("displayName")}
-          <input type="text" maxlength="40" value="${esc(st.name ?? "")}" data-root="predict-name" data-path="name" placeholder="${esc(
-            t("joinNamePlaceholder")
-          )}" autocomplete="nickname">
-          <span class="muted small">${t("displayNameHelp")}</span>
-        </label>
-        <div class="edit-classes">${CLASSES.map((cls) => classForm({ cls, c: st.draft[cls], base: cls, root: "predict" })).join("")}</div>
-        <div class="edit-actions" style="margin-top:14px">
-          <span class="spacer"></span>
-          <button type="button" class="btn primary" data-action="predict-save" ${st.busy ? "disabled" : ""}>${t(e.picks ? "predictUpdate" : "predictSubmit")}</button>
-        </div>
-        ${message(st)}
-      </section>
-      ${riderDatalists(ctx)}`;
+  // Öppet: tipsväljaren med förarna från startlistan.
+  if (closes == null || now < closes) {
+    if (!st.results || !st.pk) return empty("…");
+    if (!isPublished(st.results)) return `<section class="card">${head}<p>${t("predictWaitList", { year: e.season })}</p></section>`;
+    return pending + renderPicker({
+      pk: st.pk,
+      results: st.results,
+      year: e.season,
+      name: st.name ?? "",
+      entry: e,
+      busy: st.busy,
+      msg: message(st),
+      closesAt: e.closesAt,
+    });
   }
 
   // Stängt: visa tipsen och möjligheten att aktivera backup.

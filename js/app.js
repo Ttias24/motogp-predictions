@@ -9,6 +9,7 @@ import { renderChampionship } from "./views/championship.js";
 import { renderEdit, normalizePicks, cleanPicks, emptyClassPick } from "./views/edit.js";
 import { renderHistory, seasonNotStarted } from "./views/history.js";
 import { renderPredict, renderJoin, draftFromPicks, errorText } from "./views/predict.js";
+import { initPicker, newPickerState, picksFromSlots } from "./views/picker.js";
 import { renderAdmin, toLocalInput, fromLocalInput, suggestWindow, inviteUrl } from "./views/admin.js";
 import * as remote from "./remote.js";
 
@@ -335,7 +336,10 @@ async function ensurePredict(param) {
   state.predict = { token, loading: Boolean(token) };
   if (!token) return;
   try {
-    setPredictEntry(await remote.myEntry(token));
+    const entry = await remote.myEntry(token);
+    // Startlistan och förarinfo för den säsong spelaren tippar på (kan vara nästa år).
+    const results = entry.season === state.year ? state.results : await loadResults(entry.season);
+    setPredictEntry(entry, { results });
   } catch (err) {
     state.predict = { token, error: err.code ?? err.message };
   }
@@ -343,6 +347,7 @@ async function ensurePredict(param) {
 }
 
 function setPredictEntry(entry, keep = {}) {
+  const results = keep.results ?? state.predict?.results ?? null;
   state.predict = {
     token: state.predict?.token ?? storedToken(),
     entry,
@@ -350,9 +355,39 @@ function setPredictEntry(entry, keep = {}) {
     offset: Date.parse(entry.now) - Date.now(),
     draft: draftFromPicks(entry.picks),
     name: entry.name ?? "",
+    results,
+    pk: results ? newPickerState(entry, results) : null,
     ...keep,
   };
 }
+
+/** Lämnar in tipsen från tipsväljaren (efter "Är du säker?"). */
+async function submitPicker() {
+  const p = state.predict;
+  p.busy = true;
+  p.msg = "";
+  render();
+  try {
+    const entry = await remote.saveMyPicks(p.token, picksFromSlots(p.pk.slots, p.results), p.name);
+    setPredictEntry(entry, { msg: t("predictSavedOk"), msgType: "ok" });
+    if (state.dbSeason && entry.season === state.year) await refreshDbSeason();
+  } catch (err) {
+    p.busy = false;
+    p.msg = errorText(err.code ?? err.message);
+    p.msgType = "error";
+  }
+  render();
+  document.querySelector(".pk-submit, .pk-review-wrap")?.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
+initPicker({
+  get: () => (currentView() === "predict" ? state.predict : null),
+  render: () => render(),
+  submit: () => submitPicker(),
+  setName: (v) => {
+    if (state.predict) state.predict.name = v;
+  },
+});
 
 function ensureJoin(code) {
   if (state.join?.code === code) return;
@@ -377,7 +412,7 @@ async function ensureAdmin() {
       }
     }
   } catch (err) {
-    a.msg = errorText(err.code ?? err.message);
+    a.msg = err.code ? errorText(err.code) : err.message;
     a.msgType = "error";
   }
   a.loading = false;
@@ -396,8 +431,10 @@ async function loadAdminYear(year) {
   await reloadAdminPlayers();
   const sug = suggestWindow(year, yearResults);
   a.seasonDraft = {
-    opens: season ? toLocalInput(season.opens_at) : sug.opens,
-    closes: season ? toLocalInput(season.closes_at) : sug.closes,
+    opensAuto: season ? season.opens_auto !== false : true,
+    closesAuto: season ? season.closes_auto !== false : true,
+    opens: season?.opens_at ? toLocalInput(season.opens_at) : sug.opens,
+    closes: season?.closes_at ? toLocalInput(season.closes_at) : sug.closes,
   };
 }
 
@@ -420,7 +457,7 @@ async function adminDo(fn, okMsg) {
       a.msgType = "ok";
     }
   } catch (err) {
-    a.msg = errorText(err.code ?? err.message);
+    a.msg = err.code ? errorText(err.code) : err.message;
     a.msgType = "error";
   }
   a.busy = false;
@@ -578,8 +615,18 @@ document.addEventListener("click", async (e) => {
     }
     case "admin-save-season":
       await adminDo(async (a) => {
-        const fields = { opens_at: fromLocalInput(a.seasonDraft.opens), closes_at: fromLocalInput(a.seasonDraft.closes) };
-        if (!fields.opens_at || !fields.closes_at) throw new Error("Fyll i båda datumen.");
+        // Automatiska datum följer reglerna (startlistan/kalendern); manuella tas från formuläret.
+        const sd = a.seasonDraft;
+        const auto = suggestWindow(a.year, a.yearResults).auto;
+        const fields = {
+          opens_auto: sd.opensAuto,
+          closes_auto: sd.closesAuto,
+          opens_at: sd.opensAuto ? auto.opens : fromLocalInput(sd.opens),
+          closes_at: sd.closesAuto ? auto.closes : fromLocalInput(sd.closes),
+        };
+        if (!sd.opensAuto && !fields.opens_at) throw new Error(t("adminNeedOpens"));
+        if (!sd.closesAuto && !fields.closes_at) throw new Error(t("adminNeedCloses"));
+        if (fields.opens_at && fields.closes_at && fields.closes_at <= fields.opens_at) throw new Error(t("adminDatesOrder"));
         a.season = a.season ? await remote.updateSeason(a.year, fields) : await remote.createSeason({ year: a.year, ...fields });
         await reloadAdminPlayers();
         if (state.dbSeason && a.year === state.year) await refreshDbSeason();
@@ -660,6 +707,14 @@ document.addEventListener("change", async (e) => {
   }
   if (act === "admin-year") {
     await adminDo((a) => loadAdminYear(Number(el.value)));
+    return;
+  }
+  if (act === "admin-auto") {
+    const sd = state.admin.seasonDraft;
+    const field = el.dataset.field;
+    sd[field + "Auto"] = el.checked;
+    if (!el.checked && !sd[field]) sd[field] = suggestWindow(state.admin.year, state.admin.yearResults)[field];
+    render();
     return;
   }
   if (act === "admin-join-approval") {

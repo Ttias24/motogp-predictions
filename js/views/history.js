@@ -46,12 +46,14 @@ export function seasonNotStarted(ctx) {
   const w = ctx.state.window;
   // Databassäsong: visa tipsperioden och vilka som har lämnat tips.
   if (ctx.state.dbSeason && w) {
-    const open = Date.parse(w.now) < Date.parse(w.closesAt);
+    const now = Date.parse(w.now);
+    const notOpenYet = !w.opensAt || now < Date.parse(w.opensAt);
+    const open = !notOpenYet && (!w.closesAt || now < Date.parse(w.closesAt));
     const players = w.players ?? [];
     const done = players.filter((p) => p.submitted).length;
     return `<section class="card">
       <h2>${t("seasonNotStarted", { year: ctx.year })}</h2>
-      ${open ? `<p>${t("windowOpen", { year: ctx.year, date: fmtDate(w.closesAt, { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) })}</p>` : `<p>${t("waitingForRace")}</p>`}
+      ${notOpenYet ? `<p>${t("predictWaitList", { year: ctx.year })}</p>` : open ? `<p>${w.closesAt ? t("windowOpen", { year: ctx.year, date: fmtDate(w.closesAt, { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) }) : t("windowOpenNoDeadline", { year: ctx.year })}</p>` : `<p>${t("waitingForRace")}</p>`}
       ${
         players.length
           ? `<p class="muted">${t("windowCount", { n: done, m: players.length })}</p>

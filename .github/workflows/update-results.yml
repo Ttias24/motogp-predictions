@@ -35,6 +35,18 @@ jobs:
       - name: Hämta resultat
         if: github.event_name != 'push'
         run: node scripts/fetch-results.mjs
+      - name: Hämta nästa säsongs startlista (om MotoGP publicerat den)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: node scripts/fetch-results.mjs --year $(( $(node -p "require('./data/seasons.json').current") + 1 ))
+      - name: Synka tipsperioden till databasen
+        # Öppnar när startlistan publicerats, stänger 23:59 dagen före första tävlingshelgen.
+        # Datum som admin ändrat för hand lämnas orörda.
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          SUPABASE_SYNC_KEY: ${{ secrets.SUPABASE_SYNC_KEY }}
+        run: node scripts/sync-season.mjs
       - name: Säkerhetskopiera tips från databasen
         # Sparar tipsen i data/picks-<år>.json när tipsperioden har stängt (då är de publika).
         if: github.event_name != 'push'

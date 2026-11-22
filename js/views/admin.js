@@ -6,6 +6,7 @@ import { esc, empty } from "../ui.js";
 import { isConfigured } from "../remote.js";
 import { classForm, riderDatalists, roundOptionsFor } from "./edit.js";
 import { errorText } from "./predict.js";
+import { autoWindow, isPublished, offList, entryRiderMap } from "../entrylist.js";
 
 const pad = (n) => String(n).padStart(2, "0");
 /** ISO-tid → värde för <input type="datetime-local"> (lokal tid). */
@@ -16,16 +17,10 @@ export function toLocalInput(iso) {
 }
 export const fromLocalInput = (v) => (v ? new Date(v).toISOString() : null);
 
-/** Förslag: tipsen öppnar 1 januari och stänger 23:59 dagen före första tävlingshelgen. */
+/** Automatiska datum (se js/entrylist.js) som värden för formuläret. */
 export function suggestWindow(year, yearResults) {
-  const first = yearResults?.rounds?.[0];
-  let closes = "";
-  if (first?.dateStart) {
-    const d = new Date(String(first.dateStart).slice(0, 10) + "T00:00:00");
-    d.setDate(d.getDate() - 1);
-    closes = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T23:59`;
-  }
-  return { opens: `${year}-01-01T00:00`, closes, firstRound: first };
+  const a = autoWindow(yearResults);
+  return { opens: toLocalInput(a.opens), closes: toLocalInput(a.closes), firstRound: a.firstRound, auto: a };
 }
 
 export const inviteUrl = (token) => `${location.origin}${location.pathname}#/tippa/${token}`;
@@ -94,16 +89,15 @@ export function renderAdmin(ctx) {
       </div>
     </div>
     ${st.season ? "" : `<p class="warn">${t("adminSeasonMissing")}</p>`}
-    <div class="edit-scoring">
-      <label>${t("adminOpens")} <input type="datetime-local" data-root="admin" data-path="seasonDraft.opens" value="${esc(sd.opens)}"></label>
-      <label>${t("adminCloses")} <input type="datetime-local" data-root="admin" data-path="seasonDraft.closes" value="${esc(sd.closes)}"></label>
+    ${entryStatus(year, st.yearResults)}
+    <div class="window-grid">
+      ${dateRow("opens", t("adminOpens"), sd, sug.auto.opens, t("adminOpensRule"), t("adminWaitList"))}
+      ${dateRow("closes", t("adminCloses"), sd, sug.auto.closes, t("adminClosesRule"), t("adminWaitCalendar"))}
+    </div>
+    <div class="edit-actions" style="margin-top:10px">
+      <span class="muted small">${t("adminManualNote")}</span><span class="spacer"></span>
       <button type="button" class="btn primary" data-action="admin-save-season" ${st.busy ? "disabled" : ""}>${t(st.season ? "save" : "adminCreateSeason")}</button>
     </div>
-    <p class="muted small">${
-      sug.firstRound
-        ? t("adminSuggest", { round: esc(sug.firstRound.name ?? sug.firstRound.code), date: fmtDate(sug.firstRound.dateStart, { day: "numeric", month: "long" }) })
-        : t("adminNoCalendar")
-    }${sug.closes && sug.closes !== sd.closes ? ` <button type="button" class="link" data-action="admin-use-suggestion">${t("adminUseSuggestion")}</button>` : ""}</p>
     ${st.season ? joinSection(st) : ""}
   </section>`;
 
@@ -115,7 +109,7 @@ export function renderAdmin(ctx) {
           <input type="text" class="inline-input" value="${esc(p.name ?? "")}" placeholder="${esc(t("adminNoNameYet"))}" data-action="admin-rename" data-id="${esc(p.id)}" aria-label="${esc(t("name"))}">
           ${p.label ? `<div class="muted small">${esc(p.label)}</div>` : ""}
         </td>
-        <td>${p.picks ? `✓ <span class="muted small">${fmtDate(p.picks.updated_at, { day: "numeric", month: "short" })}</span>` : `<span class="muted">–</span>`}</td>
+        <td>${p.picks ? `✓ <span class="muted small">${fmtDate(p.picks.updated_at, { day: "numeric", month: "short" })}</span>` : `<span class="muted">–</span>`}${offWarning(p.picks?.data, st.yearResults)}</td>
         <td class="actions">
           ${p.approved === false ? `<button type="button" class="btn primary" data-action="admin-approve" data-id="${esc(p.id)}">${t("adminApprove")}</button>` : ""}
           ${
@@ -160,5 +154,41 @@ export function renderAdmin(ctx) {
 
   return `${seasonCard}${playersCard}${editCard}
     <p class="muted small"><a href="#/edit">${t("adminFileEditor")}</a></p>
-    ${riderDatalists(ctx)}`;
+    ${riderDatalists(isPublished(st.yearResults) ? { ...ctx, riderSuggestions: entryRiderMap(st.yearResults) } : ctx)}`;
+}
+
+/** Startlistans status för året. */
+function entryStatus(year, results) {
+  const el = results?.entryList;
+  const body = isPublished(results)
+    ? t("adminEntryPublished", {
+        date: fmtDate(el.firstPublished ?? el.changed, { day: "numeric", month: "long" }),
+        a: el.MotoGP?.length ?? 0,
+        b: el.Moto2?.length ?? 0,
+        c: el.Moto3?.length ?? 0,
+      })
+    : t("adminEntryMissing");
+  return `<p class="entry-status"><b>${t("adminEntryList", { year })}:</b> ${body}</p>`;
+}
+
+/** En rad för öppnings- eller stängningsdatum: automatiskt eller satt för hand. */
+function dateRow(field, label, sd, autoIso, rule, waiting) {
+  const isAuto = sd[field + "Auto"];
+  const value = isAuto
+    ? `<span class="auto-value">${autoIso ? fmtDate(autoIso, { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }) : `<span class="muted">${waiting}</span>`}</span>`
+    : `<input type="datetime-local" data-root="admin" data-path="seasonDraft.${field}" value="${esc(sd[field])}" aria-label="${esc(label)}">`;
+  return `<div class="window-row">
+    <span class="window-label">${label}</span>
+    ${value}
+    <label class="edit-check small"><input type="checkbox" data-action="admin-auto" data-field="${field}" ${isAuto ? "checked" : ""}> ${t("adminAuto")}</label>
+    <span class="muted small window-rule">${rule}</span>
+  </div>`;
+}
+
+/** Varning om en spelare har tippat förare som inte finns på startlistan. */
+function offWarning(picks, results) {
+  const off = offList(picks, results);
+  if (!off.length) return "";
+  const names = off.map((o) => `${o.name} (${o.cls})`).join(", ");
+  return `<div class="warn small" title="${esc(names)}">⚠ ${t("adminOffList", { n: off.length })}: ${esc(names)}</div>`;
 }

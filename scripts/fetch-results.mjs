@@ -190,8 +190,12 @@ async function addRiderProfiles(riders, year) {
         .sort((a, b) => b.season - a.season)[0]?.pictures?.number;
       r.numberArt = art ?? null;
       r.legacyId = d.legacy_id ?? r.legacyId ?? null;
-      r.teamColor = step?.team?.color ?? null;
-      r.teamTextColor = step?.team?.text_color ?? null;
+      r.teamColor = step?.team?.color ?? r.teamColor ?? null;
+      r.teamTextColor = step?.team?.text_color ?? r.teamTextColor ?? null;
+      if (step?.season === year) {
+        r.number = step.number ?? r.number;
+        r.team = step.sponsored_team || step.team?.name || r.team;
+      }
       r.profileFetched = new Date().toISOString().slice(0, 10);
       ok++;
     } catch (err) {
@@ -199,6 +203,115 @@ async function addRiderProfiles(riders, year) {
     }
   });
   if (todo.length) console.log(`  Förarprofiler: ${ok}/${todo.length} uppdaterade.`);
+}
+
+// ---- Startlista (officiell "entry list") ----
+// Kategori-id:n för /teams skiljer sig från resultat-API:ts. Hämtas från förarlistan, med
+// kända värden som reserv.
+const TEAM_CATEGORY_IDS = {
+  MotoGP: "737ab122-76e1-4081-bedb-334caaa18c70",
+  Moto2: "ea854a67-73a4-4a28-ac77-d67b3b2a530a",
+  Moto3: "1ab203aa-e292-4842-8bed-971911357af1",
+};
+async function teamCategoryIds() {
+  const ids = { ...TEAM_CATEGORY_IDS };
+  try {
+    for (const r of await get(`${API_ROOT}/riders`)) {
+      const c = r.current_career_step?.category;
+      if (c?.id && CLASSES.includes(className(c.name))) ids[className(c.name)] = c.id;
+    }
+  } catch {}
+  return ids;
+}
+
+/**
+ * Hämtar de ordinarie förarna per klass för säsongen (inte testförare, ersättare eller wildcards).
+ * Förarna läggs in i riders-kartan så att namn, nummer, team och färger finns redan före första racet.
+ * Returnerar { MotoGP: [förar-id, …], …, published, changed } – "changed" = datum då listan senast ändrades.
+ */
+async function fetchEntryList(year, riders, previousList) {
+  const ids = await teamCategoryIds();
+  const list = { published: false };
+  for (const cls of CLASSES) {
+    let teams = [];
+    try {
+      teams = await get(`${API_ROOT}/teams?categoryUuid=${ids[cls]}&seasonYear=${year}`);
+    } catch (err) {
+      console.warn(`  Kunde inte hämta startlistan för ${cls}: ${err.message}`);
+      return previousList ?? list; // behåll förra versionen hellre än att tömma listan
+    }
+    const keys = [];
+    for (const t of teams ?? []) {
+      for (const r of t.riders ?? []) {
+        const step = r.current_career_step ?? {};
+        if (step.type && step.type !== "Official") continue;
+        const key = r.id;
+        const name = `${r.name ?? ""} ${r.surname ?? ""}`.replace(/\s+/g, " ").trim();
+        const old = riders[cls][key] ?? {};
+        riders[cls][key] = {
+          ...old,
+          name: old.name ?? name,
+          number: step.season === year && step.number != null ? step.number : old.number ?? step.number ?? null,
+          country: r.country?.iso ?? old.country ?? "",
+          team: (step.season === year && step.sponsored_team) || t.name || old.team || "",
+          teamColor: t.color ?? old.teamColor ?? null,
+          teamTextColor: t.text_color ?? old.teamTextColor ?? null,
+          legacyId: r.legacy_id ?? old.legacyId ?? null,
+        };
+        if (!keys.includes(key)) keys.push(key);
+      }
+    }
+    list[cls] = keys;
+    if (keys.length) list.published = true;
+  }
+  const same = previousList && CLASSES.every((c) => JSON.stringify(previousList[c] ?? []) === JSON.stringify(list[c]));
+  list.changed = same ? previousList.changed : new Date().toISOString().slice(0, 10);
+  // Första gången listan sågs publicerad – då öppnar tipsperioden (om den inte ändrats för hand).
+  list.firstPublished = previousList?.firstPublished ?? (list.published ? new Date().toISOString() : null);
+  console.log(`  Startlista ${year}: ${CLASSES.map((c) => `${c} ${list[c].length}`).join(", ")}${same ? "" : " (ändrad)"}`);
+  return list;
+}
+
+/**
+ * Förarnas placering förra säsongen (och i vilken klass), för förarkorten i tipsväljaren.
+ * Hämtas ur förra årets resultatfil, annars ur förarens statistik hos MotoGP. Har föraren
+ * inte kört i MotoGP/Moto2/Moto3 förra året lämnas det tomt.
+ */
+async function addPreviousSeason(year, riders, entryList) {
+  const prevYear = year - 1;
+  const prevFile = join(ROOT, "data", `results-${prevYear}.json`);
+  let fromFile = null;
+  if (existsSync(prevFile)) {
+    try {
+      const prev = JSON.parse(await readFile(prevFile, "utf8"));
+      fromFile = new Map();
+      for (const cls of CLASSES)
+        for (const s of prev.standings?.[cls] ?? []) if (s.pos && !fromFile.has(s.rider)) fromFile.set(s.rider, { cls, pos: s.pos });
+    } catch {
+      fromFile = null;
+    }
+  }
+  const todo = [];
+  for (const cls of CLASSES)
+    for (const key of entryList?.[cls] ?? []) {
+      const r = riders[cls][key];
+      if (!r) continue;
+      if (fromFile) {
+        r.prev = fromFile.get(key) ?? null;
+        r.prevSeason = prevYear;
+      } else if (r.prevSeason !== prevYear && r.legacyId) todo.push(r);
+    }
+  await pool(todo, 4, async (r) => {
+    try {
+      const stats = await get(`${API_ROOT}/riders/${r.legacyId}/statistics`);
+      const rows = (stats ?? []).filter((s) => String(s.season) === String(prevYear) && s.position > 0);
+      rows.sort((a, b) => a.position - b.position);
+      r.prev = rows[0] ? { cls: className(rows[0].category), pos: rows[0].position } : null;
+      r.prevSeason = prevYear;
+    } catch (err) {
+      console.warn(`  Kunde inte hämta ${prevYear} för ${r.name}: ${err.message}`);
+    }
+  });
 }
 
 async function main() {
@@ -214,18 +327,8 @@ async function main() {
   const season = wanted ? seasons.find((s) => s.year === wanted) : seasons.find((s) => s.current);
   const year = season?.year ?? wanted;
   const outFile = join(ROOT, "data", `results-${year}.json`);
-  if (!season) {
-    // Det nya året finns inte i API:t ännu (vanligt i januari). Skapa en tom fil och vänta.
-    if (!existsSync(outFile)) {
-      await mkdir(dirname(outFile), { recursive: true });
-      const empty = { season: year, updatedAt: null, source: API, classes: CLASSES, rounds: [], riders: {}, standings: {} };
-      await writeFile(outFile, JSON.stringify(empty, null, 1) + "\n", "utf8");
-      console.log(`Säsong ${year} finns inte i API:t ännu – skapade tom ${outFile}.`);
-    } else {
-      console.log(`Säsong ${year} finns inte i API:t ännu.`);
-    }
-    return;
-  }
+  // Finns året inte i resultat-API:t ännu (vanligt i januari) hämtas bara startlistan.
+  if (!season) console.log(`Säsong ${year} finns inte i resultat-API:t ännu – hämtar startlistan.`);
 
   let previous = null;
   if (!FULL && existsSync(outFile)) {
@@ -236,9 +339,9 @@ async function main() {
     }
   }
 
-  const events = (await get(`/events?seasonUuid=${season.id}`))
-    .filter((e) => !e.test)
-    .sort((a, b) => a.date_start.localeCompare(b.date_start));
+  const events = season
+    ? (await get(`/events?seasonUuid=${season.id}`)).filter((e) => !e.test).sort((a, b) => a.date_start.localeCompare(b.date_start))
+    : [];
 
   const riders = Object.fromEntries(CLASSES.map((c) => [c, {}]));
   // Behåll förare från tidigare körning (t.ex. skadade förare som inte kört på länge).
@@ -339,8 +442,10 @@ async function main() {
   }
 
   repairMissingPoints(rounds, standings);
+  const entryList = await fetchEntryList(year, riders, previous?.entryList);
   await addRiderProfiles(riders, year);
   await addCareerStats(riders);
+  await addPreviousSeason(year, riders, entryList);
 
   const output = {
     season: year,
@@ -350,9 +455,15 @@ async function main() {
     rounds,
     riders,
     standings,
+    entryList,
   };
 
   await mkdir(dirname(outFile), { recursive: true });
+  // Ett år som varken finns i resultat-API:t eller har en publicerad startlista sparas inte.
+  if (!season && !entryList.published && !previous) {
+    console.log(`Säsong ${year}: varken kalender eller startlista publicerad än.`);
+    return;
+  }
   const json = JSON.stringify(output, null, 1);
   // Skriv bara om något annat än tidsstämpeln har ändrats (färre onödiga commits).
   if (previous) {
