@@ -7,7 +7,8 @@ import { fileURLToPath } from "node:url";
 import { scoreSeason, CLASSES } from "../js/scoring.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const year = 2026;
+const seasonsCfg = JSON.parse(await readFile(join(ROOT, "data", "seasons.json"), "utf8"));
+const year = process.argv.includes("--excel") ? 2026 : seasonsCfg.current;
 const picks = JSON.parse(await readFile(join(ROOT, "data", `picks-${year}.json`), "utf8"));
 const results = JSON.parse(await readFile(join(ROOT, "data", `results-${year}.json`), "utf8"));
 

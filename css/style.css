@@ -255,6 +255,12 @@ table.grid .sticky { position: sticky; background: var(--surface); z-index: 1; }
 table.grid .c1 { left: 0; min-width: 76px; max-width: 110px; white-space: normal; padding-left: 16px; }
 table.grid .c2 { left: 76px; min-width: 140px; white-space: nowrap; font-weight: 600; }
 table.grid .c3 { left: 216px; min-width: 54px; padding-right: 10px; box-shadow: 1px 0 0 var(--line); }
+/* VM-tabell: plats + förare fasta till vänster, poäng fast till höger */
+table.vm-grid .s-rank { left: 0; min-width: 46px; padding-left: 16px; }
+table.vm-grid .s-rider { left: 46px; min-width: 200px; white-space: nowrap; font-weight: 600; box-shadow: 1px 0 0 var(--line); }
+table.vm-grid .s-pts { right: 0; min-width: 60px; padding: 4px 10px; box-shadow: -1px 0 0 var(--line); }
+table.vm-grid .team { color: var(--muted); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 4px 10px; }
+table.vm-grid .picked-by { min-width: 130px; padding: 4px 16px 4px 10px; white-space: nowrap; }
 td.rd { text-align: center; }
 td.rd .res { display: block; }
 td.rd.two .res + .res { margin-top: 2px; }
@@ -321,6 +327,9 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
   table.grid .c1 { position: static; padding-left: 12px; min-width: 64px; }
   table.grid .c2 { left: 0; min-width: 0; max-width: 120px; white-space: normal; padding-left: 8px; box-shadow: 1px 0 0 var(--line); z-index: 2; }
   table.grid .c3 { position: static; box-shadow: none; }
+  table.vm-grid .s-rank { position: static; padding-left: 12px; min-width: 36px; }
+  table.vm-grid .s-rider { left: 0; min-width: 0; max-width: 130px; white-space: normal; }
+  table.vm-grid .s-rider .num-badge, table.vm-grid .team { display: none; }
   .stat-row { grid-template-columns: repeat(3, 1fr); }
   .brand { font-size: 1.15rem; }
 }

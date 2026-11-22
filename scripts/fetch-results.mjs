@@ -116,11 +116,30 @@ function repairMissingPoints(rounds, standings) {
 }
 
 async function main() {
+  // Vilken säsong som hämtas styrs av data/seasons.json ("current"), inte av API:t – så att
+  // sidan byter säsong 1 januari även om API:t ännu inte lagt upp det nya året.
+  let wanted = yearArg;
+  if (!wanted) {
+    try {
+      wanted = JSON.parse(await readFile(join(ROOT, "data", "seasons.json"), "utf8")).current;
+    } catch {}
+  }
   const seasons = await get("/seasons");
-  const season = yearArg ? seasons.find((s) => s.year === yearArg) : seasons.find((s) => s.current);
-  if (!season) throw new Error(`Hittar ingen säsong ${yearArg ?? "(current)"}`);
-  const year = season.year;
+  const season = wanted ? seasons.find((s) => s.year === wanted) : seasons.find((s) => s.current);
+  const year = season?.year ?? wanted;
   const outFile = join(ROOT, "data", `results-${year}.json`);
+  if (!season) {
+    // Det nya året finns inte i API:t ännu (vanligt i januari). Skapa en tom fil och vänta.
+    if (!existsSync(outFile)) {
+      await mkdir(dirname(outFile), { recursive: true });
+      const empty = { season: year, updatedAt: null, source: API, classes: CLASSES, rounds: [], riders: {}, standings: {} };
+      await writeFile(outFile, JSON.stringify(empty, null, 1) + "\n", "utf8");
+      console.log(`Säsong ${year} finns inte i API:t ännu – skapade tom ${outFile}.`);
+    } else {
+      console.log(`Säsong ${year} finns inte i API:t ännu.`);
+    }
+    return;
+  }
 
   let previous = null;
   if (!FULL && existsSync(outFile)) {

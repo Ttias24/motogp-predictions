@@ -1,11 +1,12 @@
 # Hämtar nya resultat från MotoGP:s API och publicerar sidan på GitHub Pages.
-# Körs automatiskt söndagar, måndagar och torsdagar, vid varje push
+# Körs automatiskt söndagar, måndagar och torsdagar, 1 januari (säsongsbyte), vid varje push
 # och manuellt via "Run workflow" under fliken Actions.
 name: Uppdatera resultat och publicera
 
 on:
   schedule:
     - cron: "20 */3 * * 0,1,4" # var 3:e timme sön, mån och tors (UTC)
+    - cron: "5 0 1 1 *" # 1 januari: ny säsong, förra året flyttas till Historik
   push:
     branches: [main]
   workflow_dispatch:
@@ -14,6 +15,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
@@ -27,12 +29,15 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
+      - name: Säsongsbyte (bara när ett nytt år har börjat)
+        if: github.event_name != 'push'
+        run: node scripts/rollover.mjs
       - name: Hämta resultat
         if: github.event_name != 'push'
         run: node scripts/fetch-results.mjs
       - name: Kontrollera poängmotorn
         run: node scripts/check-scores.mjs
-      - name: Spara ändrade resultat
+      - name: Spara ändringar
         if: github.event_name != 'push'
         run: |
           if [ -n "$(git status --porcelain data)" ]; then
@@ -40,10 +45,19 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
             git commit -m "Nya resultat $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase --autostash
             git push
           else
             echo "Inga ändringar."
           fi
+      - name: Håll schemat aktivt
+        # GitHub pausar schemalagda körningar efter 60 dagar utan aktivitet (t.ex. över vintern).
+        # Att "aktivera" arbetsflödet nollställer den räknaren.
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update-results.yml/enable"
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

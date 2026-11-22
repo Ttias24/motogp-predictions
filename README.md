@@ -13,6 +13,7 @@ läggas till på hemskärmen som en app.
 | **Förare** | Resultat per runda för alla tippade förare (race/sprint), poäng eller placering; klicka på en förare för statistik |
 | **VM-tabell** | Mästerskapsställningen med vem som tippat vilken förare |
 | **Redigera** | Lägg till spelare, ändra tips, aktivera backup, ladda ner ny picks-fil |
+| **Historik** | Tidigare säsonger med slutställning; klicka för att öppna en hel säsong |
 
 Med "Efter runda" kan du se ställningen som den var efter en tidigare runda.
 
@@ -34,7 +35,8 @@ js/scoring.js                  Poängmotorn (används både av sidan och av skri
 js/data.js                     Datakällan – det enda stället som behöver bytas vid inloggning/databas
 data/picks-2026.json           Spelarna och deras tips  ← redigeras för hand eller via sidan "Redigera"
 data/results-2026.json         Resultat (skapas av skriptet, redigera inte för hand)
-data/seasons.json              Vilken säsong som visas
+data/seasons.json              Aktuell säsong + lista över alla säsonger (Historik)
+scripts/rollover.mjs           Säsongsbyte 1 januari
 scripts/fetch-results.mjs      Hämtar resultat från API:t
 scripts/check-scores.mjs       Skriver ut ställningen / jämför med Excel (--excel)
 .github/workflows/…            Automatisk uppdatering och publicering på GitHub Pages
@@ -61,12 +63,27 @@ Backup-aktivering i filen ser ut så här (`round` = första rundan backupen rä
 "backupActivated": { "round": 12, "replaces": "Angel Piqueras" }
 ```
 
-## Ny säsong
+## Säsongsbyte (sker automatiskt)
 
-1. Kopiera `data/picks-2026.json` till `data/picks-2027.json` och fyll i de nya tipsen.
-2. Ändra `"current"` i `data/seasons.json` till 2027 och lägg till året i listan.
-3. Skriptet hämtar automatiskt den säsong som är aktuell i API:t.
-   Gamla säsonger går att visa med `?season=2026` i adressen.
+**1 januari** byter GitHub själv till det nya året (`scripts/rollover.mjs`):
+
+* förra säsongen flyttas till sidan **Historik** (slutställningen visas där och hela säsongen går att öppna),
+* `data/picks-<nytt år>.json` skapas med samma spelare men tomma tips,
+* sidan visar "Säsong <år> har inte startat än" tills första racet är kört.
+
+**Det enda du behöver göra (februari, innan första racet):**
+
+1. Öppna sidan → **Redigera**. Fyll i allas tips (förarnamn föreslås medan du skriver), lägg till
+   eller ta bort spelare. Tryck **Använd** för att se resultatet.
+2. Tryck **Ladda ner picks-fil**.
+3. På GitHub: öppna mappen `data` → **Add file → Upload files** → släpp filen (samma namn,
+   t.ex. `picks-2027.json`) → **Commit changes**. Sidan uppdateras inom någon minut.
+
+Resultaten börjar sedan hämtas automatiskt när säsongen har lagts upp i MotoGP:s API.
+
+**Om något har stannat:** gå till fliken **Actions** på GitHub. Står det att arbetsflödet är
+avstängt ("disabled"), tryck **Enable workflow**. Kör sedan **Run workflow** en gång.
+Arbetsflödet håller sig normalt aktivt självt, även över vintern.
 
 ## Publicera (GitHub Pages)
 

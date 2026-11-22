@@ -44,7 +44,9 @@ export function renderEdit(ctx) {
   const { state, results } = ctx;
   const draft = state.editDraft;
   const meta = playerMeta(draft.players);
-  const roundOptions = results.rounds.map((r) => [r.round, `R${r.round} ${r.code}`]);
+  const roundOptions = results.rounds.length
+    ? results.rounds.map((r) => [r.round, `R${r.round} ${r.code}`])
+    : Array.from({ length: 22 }, (_, i) => [i + 1, `R${i + 1}`]);
   const lastDone = ctx.lastRound;
 
   const players = draft.players
@@ -108,8 +110,8 @@ export function renderEdit(ctx) {
 
   const datalists = CLASSES.map(
     (cls) =>
-      `<datalist id="riders-${cls}">${Object.values(results.riders?.[cls] ?? {})
-        .map((r) => r.name)
+      `<datalist id="riders-${cls}">${[...new Set(Object.values(ctx.riderSuggestions?.[cls] ?? {}).map((r) => r.name))]
+
         .sort((a, b) => a.localeCompare(b))
         .map((n) => `<option value="${esc(n)}"></option>`)
         .join("")}</datalist>`

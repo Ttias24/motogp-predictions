@@ -21,7 +21,36 @@ export function rolesFor(ctx, cls, riderName) {
   return roles;
 }
 
-function roleChips(roles) {
+/** Rubriker R1…R22 för resultatrutnätet (delas av Förare och VM-tabell). */
+export function roundHeads(ctx) {
+  return ctx.results.rounds
+    .map(
+      (r) =>
+        `<th class="rd ${r.round > ctx.upto ? "future" : ""}" title="${esc(roundTitle(r))} · ${esc(r.circuit)}">R${r.round}<small>${esc(
+          r.code
+        )}</small></th>`
+    )
+    .join("");
+}
+
+/** En förares resultatceller per runda (race, och sprint under i MotoGP). */
+export function roundCells(ctx, cls, stats, mode) {
+  const types = SESSION_TYPES[cls];
+  return ctx.results.rounds
+    .map((r) => {
+      if (r.round > ctx.upto || !stats) return `<td class="rd future"></td>`;
+      const pr = stats.perRound[r.round];
+      const half = (r.halfPoints ?? []).some((h) => h.startsWith(cls + "/"));
+      const parts = types.map((type) => {
+        const cell = resultCell(pr ? pr[type] : undefined, mode);
+        return `<span class="res ${cell.cls}" title="${esc((type === "SPR" ? t("sprint") : t("race")) + ": " + cell.title)}">${esc(cell.text)}</span>`;
+      });
+      return `<td class="rd ${types.length > 1 ? "two" : ""}${half ? " half" : ""}">${parts.join("")}</td>`;
+    })
+    .join("");
+}
+
+export function roleChips(roles) {
   return roles
     .map((r) =>
       chip(r.m, {
@@ -51,42 +80,21 @@ export function renderRiders(ctx) {
   }
   const pts = ctx.standingsPts[cls];
   const list = [...names.values()].sort((a, b) => (pts.get(b.key) ?? -1) - (pts.get(a.key) ?? -1));
-  const rounds = results.rounds;
   const types = SESSION_TYPES[cls];
-
-  const head = rounds
-    .map(
-      (r) =>
-        `<th class="rd ${r.round > ctx.upto ? "future" : ""}" title="${esc(roundTitle(r))} · ${esc(r.circuit)}">R${r.round}<small>${esc(
-          r.code
-        )}</small></th>`
-    )
-    .join("");
 
   const body = list
     .map(({ key, name }) => {
       const stats = key ? riderStats(results, cls, key, { uptoRound: ctx.upto }) : null;
       const roles = rolesFor(ctx, cls, name);
-      const cells = rounds
-        .map((r) => {
-          if (r.round > ctx.upto || !stats) return `<td class="rd future"></td>`;
-          const pr = stats.perRound[r.round];
-          const half = (r.halfPoints ?? []).some((h) => h.startsWith(cls + "/"));
-          const parts = types.map((type) => {
-            const cell = resultCell(pr ? pr[type] : undefined, mode);
-            return `<span class="res ${cell.cls}" title="${esc((type === "SPR" ? t("sprint") : t("race")) + ": " + cell.title)}">${esc(cell.text)}</span>`;
-          });
-          return `<td class="rd ${types.length > 1 ? "two" : ""}${half ? " half" : ""}">${parts.join("")}</td>`;
-        })
-        .join("");
       return `<tr>
         <td class="sticky c1">${roleChips(roles)}</td>
         <td class="sticky c2">${riderLink(cls, key, name)}</td>
         <td class="sticky c3 num big">${stats ? fmt(stats.points) : "–"}</td>
-        ${cells}
+        ${roundCells(ctx, cls, stats, mode)}
       </tr>`;
     })
     .join("");
+  const head = roundHeads(ctx);
 
   return `<section class="card">
     <div class="card-head">

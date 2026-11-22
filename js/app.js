@@ -7,6 +7,7 @@ import { renderPicks } from "./views/picks.js";
 import { renderRiders, renderRiderDialog } from "./views/riders.js";
 import { renderChampionship } from "./views/championship.js";
 import { renderEdit, normalizePicks, cleanPicks, emptyClassPick } from "./views/edit.js";
+import { renderHistory, seasonNotStarted } from "./views/history.js";
 
 const VIEWS = {
   leaderboard: renderLeaderboard,
@@ -14,7 +15,10 @@ const VIEWS = {
   riders: renderRiders,
   championship: renderChampionship,
   edit: renderEdit,
+  history: renderHistory,
 };
+// Sidor som behöver minst en körd runda för att visa något vettigt.
+const NEEDS_RESULTS = new Set(["leaderboard", "picks", "riders", "championship"]);
 
 const pref = (k, d) => {
   try {
@@ -31,6 +35,10 @@ const setPref = (k, v) => {
 
 const state = {
   year: null,
+  currentSeason: null,
+  seasonList: [],
+  history: null,
+  riderSuggestions: null,
   results: null,
   picks: null,
   isDraft: false,
@@ -83,8 +91,23 @@ function buildContext() {
     standings,
     standingsPos,
     standingsPts,
+    riderSuggestions: state.riderSuggestions ?? results.riders,
     riderKey: (cls, name) => resolveRider(index, cls, name),
   };
+}
+
+/** Laddar alla säsonger för Historik-sidan (en gång). */
+async function loadHistory() {
+  if (state.history || state.historyLoading) return;
+  state.historyLoading = true;
+  state.history = await Promise.all(
+    state.seasonList.map(async (year) => {
+      const [results, picks] = await Promise.all([loadResults(year), loadSavedPicks(year)]);
+      return { year, picks, score: scoreSeason(picks, results) };
+    })
+  );
+  state.historyLoading = false;
+  if (currentView() === "history") render();
 }
 
 function renderHeader() {
@@ -127,11 +150,17 @@ function renderHeader() {
 
 function renderBanners() {
   const parts = [];
+  if (state.year !== state.currentSeason)
+    parts.push(
+      `<div class="banner">${t("archiveBanner", { year: state.year })} <a href="${location.pathname}#/">${t("backToCurrent", {
+        year: state.currentSeason,
+      })}</a></div>`
+    );
   if (state.isDraft)
     parts.push(
       `<div class="banner">${t("draftBanner")} <button type="button" class="link" data-action="reset-picks">${t("draftReset")}</button></div>`
     );
-  if (ctx.score.warnings.length)
+  if (ctx.lastRound && ctx.score.warnings.length)
     parts.push(
       `<div class="banner warn">${t("unknownRiders")} ${ctx.score.warnings.map((w) => `<b>${esc(w.name)}</b> (${w.cls})`).join(", ")}</div>`
     );
@@ -143,7 +172,9 @@ function render() {
   renderHeader();
   const view = currentView();
   if (view === "edit" && !state.editDraft) state.editDraft = normalizePicks(state.picks);
-  app.innerHTML = renderBanners() + VIEWS[view](ctx);
+  if (view === "history") loadHistory();
+  const body = NEEDS_RESULTS.has(view) && !ctx.lastRound ? seasonNotStarted(ctx) : VIEWS[view](ctx);
+  app.innerHTML = renderBanners() + body;
   if (state.dialog) openDialog(state.dialog.cls, state.dialog.key);
 }
 
@@ -272,10 +303,21 @@ async function init() {
   setLang(getLang());
   try {
     const seasons = await loadSeasonList();
-    state.year = Number(new URLSearchParams(location.search).get("season")) || seasons.current;
+    state.currentSeason = seasons.current;
+    state.seasonList = [...new Set([seasons.current, ...(seasons.seasons ?? [])])].sort((a, b) => b - a);
+    const asked = Number(new URLSearchParams(location.search).get("season"));
+    state.year = state.seasonList.includes(asked) ? asked : seasons.current;
     const [results, picksRes] = await Promise.all([loadResults(state.year), loadPicks(state.year)]);
     state.results = results;
-    setRiderInfo(results.riders);
+    // En ny säsong har inga förare i resultaten förrän första racet: föreslå förra årets förare.
+    const prevYear = state.seasonList.find((y) => y < state.year);
+    if (prevYear && !Object.values(results.riders ?? {}).some((c) => Object.keys(c).length)) {
+      const prev = await loadResults(prevYear);
+      state.riderSuggestions = prev.riders;
+      setRiderInfo(prev.riders);
+    } else {
+      setRiderInfo(results.riders);
+    }
     state.picks = picksRes.picks;
     state.isDraft = picksRes.isDraft;
     if (!CLASSES.includes(state.cls)) state.cls = "MotoGP";
