@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T16:08:31.125Z",
+ "updatedAt": "2026-11-22T17:39:33.630Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -12046,13 +12046,13 @@
       },
       {
        "pos": null,
-       "rider": "553b174a-1c06-4bed-82b4-efcc035f1a4e",
+       "rider": "96edcb06-aa78-4976-9559-62186821e48e",
        "pts": 0,
        "status": "NOTONRESTARTGRID"
       },
       {
        "pos": null,
-       "rider": "96edcb06-aa78-4976-9559-62186821e48e",
+       "rider": "553b174a-1c06-4bed-82b4-efcc035f1a4e",
        "pts": 0,
        "status": "NOTONRESTARTGRID"
       },
