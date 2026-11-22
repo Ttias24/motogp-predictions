@@ -1,0 +1,16 @@
+{
+  "name": "motogp-tips",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Familjens MotoGP/Moto2/Moto3-tips – ställning, resultat och poäng som uppdateras automatiskt.",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-results.mjs",
+    "fetch:full": "node scripts/fetch-results.mjs --full",
+    "check": "node scripts/check-scores.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

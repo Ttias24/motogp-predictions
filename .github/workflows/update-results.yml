@@ -1,0 +1,60 @@
+# Hämtar nya resultat från MotoGP:s API och publicerar sidan på GitHub Pages.
+# Körs automatiskt söndagar, måndagar och torsdagar, vid varje push
+# och manuellt via "Run workflow" under fliken Actions.
+name: Uppdatera resultat och publicera
+
+on:
+  schedule:
+    - cron: "20 */3 * * 0,1,4" # var 3:e timme sön, mån och tors (UTC)
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Hämta resultat
+        if: github.event_name != 'push'
+        run: node scripts/fetch-results.mjs
+      - name: Kontrollera poängmotorn
+        run: node scripts/check-scores.mjs
+      - name: Spara ändrade resultat
+        if: github.event_name != 'push'
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data
+            git commit -m "Nya resultat $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          else
+            echo "Inga ändringar."
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

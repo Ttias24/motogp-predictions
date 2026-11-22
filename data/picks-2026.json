@@ -1,0 +1,81 @@
+{
+ "season": 2026,
+ "scoring": {
+  "exactPosition": 2,
+  "insideTop5": 1
+ },
+ "players": [
+  {
+   "id": "carry",
+   "name": "Carry",
+   "picks": {
+    "MotoGP": {
+     "top5": ["Marc Marquez", "Alex Marquez", "Francesco Bagnaia", "Marco Bezzecchi", "Jorge Martin"],
+     "backup": "Enea Bastianini",
+     "bowling": "Marc Marquez",
+     "backupActivated": null
+    },
+    "Moto2": {
+     "top5": ["David Alonso", "Angel Piqueras", "Filip Salac", "Joe Roberts", "Aron Canet"],
+     "backup": "Barry Baltus",
+     "bowling": "Daniel Muñoz",
+     "backupActivated": { "round": 4, "replaces": "Angel Piqueras" }
+    },
+    "Moto3": {
+     "top5": ["Maximo Quiles", "Alvaro Carpe", "David Almansa", "Guido Pini", "Valentin Perrone"],
+     "backup": "Nicola Carraro",
+     "bowling": "David Muñoz",
+     "backupActivated": null
+    }
+   }
+  },
+  {
+   "id": "simon",
+   "name": "Simon",
+   "picks": {
+    "MotoGP": {
+     "top5": ["Marc Marquez", "Marco Bezzecchi", "Alex Marquez", "Pedro Acosta", "Fabio Quartararo"],
+     "backup": "Francesco Bagnaia",
+     "bowling": "Franco Morbidelli",
+     "backupActivated": null
+    },
+    "Moto2": {
+     "top5": ["David Alonso", "Daniel Holgado", "Manuel Gonzalez", "Barry Baltus", "Aron Canet"],
+     "backup": "Ayumu Sasaki",
+     "bowling": "Deniz Öncü",
+     "backupActivated": null
+    },
+    "Moto3": {
+     "top5": ["Guido Pini", "Alvaro Carpe", "Maximo Quiles", "Valentin Perrone", "David Almansa"],
+     "backup": "Joel Kelso",
+     "bowling": "Joel Kelso",
+     "backupActivated": null
+    }
+   }
+  },
+  {
+   "id": "mattias",
+   "name": "Mattias",
+   "picks": {
+    "MotoGP": {
+     "top5": ["Marc Marquez", "Marco Bezzecchi", "Francesco Bagnaia", "Alex Marquez", "Pedro Acosta"],
+     "backup": "Jorge Martin",
+     "bowling": "Jorge Martin",
+     "backupActivated": { "round": 7, "replaces": "Alex Marquez" }
+    },
+    "Moto2": {
+     "top5": ["Daniel Holgado", "David Alonso", "Manuel Gonzalez", "Izan Guevara", "Angel Piqueras"],
+     "backup": "Barry Baltus",
+     "bowling": "Celestino Vietti",
+     "backupActivated": { "round": 4, "replaces": "Angel Piqueras" }
+    },
+    "Moto3": {
+     "top5": ["Maximo Quiles", "David Muñoz", "Alvaro Carpe", "Valentin Perrone", "Matteo Bertelle"],
+     "backup": "David Almansa",
+     "bowling": "David Muñoz",
+     "backupActivated": { "round": 3, "replaces": "David Muñoz" }
+    }
+   }
+  }
+ ]
+}
