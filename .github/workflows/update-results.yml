@@ -35,6 +35,11 @@ jobs:
       - name: Hämta resultat
         if: github.event_name != 'push'
         run: node scripts/fetch-results.mjs
+      - name: Säkerhetskopiera tips från databasen
+        # Sparar tipsen i data/picks-<år>.json när tipsperioden har stängt (då är de publika).
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: node scripts/backup-picks.mjs
       - name: Kontrollera poängmotorn
         run: node scripts/check-scores.mjs
       - name: Spara ändringar

@@ -93,7 +93,7 @@ export function numberBadge(r, size = "") {
   if (!r || (r.number == null && !r.numberArt)) return "";
   const num = esc(r.number ?? "");
   if (r.numberArt)
-    return `<span class="num-plate art ${size}" title="#${num} · ${esc(r.team)}"><img src="${esc(r.numberArt)}" alt="${num}" loading="lazy" onerror="this.parentNode.classList.remove('art');this.replaceWith('${num}')"></span>`;
+    return `<span class="num-plate art ${size}" title="#${num} · ${esc(r.team)}"><img src="${esc(r.numberArt)}" alt="${num}" loading="lazy" data-fallback="${num}"></span>`;
   const style = r.teamColor ? ` style="--team:${esc(r.teamColor)};--team-text:${esc(r.teamTextColor || "#fff")}"` : "";
   return `<span class="num-plate ${size}"${style} title="#${num} · ${esc(r.team)}">${num}</span>`;
 }

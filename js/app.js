@@ -206,6 +206,7 @@ function renderBanners() {
         year: state.currentSeason,
       })}</a></div>`
     );
+  if (state.fromBackup) parts.push(`<div class="banner warn">${t("fromBackup")}</div>`);
   if (state.isDraft)
     parts.push(
       `<div class="banner">${t("draftBanner")} <button type="button" class="link" data-action="reset-picks">${t("draftReset")}</button></div>`
@@ -696,6 +697,19 @@ document.addEventListener("input", (e) => {
   if (root) setPath(root, el.dataset.path, el.dataset.type === "number" ? Number(el.value) : el.value);
 });
 
+// Saknas en nummergrafik visas numret som text i stället (ersätter inline-onerror,
+// som sidans säkerhetsregler – Content Security Policy – inte tillåter).
+document.addEventListener(
+  "error",
+  (e) => {
+    const img = e.target;
+    if (img?.tagName !== "IMG" || !img.dataset.fallback) return;
+    img.parentNode?.classList.remove("art");
+    img.replaceWith(img.dataset.fallback);
+  },
+  true
+);
+
 function closeDialog() {
   state.dialog = null;
   if (dialog.open) dialog.close();
@@ -711,11 +725,14 @@ window.addEventListener("hashchange", () => {
 async function loadDbPicks(year) {
   try {
     const ov = await remote.seasonOverview(year);
-    return { picks: overviewToPicks(ov, year), window: ov };
+    if (ov) return { picks: overviewToPicks(ov, year), window: ov };
   } catch (err) {
     console.error(err);
-    return { picks: overviewToPicks(null, year), window: null };
   }
+  // Databasen svarar inte (eller saknar säsongen): använd säkerhetskopian i data/picks-<år>.json.
+  const backup = await loadSavedPicks(year);
+  if (backup.players?.length) return { picks: backup, window: null, fromBackup: true };
+  return { picks: overviewToPicks(null, year), window: null };
 }
 
 async function refreshDbSeason() {
@@ -756,6 +773,7 @@ async function init() {
     state.picks = picksRes.picks;
     state.isDraft = Boolean(picksRes.isDraft);
     state.window = picksRes.window ?? null;
+    state.fromBackup = Boolean(picksRes.fromBackup);
     if (!CLASSES.includes(state.cls)) state.cls = "MotoGP";
     render();
   } catch (err) {

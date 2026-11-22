@@ -3,10 +3,23 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY } from "./config.js";
 
 export const isConfigured = () => Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
 
+// Supabase-klienten ligger som lokal kopia i js/vendor/supabase (se README där) och laddas
+// först när den behövs – vanliga besökare av ställningen laddar den aldrig.
+function loadLibrary() {
+  if (window.supabase?.createClient) return Promise.resolve(window.supabase);
+  return new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = new URL("./vendor/supabase/supabase.js", import.meta.url).href;
+    s.onload = () => (window.supabase?.createClient ? resolve(window.supabase) : reject(new Error("Supabase-biblioteket saknas")));
+    s.onerror = () => reject(new Error("Kunde inte ladda Supabase-biblioteket"));
+    document.head.appendChild(s);
+  });
+}
+
 let clientPromise = null;
 export function client() {
   if (!isConfigured()) throw new Error("Databasen är inte konfigurerad (js/config.js).");
-  clientPromise ??= import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm").then(({ createClient }) =>
+  clientPromise ??= loadLibrary().then(({ createClient }) =>
     createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
       auth: { flowType: "pkce", persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
     })

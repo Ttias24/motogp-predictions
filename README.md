@@ -39,6 +39,7 @@ data/seasons.json              Aktuell säsong + lista över alla säsonger (His
 scripts/rollover.mjs           Säsongsbyte 1 januari
 scripts/fetch-results.mjs      Hämtar resultat från API:t
 scripts/check-scores.mjs       Skriver ut ställningen / jämför med Excel (--excel)
+scripts/backup-picks.mjs       Säkerhetskopia av tipsen i databasen
 .github/workflows/…            Automatisk uppdatering och publicering på GitHub Pages
 ```
 
@@ -123,6 +124,20 @@ flyttas till **Historik** och sidan visar "Säsong <år> har inte startat än" t
 **Om något har stannat:** gå till fliken **Actions** på GitHub. Står det att arbetsflödet är
 avstängt ("disabled"), tryck **Enable workflow**. Kör sedan **Run workflow** en gång.
 Arbetsflödet håller sig normalt aktivt självt, även över vintern.
+
+## Säkerhet
+
+* **Databasen** bestämmer allt: besökare kommer inte åt några tabeller, bara funktioner som
+  kontrollerar kod, tidsfrist och ägarskap. Testat med 29 attackförsök (se historiken).
+* **Koder** i länkarna är 128-bitars slumptal och sparas bara som hash.
+* **Webbsidan** escapar allt som spelare skriver, och har en *Content Security Policy*
+  (`index.html`): skript får bara komma från sidan själv och data får bara skickas till
+  sidan och databasen. Supabase-klienten ligger som verifierad kopia i `js/vendor/supabase`.
+* **Säkerhetskopia:** GitHub-jobbet sparar alla tips i `data/picks-<år>.json` när tipsperioden
+  har stängt (`scripts/backup-picks.mjs`). Svarar inte databasen visar sidan kopian.
+* **Ditt ansvar:** slå på tvåstegsinloggning (2FA) på GitHub, Supabase och den e-post du loggar
+  in som admin med – den som tar över något av dem kan ändra allt.
+* Byter databasen adress: uppdatera `connect-src` i säkerhetsregeln i `index.html` också.
 
 ## Publicera (GitHub Pages)
 
