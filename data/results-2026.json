@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T15:49:36.019Z",
+ "updatedAt": "2026-11-22T16:05:00.949Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -11620,7 +11620,7 @@
    "circuit": "Autódromo Internacional do Algarve",
    "dateStart": "2026-11-20",
    "dateEnd": "2026-11-22",
-   "status": "CURRENT",
+   "status": "FINISHED",
    "results": {
     "MotoGP": {
      "SPR": [
@@ -12847,7 +12847,7 @@
     "team": "CODE Motorsports"
    },
    "bfcd17e6-e9af-47c7-aeeb-9787bae55081": {
-    "name": "Be??at Fernandez",
+    "name": "Beñat Fernandez",
     "number": 7,
     "country": "ES",
     "team": "LEVEL UP - MTA"
