@@ -143,6 +143,9 @@ function condenseCareer(s) {
     titlesByClass: byClass(s.world_championship_wins),
     winsByClass: byClass(s.grand_prix_victories),
     startsByClass: byClass(s.all_races),
+    podiumsByClass: byClass(s.podiums),
+    polesByClass: byClass(s.poles),
+    fastestLapsByClass: byClass(s.race_fastest_laps),
   };
 }
 

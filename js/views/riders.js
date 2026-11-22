@@ -133,9 +133,9 @@ function careerSection(c) {
       ${box(c.titles, t("careerTitles"), split(c.titlesByClass))}
       ${box(c.starts, t("careerStarts"), split(c.startsByClass))}
       ${box(c.wins, t("careerWins"), split(c.winsByClass))}
-      ${box(c.podiums, t("careerPodiums"))}
-      ${box(c.poles, t("careerPoles"))}
-      ${box(c.fastestLaps, t("careerFastest"))}
+      ${box(c.podiums, t("careerPodiums"), split(c.podiumsByClass))}
+      ${box(c.poles, t("careerPoles"), split(c.polesByClass))}
+      ${box(c.fastestLaps, t("careerFastest"), split(c.fastestLapsByClass))}
     </div>
     ${
       c.titles || c.sprintWins

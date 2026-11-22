@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T20:02:55.130Z",
+ "updatedAt": "2026-11-22T20:07:29.655Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -12274,14 +12274,29 @@
       "MotoGP": 61,
       "Moto2": 38,
       "Moto3": 18
+     },
+     "podiumsByClass": {
+      "MotoGP": 17,
+      "Moto2": 19,
+      "Moto3": 8
+     },
+     "polesByClass": {
+      "MotoGP": 2,
+      "Moto2": 4,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 5,
+      "Moto2": 9,
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 4
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "23e50438-a657-4fb0-a190-3262b5472f29": {
     "name": "Marc Marquez",
@@ -12316,14 +12331,29 @@
       "MotoGP": 225,
       "Moto2": 32,
       "125cc": 46
+     },
+     "podiumsByClass": {
+      "MotoGP": 134,
+      "Moto2": 25,
+      "125cc": 14
+     },
+     "polesByClass": {
+      "MotoGP": 78,
+      "Moto2": 14,
+      "125cc": 14
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 75,
+      "Moto2": 7,
+      "125cc": 9
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 1
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "eec1f7dc-b115-44f6-82aa-73130e5c92cf": {
     "name": "Raul Fernandez",
@@ -12354,14 +12384,29 @@
       "MotoGP": 97,
       "Moto2": 18,
       "Moto3": 42
+     },
+     "podiumsByClass": {
+      "MotoGP": 9,
+      "Moto2": 12,
+      "Moto3": 4
+     },
+     "polesByClass": {
+      "MotoGP": 1,
+      "Moto2": 7,
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 4,
+      "Moto2": 7,
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 10
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "244b6f51-ac33-40ee-876d-9401dc9d1346": {
     "name": "Ai Ogura",
@@ -12393,14 +12438,29 @@
       "MotoGP": 36,
       "Moto2": 74,
       "Moto3": 37
+     },
+     "podiumsByClass": {
+      "MotoGP": 4,
+      "Moto2": 19,
+      "Moto3": 8
+     },
+     "polesByClass": {
+      "MotoGP": 1,
+      "Moto2": 5,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 2,
+      "Moto2": 3,
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 16
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5b9af34e-da94-4ca2-9c4c-6be0fc8b1bbc": {
     "name": "Jorge Martin",
@@ -12434,14 +12494,29 @@
       "MotoGP": 100,
       "Moto2": 32,
       "Moto3": 67
+     },
+     "podiumsByClass": {
+      "MotoGP": 42,
+      "Moto2": 8,
+      "Moto3": 20
+     },
+     "polesByClass": {
+      "MotoGP": 24,
+      "Moto2": 1,
+      "Moto3": 20
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 6,
+      "Moto2": 3,
+      "Moto3": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 21
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "ade5ef32-01ea-487c-95ca-491544a668ed": {
     "name": "Brad Binder",
@@ -12475,14 +12550,28 @@
       "Moto2": 52,
       "125cc": 5,
       "Moto3": 88
+     },
+     "podiumsByClass": {
+      "MotoGP": 11,
+      "Moto2": 15,
+      "Moto3": 20
+     },
+     "polesByClass": {
+      "Moto2": 1,
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 4,
+      "Moto2": 3,
+      "Moto3": 7
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 11
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "f55f9c34-8621-437b-ae04-ae2418720204": {
     "name": "Joan Mir",
@@ -12515,14 +12604,27 @@
       "MotoGP": 136,
       "Moto2": 18,
       "Moto3": 37
+     },
+     "podiumsByClass": {
+      "MotoGP": 15,
+      "Moto2": 4,
+      "Moto3": 16
+     },
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 1,
+      "Moto2": 1,
+      "Moto3": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 15
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "525b1551-f10b-4cfd-9b43-59af6fca654b": {
     "name": "Fabio Di Giannantonio",
@@ -12553,14 +12655,27 @@
       "MotoGP": 99,
       "Moto2": 52,
       "Moto3": 55
+     },
+     "podiumsByClass": {
+      "MotoGP": 9,
+      "Moto2": 8,
+      "Moto3": 14
+     },
+     "polesByClass": {
+      "MotoGP": 3,
+      "Moto2": 1
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 3,
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 6
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "66b78301-5826-4986-b11e-fa68a7bd77a7": {
     "name": "Francesco Bagnaia",
@@ -12594,14 +12709,29 @@
       "MotoGP": 146,
       "Moto2": 36,
       "Moto3": 69
+     },
+     "podiumsByClass": {
+      "MotoGP": 63,
+      "Moto2": 16,
+      "Moto3": 7
+     },
+     "polesByClass": {
+      "MotoGP": 28,
+      "Moto2": 6,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 22,
+      "Moto2": 3,
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 5
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5dfc20db-c3c4-4ecd-9c7c-f6cfd042031a": {
     "name": "Luca Marini",
@@ -12630,14 +12760,26 @@
       "MotoGP": 113,
       "Moto2": 87,
       "Moto3": 1
+     },
+     "podiumsByClass": {
+      "MotoGP": 2,
+      "Moto2": 15
+     },
+     "polesByClass": {
+      "MotoGP": 2,
+      "Moto2": 5
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 1,
+      "Moto2": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 13
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "41195f0f-9817-4a4d-913e-c1fbbb351d9b": {
     "name": "Alex Marquez",
@@ -12671,14 +12813,29 @@
       "MotoGP": 127,
       "Moto2": 89,
       "Moto3": 46
+     },
+     "podiumsByClass": {
+      "MotoGP": 20,
+      "Moto2": 23,
+      "Moto3": 15
+     },
+     "polesByClass": {
+      "MotoGP": 3,
+      "Moto2": 12,
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 8,
+      "Moto2": 10,
+      "Moto3": 7
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 2
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "4a439bde-305a-4995-b3e7-783fa99f784a": {
     "name": "Johann Zarco",
@@ -12711,14 +12868,29 @@
       "MotoGP": 180,
       "Moto2": 88,
       "125cc": 49
+     },
+     "podiumsByClass": {
+      "MotoGP": 23,
+      "Moto2": 30,
+      "125cc": 11
+     },
+     "polesByClass": {
+      "MotoGP": 8,
+      "Moto2": 15,
+      "125cc": 4
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 11,
+      "Moto2": 7,
+      "125cc": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 12
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "e2479f8e-dad8-4191-9a6c-9d4aafa8c3a3": {
     "name": "Diogo Moreira",
@@ -12750,14 +12922,25 @@
       "MotoGP": 20,
       "Moto2": 40,
       "Moto3": 39
+     },
+     "podiumsByClass": {
+      "Moto2": 10,
+      "Moto3": 3
+     },
+     "polesByClass": {
+      "Moto2": 7,
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto2": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 1
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "4113c5f7-33c5-4246-b05b-3f81f4ddbd8f": {
     "name": "Franco Morbidelli",
@@ -12788,14 +12971,26 @@
      "startsByClass": {
       "MotoGP": 162,
       "Moto2": 71
+     },
+     "podiumsByClass": {
+      "MotoGP": 8,
+      "Moto2": 21
+     },
+     "polesByClass": {
+      "MotoGP": 2,
+      "Moto2": 6
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 2,
+      "Moto2": 13
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 7
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "b0c1fea6-2dd5-4e26-8a18-0ac9fe6870e4": {
     "name": "Jack Miller",
@@ -12825,14 +13020,26 @@
       "MotoGP": 217,
       "125cc": 6,
       "Moto3": 49
+     },
+     "podiumsByClass": {
+      "MotoGP": 23,
+      "Moto3": 10
+     },
+     "polesByClass": {
+      "MotoGP": 2,
+      "Moto3": 8
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 4,
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 17
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "bf95d959-6a60-44f1-84b5-ded861e62578": {
     "name": "Fabio Quartararo",
@@ -12864,14 +13071,28 @@
       "MotoGP": 152,
       "Moto2": 36,
       "Moto3": 31
+     },
+     "podiumsByClass": {
+      "MotoGP": 32,
+      "Moto2": 2,
+      "Moto3": 2
+     },
+     "polesByClass": {
+      "MotoGP": 21,
+      "Moto2": 1,
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 13,
+      "Moto2": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 9
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "00db2312-15f2-4333-be5c-4bbff9d17aec": {
     "name": "Enea Bastianini",
@@ -12904,14 +13125,28 @@
       "MotoGP": 110,
       "Moto2": 33,
       "Moto3": 88
+     },
+     "podiumsByClass": {
+      "MotoGP": 19,
+      "Moto2": 8,
+      "Moto3": 24
+     },
+     "polesByClass": {
+      "MotoGP": 2,
+      "Moto3": 9
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 10,
+      "Moto2": 2,
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 14
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "04bf0ce4-5062-44fc-9745-ec85a8d8f8d3": {
     "name": "Alex Rins",
@@ -12942,14 +13177,28 @@
       "MotoGP": 164,
       "Moto2": 36,
       "Moto3": 52
+     },
+     "podiumsByClass": {
+      "MotoGP": 18,
+      "Moto2": 17,
+      "Moto3": 23
+     },
+     "polesByClass": {
+      "Moto2": 4,
+      "Moto3": 13
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 7,
+      "Moto2": 7,
+      "Moto3": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 19
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "71df6f0d-51c3-4cdb-9f5c-51939e6f33f2": {
     "name": "Maverick Viñales",
@@ -12984,14 +13233,32 @@
       "Moto2": 18,
       "125cc": 17,
       "Moto3": 32
+     },
+     "podiumsByClass": {
+      "MotoGP": 35,
+      "Moto2": 9,
+      "125cc": 9,
+      "Moto3": 22
+     },
+     "polesByClass": {
+      "MotoGP": 15,
+      "Moto2": 1,
+      "125cc": 3,
+      "Moto3": 7
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 12,
+      "Moto2": 5,
+      "125cc": 3,
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 18
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "c883a3b8-17ce-419d-b71b-32c252f6fc7e": {
     "name": "Toprak Razgatlioglu",
@@ -13016,11 +13283,14 @@
      "winsByClass": {},
      "startsByClass": {
       "MotoGP": 17
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": null,
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "7c653b2a-b493-436b-a77e-06a43b37b799": {
     "name": "Michele Pirro",
@@ -13049,7 +13319,14 @@
       "MotoGP": 73,
       "Moto2": 18,
       "125cc": 29
-     }
+     },
+     "podiumsByClass": {
+      "Moto2": 2
+     },
+     "polesByClass": {
+      "Moto2": 1
+     },
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -13082,14 +13359,28 @@
       "MotoGP": 100,
       "Moto2": 52,
       "Moto3": 40
+     },
+     "podiumsByClass": {
+      "MotoGP": 31,
+      "Moto2": 14,
+      "Moto3": 10
+     },
+     "polesByClass": {
+      "MotoGP": 15,
+      "Moto2": 2,
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 9,
+      "Moto2": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 3
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "71052114-5bce-4307-908c-4cc2bd387aac": {
     "name": "Fermin Aldeguer",
@@ -13118,14 +13409,25 @@
      "startsByClass": {
       "MotoGP": 37,
       "Moto2": 67
+     },
+     "podiumsByClass": {
+      "MotoGP": 4,
+      "Moto2": 12
+     },
+     "polesByClass": {
+      "Moto2": 8
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 2,
+      "Moto2": 6
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "MotoGP",
      "pos": 8
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "eb7f90b1-9373-4089-b2f5-adbc234a3526": {
     "name": "Augusto Fernandez",
@@ -13155,6 +13457,15 @@
      "startsByClass": {
       "MotoGP": 54,
       "Moto2": 94
+     },
+     "podiumsByClass": {
+      "Moto2": 20
+     },
+     "polesByClass": {
+      "Moto2": 3
+     },
+     "fastestLapsByClass": {
+      "Moto2": 11
      }
     },
     "careerFetched": "2026-11-22"
@@ -13183,7 +13494,10 @@
      "startsByClass": {
       "MotoGP": 44,
       "125cc": 30
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -13217,6 +13531,21 @@
       "Moto2": 59,
       "125cc": 52,
       "Moto3": 31
+     },
+     "podiumsByClass": {
+      "MotoGP": 1,
+      "Moto2": 11,
+      "125cc": 4,
+      "Moto3": 8
+     },
+     "polesByClass": {
+      "Moto2": 2,
+      "Moto3": 4
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 2,
+      "Moto2": 5,
+      "Moto3": 1
      }
     },
     "careerFetched": "2026-11-22"
@@ -13246,6 +13575,15 @@
      },
      "startsByClass": {
       "MotoGP": 184
+     },
+     "podiumsByClass": {
+      "MotoGP": 19
+     },
+     "polesByClass": {
+      "MotoGP": 4
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 4
      }
     },
     "careerFetched": "2026-11-22"
@@ -13274,7 +13612,12 @@
      "startsByClass": {
       "MotoGP": 42,
       "Moto2": 55
-     }
+     },
+     "podiumsByClass": {
+      "Moto2": 2
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -13308,6 +13651,21 @@
       "MotoGP": 179,
       "Moto2": 51,
       "125cc": 71
+     },
+     "podiumsByClass": {
+      "MotoGP": 8,
+      "Moto2": 23,
+      "125cc": 21
+     },
+     "polesByClass": {
+      "MotoGP": 3,
+      "Moto2": 14,
+      "125cc": 3
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 1,
+      "Moto2": 10,
+      "125cc": 5
      }
     },
     "careerFetched": "2026-11-22"
@@ -13339,6 +13697,16 @@
       "MotoGP": 127,
       "Moto2": 105,
       "125cc": 34
+     },
+     "podiumsByClass": {
+      "Moto2": 14
+     },
+     "polesByClass": {
+      "MotoGP": 1,
+      "Moto2": 5
+     },
+     "fastestLapsByClass": {
+      "Moto2": 1
      }
     },
     "careerFetched": "2026-11-22"
@@ -13370,6 +13738,15 @@
       "MotoGP": 18,
       "Moto2": 106,
       "Moto3": 1
+     },
+     "podiumsByClass": {
+      "Moto2": 6
+     },
+     "polesByClass": {
+      "Moto2": 2
+     },
+     "fastestLapsByClass": {
+      "Moto2": 3
      }
     },
     "careerFetched": "2026-11-22"
@@ -13402,6 +13779,16 @@
       "250cc": 44,
       "Moto2": 17,
       "125cc": 23
+     },
+     "podiumsByClass": {
+      "MotoGP": 11,
+      "Moto2": 1
+     },
+     "polesByClass": {
+      "MotoGP": 7
+     },
+     "fastestLapsByClass": {
+      "MotoGP": 5
      }
     },
     "careerFetched": "2026-11-22"
@@ -13432,6 +13819,15 @@
      "startsByClass": {
       "MotoGP": 4,
       "Moto2": 124
+     },
+     "podiumsByClass": {
+      "Moto2": 22
+     },
+     "polesByClass": {
+      "Moto2": 8
+     },
+     "fastestLapsByClass": {
+      "Moto2": 4
      }
     },
     "careerFetched": "2026-11-22"
@@ -13463,14 +13859,23 @@
      },
      "startsByClass": {
       "Moto2": 70
+     },
+     "podiumsByClass": {
+      "Moto2": 10
+     },
+     "polesByClass": {
+      "Moto2": 3
+     },
+     "fastestLapsByClass": {
+      "Moto2": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 10
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "dd56704e-b40e-4202-8af2-a81b7fd6a82d": {
     "name": "Celestino Vietti",
@@ -13499,14 +13904,26 @@
      "startsByClass": {
       "Moto2": 114,
       "Moto3": 38
+     },
+     "podiumsByClass": {
+      "Moto2": 17,
+      "Moto3": 8
+     },
+     "polesByClass": {
+      "Moto2": 8,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto2": 10,
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 7
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "28d22e58-56c2-4c94-97fc-09453bfa089f": {
     "name": "Izan Guevara",
@@ -13537,14 +13954,26 @@
      "startsByClass": {
       "Moto2": 80,
       "Moto3": 38
+     },
+     "podiumsByClass": {
+      "Moto2": 12,
+      "Moto3": 13
+     },
+     "polesByClass": {
+      "Moto2": 5,
+      "Moto3": 5
+     },
+     "fastestLapsByClass": {
+      "Moto2": 2,
+      "Moto3": 6
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 11
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "96d9b2b4-a26b-427f-b76a-6e1294c341c0": {
     "name": "David Alonso",
@@ -13575,14 +14004,26 @@
      "startsByClass": {
       "Moto2": 41,
       "Moto3": 42
+     },
+     "podiumsByClass": {
+      "Moto2": 10,
+      "Moto3": 23
+     },
+     "polesByClass": {
+      "Moto2": 2,
+      "Moto3": 7
+     },
+     "fastestLapsByClass": {
+      "Moto2": 5,
+      "Moto3": 6
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 9
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "96edcb06-aa78-4976-9559-62186821e48e": {
     "name": "Manuel Gonzalez",
@@ -13609,14 +14050,23 @@
      },
      "startsByClass": {
       "Moto2": 102
+     },
+     "podiumsByClass": {
+      "Moto2": 25
+     },
+     "polesByClass": {
+      "Moto2": 10
+     },
+     "fastestLapsByClass": {
+      "Moto2": 9
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 2
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "31d9d715-4dbc-4d12-8a21-f2daffb62d7f": {
     "name": "Barry Baltus",
@@ -13642,14 +14092,23 @@
      "startsByClass": {
       "Moto2": 108,
       "Moto3": 14
+     },
+     "podiumsByClass": {
+      "Moto2": 9
+     },
+     "polesByClass": {
+      "Moto2": 2
+     },
+     "fastestLapsByClass": {
+      "Moto2": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 3
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "88ec0ae1-53e4-48d4-8c60-6b74210d7552": {
     "name": "Alonso Lopez",
@@ -13677,14 +14136,25 @@
      "startsByClass": {
       "Moto2": 97,
       "Moto3": 51
+     },
+     "podiumsByClass": {
+      "Moto2": 18,
+      "Moto3": 1
+     },
+     "polesByClass": {
+      "Moto2": 4
+     },
+     "fastestLapsByClass": {
+      "Moto2": 4,
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 18
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "57787b04-f675-4877-a72a-b5340a45109a": {
     "name": "Alex Escrig",
@@ -13709,14 +14179,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 67
+     },
+     "podiumsByClass": {
+      "Moto2": 2
+     },
+     "polesByClass": {
+      "Moto2": 1
+     },
+     "fastestLapsByClass": {
+      "Moto2": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 22
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "3157c88e-bd94-4851-9fe2-1d7458f65a1e": {
     "name": "Joe Roberts",
@@ -13743,14 +14222,23 @@
      },
      "startsByClass": {
       "Moto2": 165
+     },
+     "podiumsByClass": {
+      "Moto2": 9
+     },
+     "polesByClass": {
+      "Moto2": 5
+     },
+     "fastestLapsByClass": {
+      "Moto2": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 14
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5c8bbc11-a1aa-4f55-b9dc-f2e8b7c33ceb": {
     "name": "Tony Arbolino",
@@ -13779,14 +14267,26 @@
      "startsByClass": {
       "Moto2": 120,
       "Moto3": 69
+     },
+     "podiumsByClass": {
+      "Moto2": 18,
+      "Moto3": 12
+     },
+     "polesByClass": {
+      "Moto2": 1,
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "Moto2": 5,
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 19
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "6b517083-20d8-40da-9d92-aeb63cdee89d": {
     "name": "Ivan Ortola",
@@ -13815,14 +14315,26 @@
      "startsByClass": {
       "Moto2": 42,
       "Moto3": 60
+     },
+     "podiumsByClass": {
+      "Moto2": 6,
+      "Moto3": 10
+     },
+     "polesByClass": {
+      "Moto2": 1,
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "Moto2": 4,
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 16
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "8293f58c-2182-4c77-958f-6de9e9dca168": {
     "name": "Adrian Huertas",
@@ -13847,14 +14359,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 39
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 21
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "12e072c6-c19b-4c35-a9c4-2c7deba15cb0": {
     "name": "Aron Canet",
@@ -13883,14 +14398,26 @@
      "startsByClass": {
       "Moto2": 127,
       "Moto3": 72
+     },
+     "podiumsByClass": {
+      "Moto2": 34,
+      "Moto3": 17
+     },
+     "polesByClass": {
+      "Moto2": 14,
+      "Moto3": 5
+     },
+     "fastestLapsByClass": {
+      "Moto2": 8,
+      "Moto3": 9
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 4
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "be57d739-ceff-4bd4-b612-08100cae9990": {
     "name": "Daniel Muñoz",
@@ -13917,14 +14444,21 @@
      },
      "startsByClass": {
       "Moto2": 41
+     },
+     "podiumsByClass": {
+      "Moto2": 3
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {
+      "Moto2": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 20
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "553b174a-1c06-4bed-82b4-efcc035f1a4e": {
     "name": "Jose Antonio Rueda",
@@ -13954,14 +14488,23 @@
      "startsByClass": {
       "Moto2": 20,
       "Moto3": 59
+     },
+     "podiumsByClass": {
+      "Moto3": 19
+     },
+     "polesByClass": {
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "Moto3": 6
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 1
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "845c70b2-fe9b-40b6-a558-692cf5f9e6da": {
     "name": "Daniel Holgado",
@@ -13990,14 +14533,26 @@
      "startsByClass": {
       "Moto2": 42,
       "Moto3": 63
+     },
+     "podiumsByClass": {
+      "Moto2": 12,
+      "Moto3": 16
+     },
+     "polesByClass": {
+      "Moto2": 6,
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "Moto2": 4,
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 6
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "ae003ef7-aff4-4903-ab7a-0c40997baa0a": {
     "name": "Ayumu Sasaki",
@@ -14025,14 +14580,23 @@
      "startsByClass": {
       "Moto2": 55,
       "Moto3": 124
+     },
+     "podiumsByClass": {
+      "Moto3": 22
+     },
+     "polesByClass": {
+      "Moto3": 8
+     },
+     "fastestLapsByClass": {
+      "Moto3": 8
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 23
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "e983f2ed-5bac-4ae7-9b54-3ab5fc357500": {
     "name": "Taiyo Furusato",
@@ -14060,14 +14624,23 @@
      "startsByClass": {
       "Moto2": 20,
       "Moto3": 79
+     },
+     "podiumsByClass": {
+      "Moto3": 9
+     },
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 8
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "a90f6d5b-cba7-45cd-932e-308514518b80": {
     "name": "Dennis Foggia",
@@ -14095,6 +14668,15 @@
      "startsByClass": {
       "Moto2": 41,
       "Moto3": 112
+     },
+     "podiumsByClass": {
+      "Moto3": 24
+     },
+     "polesByClass": {
+      "Moto3": 4
+     },
+     "fastestLapsByClass": {
+      "Moto3": 4
      }
     },
     "careerFetched": "2026-11-22"
@@ -14126,14 +14708,24 @@
      "startsByClass": {
       "Moto2": 49,
       "Moto3": 76
+     },
+     "podiumsByClass": {
+      "Moto2": 4,
+      "Moto3": 13
+     },
+     "polesByClass": {
+      "Moto3": 8
+     },
+     "fastestLapsByClass": {
+      "Moto3": 7
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 12
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "48af1e5c-5376-43ad-9b26-9a860bef4e1d": {
     "name": "Filip Salac",
@@ -14161,14 +14753,25 @@
      "startsByClass": {
       "Moto2": 97,
       "Moto3": 50
+     },
+     "podiumsByClass": {
+      "Moto2": 8,
+      "Moto3": 1
+     },
+     "polesByClass": {
+      "Moto2": 2,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto2": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 17
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "206c1c78-6d79-4e13-9568-5a90138ece2b": {
     "name": "Zonta Vd Goorbergh",
@@ -14193,14 +14796,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 100
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 25
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "59d0a2fb-df55-46d8-a57f-bf81ca690a5b": {
     "name": "Mario Aji",
@@ -14226,14 +14832,17 @@
      "startsByClass": {
       "Moto2": 46,
       "Moto3": 41
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 26
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "57f4c236-d465-4161-8e22-7426f4da36eb": {
     "name": "Jorge Navarro",
@@ -14261,6 +14870,18 @@
      "startsByClass": {
       "Moto2": 143,
       "Moto3": 46
+     },
+     "podiumsByClass": {
+      "Moto2": 11,
+      "Moto3": 9
+     },
+     "polesByClass": {
+      "Moto2": 5,
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto2": 3,
+      "Moto3": 1
      }
     },
     "careerFetched": "2026-11-22"
@@ -14291,14 +14912,26 @@
      "startsByClass": {
       "Moto2": 38,
       "Moto3": 39
+     },
+     "podiumsByClass": {
+      "Moto2": 3,
+      "Moto3": 11
+     },
+     "polesByClass": {
+      "Moto2": 1,
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "Moto2": 1,
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 15
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "97116ba3-5971-4304-be84-451bdc9a563c": {
     "name": "Angel Piqueras",
@@ -14326,14 +14959,24 @@
      "startsByClass": {
       "Moto2": 12,
       "Moto3": 42
+     },
+     "podiumsByClass": {
+      "Moto2": 1,
+      "Moto3": 11
+     },
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 2
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "6251aee5-6e36-455c-8b43-e6fd1753fd8d": {
     "name": "Sergio Garcia",
@@ -14362,14 +15005,26 @@
      "startsByClass": {
       "Moto2": 63,
       "Moto3": 68
+     },
+     "podiumsByClass": {
+      "Moto2": 5,
+      "Moto3": 20
+     },
+     "polesByClass": {
+      "Moto2": 1,
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto2": 1,
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 28
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "c534aae8-f63b-4f14-8a7e-4c6780c80685": {
     "name": "Alberto Ferrandez",
@@ -14394,14 +15049,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 18
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 36
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "711cd7a3-7e13-413b-8de2-08d5bf4070f4": {
     "name": "Marcos Ramirez",
@@ -14429,6 +15087,16 @@
      "startsByClass": {
       "Moto2": 118,
       "Moto3": 65
+     },
+     "podiumsByClass": {
+      "Moto2": 2,
+      "Moto3": 8
+     },
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
     "careerFetched": "2026-11-22"
@@ -14457,14 +15125,21 @@
      "startsByClass": {
       "Moto2": 17,
       "Moto3": 39
+     },
+     "podiumsByClass": {
+      "Moto3": 4
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 12
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "a357a14a-bdd0-4b0a-8c75-948b5233cbad": {
     "name": "Unai Orradre",
@@ -14489,7 +15164,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 10
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -14517,14 +15195,17 @@
      "startsByClass": {
       "Moto2": 17,
       "Moto3": 18
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto2",
      "pos": 35
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "2d9bd73c-a0ef-4ade-8ab4-f91b0a085c4f": {
     "name": "Jacob Roulstone",
@@ -14550,7 +15231,10 @@
      "startsByClass": {
       "Moto2": 4,
       "Moto3": 38
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -14577,7 +15261,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto2": 5
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -14605,7 +15292,10 @@
      "startsByClass": {
       "Moto2": 6,
       "Moto3": 47
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    }
@@ -14636,14 +15326,23 @@
      },
      "startsByClass": {
       "Moto3": 41
+     },
+     "podiumsByClass": {
+      "Moto3": 2
+     },
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 13
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "01f85422-d97e-4901-9492-1be9694a4cc2": {
     "name": "Maximo Quiles",
@@ -14672,14 +15371,23 @@
      },
      "startsByClass": {
       "Moto3": 37
+     },
+     "podiumsByClass": {
+      "Moto3": 27
+     },
+     "polesByClass": {
+      "Moto3": 6
+     },
+     "fastestLapsByClass": {
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 3
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "992cadcb-08e5-47cf-8b29-cf28d3e941ca": {
     "name": "Alvaro Carpe",
@@ -14704,14 +15412,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 43
+     },
+     "podiumsByClass": {
+      "Moto3": 13
+     },
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 4
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "c1dbeba7-8a56-40fd-ab57-cd6eb37e63f3": {
     "name": "Valentin Perrone",
@@ -14736,14 +15453,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 41
+     },
+     "podiumsByClass": {
+      "Moto3": 4
+     },
+     "polesByClass": {
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 10
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "587e8e1a-43c4-4372-bde7-34da0b19e0e6": {
     "name": "Adrian Fernandez",
@@ -14770,14 +15496,23 @@
      },
      "startsByClass": {
       "Moto3": 106
+     },
+     "podiumsByClass": {
+      "Moto3": 11
+     },
+     "polesByClass": {
+      "Moto3": 4
+     },
+     "fastestLapsByClass": {
+      "Moto3": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 7
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "a259beac-40f5-4105-acf7-8f7fb3bd9ea0": {
     "name": "Rico Salmela",
@@ -14802,11 +15537,16 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 20
-     }
+     },
+     "podiumsByClass": {
+      "Moto3": 1
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": null,
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "6052c038-a2a3-4eab-9ee0-79bd5f5be209": {
     "name": "Brian Uriarte",
@@ -14833,14 +15573,23 @@
      },
      "startsByClass": {
       "Moto3": 24
+     },
+     "podiumsByClass": {
+      "Moto3": 6
+     },
+     "polesByClass": {
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 28
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "769510fc-e823-4bf1-8cda-08c1873935e6": {
     "name": "Adrian Cruces",
@@ -14865,14 +15614,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 26
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 26
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "fb584b95-a9ed-4d23-8db3-4a946db60fe8": {
     "name": "Matteo Bertelle",
@@ -14897,14 +15649,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 78
+     },
+     "podiumsByClass": {
+      "Moto3": 3
+     },
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 17
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "f261e368-80bd-4830-9a2e-1cee3e6b0be4": {
     "name": "Scott Ogden",
@@ -14929,14 +15690,19 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 100
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 15
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "99fb2930-285a-4300-a251-ccabc60e9af3": {
     "name": "Eddie O'shea",
@@ -14961,14 +15727,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 46
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 32
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "101ad37a-28d8-4bcc-bf16-dffdd51f1375": {
     "name": "Marco Morelli",
@@ -14993,14 +15762,21 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 28
+     },
+     "podiumsByClass": {
+      "Moto3": 3
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 24
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5d81cf1f-1708-47a9-984e-9430afd4a814": {
     "name": "Hakim Danish",
@@ -15027,14 +15803,21 @@
      },
      "startsByClass": {
       "Moto3": 23
+     },
+     "podiumsByClass": {
+      "Moto3": 2
+     },
+     "polesByClass": {},
+     "fastestLapsByClass": {
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 31
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "c4708bf4-0ca8-4296-8ee3-f153a0fe89b8": {
     "name": "Marcos Uriarte",
@@ -15059,7 +15842,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 19
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15086,14 +15872,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 22
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 30
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "821c7e78-24dd-4715-a7b6-966b6da2c4d8": {
     "name": "Ruche Moodley",
@@ -15118,14 +15907,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 35
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 27
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "368ea111-05a4-4102-8564-e59905ae2858": {
     "name": "Nicola Carraro",
@@ -15150,14 +15942,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 66
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 21
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "b2570616-5431-4eb3-be49-d79fd4ff86e2": {
     "name": "Ryusei Yamanaka",
@@ -15182,14 +15977,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 135
+     },
+     "podiumsByClass": {
+      "Moto3": 3
+     },
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 9
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "a7d44fd6-d27c-4fea-ac27-85953cd45f86": {
     "name": "Cormac Buchanan",
@@ -15214,14 +16018,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 35
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 20
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "8aef18e2-3cb9-4321-ba88-2eeac2b7a7f3": {
     "name": "Leo Rammerstorfer",
@@ -15246,11 +16053,14 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 19
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": null,
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "11af471d-9074-4d43-8b5e-f33957486f08": {
     "name": "Zen Mitani",
@@ -15275,14 +16085,17 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 21
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 38
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "b909706a-1f29-4f38-8a76-40b1fe651d9c": {
     "name": "Casey O'gorman",
@@ -15307,14 +16120,19 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 24
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 25
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "15049794-9e9a-45da-a2d5-a52d684914a7": {
     "name": "Joel Esteban",
@@ -15339,14 +16157,21 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 47
+     },
+     "podiumsByClass": {},
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 19
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5b5fb07a-f0b6-4f7f-9533-18cad7f0c8f2": {
     "name": "Joel Kelso",
@@ -15371,14 +16196,23 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 101
+     },
+     "podiumsByClass": {
+      "Moto3": 5
+     },
+     "polesByClass": {
+      "Moto3": 3
+     },
+     "fastestLapsByClass": {
+      "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 6
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "73085df9-f749-42c4-90b6-6d9863c0f6f4": {
     "name": "Veda Pratama",
@@ -15403,11 +16237,20 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 20
+     },
+     "podiumsByClass": {
+      "Moto3": 2
+     },
+     "polesByClass": {
+      "Moto3": 1
+     },
+     "fastestLapsByClass": {
+      "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": null,
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "3061875e-1a3f-4b9d-a974-603becd903a7": {
     "name": "David Muñoz",
@@ -15434,14 +16277,23 @@
      },
      "startsByClass": {
       "Moto3": 80
+     },
+     "podiumsByClass": {
+      "Moto3": 18
+     },
+     "polesByClass": {
+      "Moto3": 2
+     },
+     "fastestLapsByClass": {
+      "Moto3": 5
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 5
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "ed2d5631-8fe0-4a21-8449-463657eb7901": {
     "name": "David Almansa",
@@ -15468,14 +16320,23 @@
      },
      "startsByClass": {
       "Moto3": 62
+     },
+     "podiumsByClass": {
+      "Moto3": 10
+     },
+     "polesByClass": {
+      "Moto3": 10
+     },
+     "fastestLapsByClass": {
+      "Moto3": 3
      }
     },
-    "careerFetched": "2026-11-22",
     "prev": {
      "cls": "Moto3",
      "pos": 11
     },
-    "prevSeason": 2025
+    "prevSeason": 2025,
+    "careerFetched": "2026-11-22"
    },
    "5f493d5b-0f90-4649-8058-8e78e71ce8a0": {
     "name": "Eduardo Gutierrez",
@@ -15500,7 +16361,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 1
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15527,7 +16391,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 3
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15554,7 +16421,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 6
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15581,7 +16451,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 5
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15608,7 +16481,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 2
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15635,7 +16511,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 1
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    },
@@ -15662,7 +16541,10 @@
      "winsByClass": {},
      "startsByClass": {
       "Moto3": 1
-     }
+     },
+     "podiumsByClass": {},
+     "polesByClass": {},
+     "fastestLapsByClass": {}
     },
     "careerFetched": "2026-11-22"
    }
