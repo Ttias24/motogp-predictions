@@ -1,13 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0e1116"/>
-  <g transform="translate(14 14)">
-    <rect width="36" height="36" fill="#f2f2f2"/>
-    <g fill="#111">
-      <rect x="0" y="0" width="9" height="9"/><rect x="18" y="0" width="9" height="9"/>
-      <rect x="9" y="9" width="9" height="9"/><rect x="27" y="9" width="9" height="9"/>
-      <rect x="0" y="18" width="9" height="9"/><rect x="18" y="18" width="9" height="9"/>
-      <rect x="9" y="27" width="9" height="9"/><rect x="27" y="27" width="9" height="9"/>
-    </g>
+  <rect width="64" height="64" rx="12" fill="#0e1116"/>
+  <!-- Fot -->
+  <path d="M19 49 L45 49 L48 57 L16 57 Z" fill="#e5343a"/>
+  <!-- Kristallkula med svag rutig flagga -->
+  <circle cx="32" cy="28" r="21" fill="#dfe7f3"/>
+  <clipPath id="ball"><circle cx="32" cy="28" r="18"/></clipPath>
+  <g clip-path="url(#ball)" fill="#c2cee0">
+    <rect x="11" y="7" width="7" height="7"/><rect x="25" y="7" width="7" height="7"/><rect x="39" y="7" width="7" height="7"/>
+    <rect x="18" y="14" width="7" height="7"/><rect x="32" y="14" width="7" height="7"/><rect x="46" y="14" width="7" height="7"/>
+    <rect x="11" y="21" width="7" height="7"/><rect x="25" y="21" width="7" height="7"/><rect x="39" y="21" width="7" height="7"/>
+    <rect x="18" y="28" width="7" height="7"/><rect x="32" y="28" width="7" height="7"/><rect x="46" y="28" width="7" height="7"/>
+    <rect x="11" y="35" width="7" height="7"/><rect x="25" y="35" width="7" height="7"/><rect x="39" y="35" width="7" height="7"/>
+    <rect x="18" y="42" width="7" height="7"/><rect x="32" y="42" width="7" height="7"/><rect x="46" y="42" width="7" height="7"/>
   </g>
-  <rect x="6" y="54" width="52" height="4" rx="2" fill="#e5343a"/>
+  <!-- Glans -->
+  <path d="M18 20 A16 16 0 0 1 28 11" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <!-- GP i rött, kursivt -->
+  <g transform="translate(32 28) skewX(-10) translate(-32 -28)" fill="none" stroke="#e5343a" stroke-width="4.6" stroke-linejoin="miter">
+    <path d="M29.5 22.2 A7.6 7.6 0 1 0 31 30.5 L31 28.4 L25.6 28.4" stroke-linecap="butt"/>
+    <path d="M36.2 36.4 L36.2 20.7 L40.6 20.7 A3.9 3.9 0 0 1 40.6 28.5 L36.2 28.5" stroke-linecap="butt"/>
+  </g>
 </svg>
