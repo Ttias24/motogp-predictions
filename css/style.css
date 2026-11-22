@@ -193,14 +193,14 @@ th { text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spa
 /* Startnummer: nummergrafik eller teamfärgad platta */
 .num-plate {
   display: inline-flex; align-items: center; justify-content: center; flex: none;
-  min-width: 30px; height: 22px; padding: 0 5px;
+  width: 36px; height: 22px; padding: 0;
   background: var(--team, var(--surface-3)); color: var(--team-text, var(--text));
   font-family: var(--font-cond); font-weight: 700; font-size: 0.95rem; line-height: 1;
 }
-.num-plate.art { background: none; padding: 0; width: 36px; }
-.num-plate.art img { height: 100%; width: 100%; object-fit: contain; display: block; }
-.num-plate.lg { height: 40px; min-width: 52px; font-size: 1.6rem; padding: 0 8px; }
-.num-plate.lg.art { width: 66px; padding: 0; }
+.num-plate.art { background: none; }
+.num-plate.art img { height: 100%; width: 100%; object-fit: contain; object-position: left center; display: block; }
+.num-plate.lg { width: 64px; height: 40px; font-size: 1.6rem; }
+.num-plate.lg.art { width: 64px; }
 .rider-cell { display: inline-flex; align-items: center; gap: 8px; }
 .dlg-head h2 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .dlg-head h2 .flag { margin-right: 0; }
