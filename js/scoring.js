@@ -60,6 +60,35 @@ export function lineupForRound(classPick, round) {
   return [...without, classPick.backup];
 }
 
+/**
+ * Rundan en backup börjar räknas från. Antingen angiven direkt ({ round }) eller räknad från
+ * när spelaren aktiverade den ({ at }): första runda som startar efter aktiveringsdagen.
+ * Aktiveras den mitt under en tävlingshelg gäller den alltså från nästa runda.
+ */
+export function activationRound(act, results) {
+  if (!act) return null;
+  if (Number.isFinite(act.round)) return act.round;
+  if (!act.at) return null;
+  const day = String(act.at).slice(0, 10);
+  const next = (results?.rounds ?? []).find((r) => String(r.dateStart).slice(0, 10) > day);
+  return next ? next.round : (results?.rounds?.length ?? 0) + 1;
+}
+
+/** Kopia av tipsen där alla backup-aktiveringar har ett rundnummer. */
+export function resolveActivations(picks, results) {
+  const needs = (picks.players ?? []).some((p) =>
+    CLASSES.some((c) => p.picks?.[c]?.backupActivated && !Number.isFinite(p.picks[c].backupActivated.round))
+  );
+  if (!needs) return picks;
+  const copy = structuredClone(picks);
+  for (const p of copy.players)
+    for (const c of CLASSES) {
+      const act = p.picks?.[c]?.backupActivated;
+      if (act && !Number.isFinite(act.round)) act.round = activationRound(act, results);
+    }
+  return copy;
+}
+
 export function roundsWithResults(results) {
   return results.rounds.filter((r) => Object.keys(r.results ?? {}).length > 0);
 }
@@ -71,6 +100,7 @@ export function roundsWithResults(results) {
  * @param opts.uptoRound  räkna bara t.o.m. denna runda (för "tidsresor" och jämförelser)
  */
 export function scoreSeason(picks, results, { uptoRound = Infinity } = {}) {
+  picks = resolveActivations(picks, results);
   const index = buildRiderIndex(results);
   const exactPts = picks.scoring?.exactPosition ?? 2;
   const top5Pts = picks.scoring?.insideTop5 ?? 1;

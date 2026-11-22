@@ -40,53 +40,46 @@ export function cleanPicks(picks) {
   return p;
 }
 
-export function renderEdit(ctx) {
-  const { state, results } = ctx;
-  const draft = state.editDraft;
-  const meta = playerMeta(draft.players);
-  const roundOptions = results.rounds.length
-    ? results.rounds.map((r) => [r.round, `R${r.round} ${r.code}`])
-    : Array.from({ length: 22 }, (_, i) => [i + 1, `R${i + 1}`]);
-  const lastDone = ctx.lastRound;
-
-  const players = draft.players
-    .map((pl, i) => {
-      const m = meta.get(pl.id);
-      const classes = CLASSES.map((cls) => {
-        const c = pl.picks[cls];
-        const base = `players.${i}.picks.${cls}`;
-        const dupes = new Set();
-        const seen = new Set();
-        c.top5.forEach((n) => {
-          const k = normalizeName(n);
-          if (k && seen.has(k)) dupes.add(k);
-          seen.add(k);
-        });
-        const act = c.backupActivated;
-        return `<div class="edit-class">
-          <h4>${cls}</h4>
-          <ol class="edit-top5">${c.top5
-            .map(
-              (n, k) =>
-                `<li><input type="text" list="riders-${cls}" value="${esc(n)}" data-path="${base}.top5.${k}" aria-label="${cls} ${k + 1}" autocomplete="off"></li>`
-            )
-            .join("")}</ol>
-          ${dupes.size ? `<p class="warn">${t("duplicates")}</p>` : ""}
-          <label class="edit-row"><span class="tag bu">BU</span><input type="text" list="riders-${cls}" value="${esc(c.backup)}" data-path="${base}.backup" autocomplete="off"></label>
-          <label class="edit-row"><span class="tag bk">DNF</span><input type="text" list="riders-${cls}" value="${esc(c.bowling)}" data-path="${base}.bowling" autocomplete="off"></label>
-          <label class="edit-check"><input type="checkbox" data-action="toggle-backup" data-index="${i}" data-cls="${cls}" ${act ? "checked" : ""} ${
+/**
+ * Formulär för en klass: topp 5, backup och DNF-förare.
+ * root anger vilket utkast fälten skriver till (edit | predict | admin), base sökvägen i det.
+ * roundOptions = null döljer backup-aktiveringen (spelare aktiverar på annat sätt).
+ */
+export function classForm({ cls, c, base, root, roundOptions = null, disabled = false }) {
+  const dupes = new Set();
+  const seen = new Set();
+  c.top5.forEach((n) => {
+    const k = normalizeName(n);
+    if (k && seen.has(k)) dupes.add(k);
+    seen.add(k);
+  });
+  const buInTop5 = c.backup && seen.has(normalizeName(c.backup));
+  const act = c.backupActivated;
+  const dis = disabled ? " disabled" : "";
+  const input = (path, value, label) =>
+    `<input type="text" list="riders-${cls}" value="${esc(value ?? "")}" data-root="${root}" data-path="${base}.${path}" aria-label="${esc(label)}" autocomplete="off"${dis}>`;
+  return `<div class="edit-class">
+    <h4>${cls}</h4>
+    <ol class="edit-top5">${c.top5.map((n, k) => `<li>${input(`top5.${k}`, n, `${cls} ${k + 1}`)}</li>`).join("")}</ol>
+    ${dupes.size ? `<p class="warn">${t("duplicates")}</p>` : ""}
+    <label class="edit-row"><span class="tag bu">BU</span>${input("backup", c.backup, `${cls} backup`)}</label>
+    ${buInTop5 ? `<p class="warn">${t("backupInTop5")}</p>` : ""}
+    <label class="edit-row"><span class="tag bk">DNF</span>${input("bowling", c.bowling, `${cls} DNF`)}</label>
+    ${
+      roundOptions
+        ? `<label class="edit-check"><input type="checkbox" data-action="toggle-backup" data-root="${root}" data-base="${base}" ${act ? "checked" : ""} ${
             c.backup ? "" : "disabled"
           }> ${t("buActivatedLabel")}</label>
           ${
             act
               ? `<div class="edit-act">
                   <label>${t("fromRound")}
-                    <select data-path="${base}.backupActivated.round" data-type="number">${roundOptions
+                    <select data-root="${root}" data-path="${base}.backupActivated.round" data-type="number">${roundOptions
                       .map(([v, l]) => `<option value="${v}" ${v === act.round ? "selected" : ""}>${esc(l)}</option>`)
                       .join("")}</select>
                   </label>
                   <label>${t("replaces")}
-                    <select data-path="${base}.backupActivated.replaces">${c.top5
+                    <select data-root="${root}" data-path="${base}.backupActivated.replaces">${c.top5
                       .filter(Boolean)
                       .map((n) => `<option ${normalizeName(n) === normalizeName(act.replaces) ? "selected" : ""}>${esc(n)}</option>`)
                       .join("")}</select>
@@ -94,9 +87,41 @@ export function renderEdit(ctx) {
                   <p class="muted small">${t("irreversible")}</p>
                 </div>`
               : ""
-          }
-        </div>`;
-      }).join("");
+          }`
+        : ""
+    }
+  </div>`;
+}
+
+/** Förslagslistor med förarnamn (används av alla formulär). */
+export function riderDatalists(ctx) {
+  return CLASSES.map(
+    (cls) =>
+      `<datalist id="riders-${cls}">${[...new Set(Object.values(ctx.riderSuggestions?.[cls] ?? {}).map((r) => r.name))]
+        .sort((a, b) => a.localeCompare(b))
+        .map((n) => `<option value="${esc(n)}"></option>`)
+        .join("")}</datalist>`
+  ).join("");
+}
+
+export function roundOptionsFor(results) {
+  return results.rounds.length
+    ? results.rounds.map((r) => [r.round, `R${r.round} ${r.code}`])
+    : Array.from({ length: 22 }, (_, i) => [i + 1, `R${i + 1}`]);
+}
+
+export function renderEdit(ctx) {
+  const { state, results } = ctx;
+  const draft = state.editDraft;
+  const meta = playerMeta(draft.players);
+  const roundOptions = roundOptionsFor(results);
+
+  const players = draft.players
+    .map((pl, i) => {
+      const m = meta.get(pl.id);
+      const classes = CLASSES.map((cls) =>
+        classForm({ cls, c: pl.picks[cls], base: `players.${i}.picks.${cls}`, root: "edit", roundOptions })
+      ).join("");
 
       return `<fieldset class="card edit-player" style="--c:${m.color}">
         <div class="card-head">
@@ -108,14 +133,7 @@ export function renderEdit(ctx) {
     })
     .join("");
 
-  const datalists = CLASSES.map(
-    (cls) =>
-      `<datalist id="riders-${cls}">${[...new Set(Object.values(ctx.riderSuggestions?.[cls] ?? {}).map((r) => r.name))]
-
-        .sort((a, b) => a.localeCompare(b))
-        .map((n) => `<option value="${esc(n)}"></option>`)
-        .join("")}</datalist>`
-  ).join("");
+  const datalists = riderDatalists(ctx);
 
   return `<section class="card">
       <div class="card-head"><h2>${t("editTitle")}</h2></div>

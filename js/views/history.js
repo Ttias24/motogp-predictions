@@ -1,4 +1,4 @@
-import { t, fmt } from "../i18n.js";
+import { t, fmt, fmtDate } from "../i18n.js";
 import { rankPlayers } from "../scoring.js";
 import { esc, playerMeta, playerName, empty } from "../ui.js";
 
@@ -43,6 +43,24 @@ export function renderHistory(ctx) {
 /** Kort som visas när säsongen inte har börjat (inga resultat ännu). */
 export function seasonNotStarted(ctx) {
   const hasPicks = (ctx.state.picks.players ?? []).some((p) => Object.values(p.picks ?? {}).some((c) => (c.top5 ?? []).some(Boolean)));
+  const w = ctx.state.window;
+  // Databassäsong: visa tipsperioden och vilka som har lämnat tips.
+  if (ctx.state.dbSeason && w) {
+    const open = Date.parse(w.now) < Date.parse(w.closesAt);
+    const players = w.players ?? [];
+    const done = players.filter((p) => p.submitted).length;
+    return `<section class="card">
+      <h2>${t("seasonNotStarted", { year: ctx.year })}</h2>
+      ${open ? `<p>${t("windowOpen", { year: ctx.year, date: fmtDate(w.closesAt, { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) })}</p>` : `<p>${t("waitingForRace")}</p>`}
+      ${
+        players.length
+          ? `<p class="muted">${t("windowCount", { n: done, m: players.length })}</p>
+             <ul class="submitted">${players.map((p) => `<li>${p.submitted ? "✓" : "–"} ${esc(p.name)}</li>`).join("")}</ul>`
+          : ""
+      }
+      ${ctx.state.seasonList.length > 1 ? `<p><a href="#/history">${esc(t("seeHistory"))} →</a></p>` : ""}
+    </section>`;
+  }
   return `<section class="card">
     <h2>${t("seasonNotStarted", { year: ctx.year })}</h2>
     <p>${hasPicks ? t("waitingForRace") : t("fillPicks")}</p>

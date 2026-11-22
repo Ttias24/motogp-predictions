@@ -58,6 +58,17 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update-results.yml/enable"
+      - name: Håll databasen vaken
+        # Supabase gratisprojekt pausas efter en vecka utan anrop. En liten läsning räcker.
+        # Adress och nyckel är de publika värdena från js/config.js.
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: |
+          URL=$(sed -n 's/^export const SUPABASE_URL = "\(.*\)";/\1/p' js/config.js)
+          KEY=$(sed -n 's/^export const SUPABASE_ANON_KEY = "\(.*\)";/\1/p' js/config.js)
+          if [ -n "$URL" ] && [ -n "$KEY" ]; then
+            curl -sf -X POST "$URL/rest/v1/rpc/season_overview" -H "apikey: $KEY" -H "content-type: application/json" -d '{"p_year": 2000}' -o /dev/null && echo "Databasen svarar."
+          fi
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

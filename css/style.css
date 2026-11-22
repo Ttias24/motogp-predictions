@@ -347,3 +347,26 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
   .stat-row { grid-template-columns: repeat(3, 1fr); }
   .brand { font-size: 1.15rem; }
 }
+
+/* ---------- Tippa / Admin ---------- */
+h3.sub { margin: 18px 0 4px; }
+.ok { color: var(--good); margin: 10px 0 0; }
+.warn[role="status"] { margin-top: 10px; }
+.inline-input { min-width: 0; width: 100%; max-width: 220px; }
+.link-out { font-size: 0.8rem; color: var(--muted); }
+.link-out.wide { max-width: 520px; flex: 1; }
+.admin-players td.actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.admin-players .btn { padding: 5px 10px; font-size: 0.85rem; }
+.name-field { display: grid; gap: 4px; margin-bottom: 14px; font-weight: 600; max-width: 360px; }
+.edit-top5.readonly li { padding: 3px 0; }
+.struck-text { text-decoration: line-through; color: var(--muted); }
+.activate { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; margin: 6px 0 10px; }
+.activate label { display: grid; gap: 3px; font-size: 0.85rem; }
+.admin-login input[type="email"] { min-width: 260px; }
+input[type="email"], input[type="datetime-local"] {
+  background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 0; padding: 6px 9px; font: inherit;
+}
+ul.submitted { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+a.btn { display: inline-block; text-decoration: none; }
+/* Före första racet finns inga resultat att matcha namn mot – visa namnen neutralt. */
+.preseason .unknown { color: inherit; border-bottom: 0; }

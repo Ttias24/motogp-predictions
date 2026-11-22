@@ -28,7 +28,11 @@ if (year <= seasons.current) {
 
 const previous = seasons.current;
 const picksFile = join(DATA, `picks-${year}.json`);
-if (!existsSync(picksFile)) {
+// Säsonger från och med "databaseFrom" har sina tips i databasen – då behövs ingen fil.
+const inDatabase = seasons.databaseFrom != null && year >= seasons.databaseFrom;
+if (inDatabase) {
+  console.log(`Säsong ${year} lämnar tips via databasen (skapa tipsperioden på adminsidan).`);
+} else if (!existsSync(picksFile)) {
   const prevFile = join(DATA, `picks-${previous}.json`);
   const prev = existsSync(prevFile) ? JSON.parse(await readFile(prevFile, "utf8")) : { players: [] };
   const empty = () => ({ top5: ["", "", "", "", ""], backup: null, bowling: null, backupActivated: null });
