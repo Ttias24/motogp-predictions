@@ -488,3 +488,6 @@ hr.divider { border: 0; border-top: 1px solid var(--line); margin: 16px 0 4px; }
 @media (prefers-reduced-motion: reduce) { .pk-card, .pk-slot { transition: none; } }
 
 .dlg-head h2 .age { font-weight: 600; color: var(--muted); }
+
+.brand-icon { width: 30px; height: 30px; display: block; flex: none; }
+@media (max-width: 640px) { .brand-icon { width: 26px; height: 26px; } }
