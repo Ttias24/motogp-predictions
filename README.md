@@ -88,17 +88,27 @@ Inga IP-adresser och inga e-postadresser för spelare sparas – bara det namn s
 
 ### Varje år (din del)
 
-1. **December/januari:** öppna `#/admin` och logga in. Välj året, fyll i när tipsen öppnar
-   (förslag: 1 januari) och stänger (förslag: 23:59 dagen före första racehelgen – sidan föreslår
-   datumet ur MotoGP-kalendern när den finns) och tryck **Skapa säsong**.
-2. Tryck **Skapa delad länk**, kopiera den och skicka den till alla som ska vara med.
+Tipsperioden sköter sig själv: GitHub-jobbet hämtar MotoGP:s officiella startlista och kalender
+och skapar säsongen i databasen. Tipsen **öppnar när startlistan publiceras** och **stänger 23:59
+dagen före årets första tävlingshelg**. Spelarna väljer förare i en tipsväljare i fyra steg
+(Moto3, Moto2, MotoGP, översikt) och kan bara välja förare som står på startlistan för klassen.
+
+1. När säsongen dykt upp på `#/admin`: tryck **Skapa delad länk**, kopiera den och skicka den
+   till alla som ska vara med (länken fungerar bara medan tipsperioden är öppen).
    Vill du hellre bjuda in en och en: skriv en anteckning (t.ex. "Mormor") och tryck **Bjud in** –
    mottagaren väljer själv sitt namn.
-3. Följ på adminsidan vilka som lämnat tips. Du kan rätta tips, ta bort dubbletter, godkänna
+2. Följ på adminsidan vilka som lämnat tips. Du kan rätta tips, ta bort dubbletter, godkänna
    nya spelare (om du kryssat i att det krävs) och ge någon en ny länk om de tappat bort sin.
+   Adminsidan varnar om någon tippat en förare som inte längre står på startlistan.
+3. Vill du ändra ett datum: bocka ur **Automatiskt** vid datumet, ändra och spara. Det datumet
+   lämnas sedan orört av jobbet tills du bockar i **Automatiskt** igen.
 
-Resten sker automatiskt: säsongsbytet 1 januari, resultaten och att databasen hålls vaken
-(GitHub-jobbet gör ett litet anrop varje körning, eftersom gratisprojekt annars pausas efter en vecka).
+Resten sker automatiskt: säsongsbytet 1 januari, startlistan, tipsperioden, resultaten och att
+databasen hålls vaken (GitHub-jobbet gör ett litet anrop varje körning, eftersom gratisprojekt
+annars pausas efter en vecka).
+
+Datumen skickas till databasen med en hemlig nyckel (GitHub-hemligheten `SUPABASE_SYNC_KEY`;
+databasen har bara en hash av den). Byts nyckeln måste båda ställena uppdateras.
 
 ### Teknik
 
