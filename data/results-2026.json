@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-22T18:02:11.136Z",
+ "updatedAt": "2026-11-22T20:02:55.130Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -16270,6 +16270,7 @@
    "8aef18e2-3cb9-4321-ba88-2eeac2b7a7f3",
    "b909706a-1f29-4f38-8a76-40b1fe651d9c"
   ],
-  "changed": "2026-11-22"
+  "changed": "2026-11-22",
+  "firstPublished": "2026-11-22T20:02:55.129Z"
  }
 }
