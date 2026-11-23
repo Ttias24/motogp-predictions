@@ -21,7 +21,7 @@ const STRINGS = {
     seeHistory: "Se tidigare säsonger under Historik",
     "nav.predict": "Mina tips",
     "nav.join": "Gå med",
-    ridersTitle: "Predicted Riders",
+    ridersTitle: "Tippade förare",
     seasonPosition: "Position",
     predictWaitList: "Tipsen öppnar när MotoGP har publicerat startlistan för {year}.",
     windowOpenNoDeadline: "Tipsen för {year} är öppna.",
@@ -197,6 +197,8 @@ const STRINGS = {
     player: "Spelare",
     lastRound: "Senaste runda",
     lastRoundShort: "Senast",
+    themeLight: "Ljust läge",
+    themeDark: "Mörkt läge",
     rank: "#",
     rulesTitle: "Så räknas poängen",
     rules: [
@@ -468,6 +470,8 @@ const STRINGS = {
     player: "Player",
     lastRound: "Last round",
     lastRoundShort: "Last",
+    themeLight: "Bright mode",
+    themeDark: "Dark mode",
     rank: "#",
     rulesTitle: "How scoring works",
     rules: [

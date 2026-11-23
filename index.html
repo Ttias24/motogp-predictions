@@ -31,7 +31,7 @@
     <meta name="twitter:image" content="https://ttias24.github.io/motogp-predictions/icon-512.png" />
     <meta name="twitter:title" content="MotoGP Predictions" />
     <meta name="twitter:description" content="Predicting the outcome of the upcoming MotoGP, Moto2 and Moto3 season" />
-    <meta name="theme-color" content="#0e1116" />
+    <meta name="theme-color" content="#161b24" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -40,6 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme-init.js"></script>
   </head>
   <body>
     <header class="topbar">
@@ -53,6 +54,10 @@
           <button type="button" data-action="lang" data-lang="sv">SV</button>
           <button type="button" data-action="lang" data-lang="en">EN</button>
         </div>
+        <button type="button" class="theme-btn" data-action="theme" aria-label="Ljust läge" title="Ljust läge">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
       </div>
       <nav id="nav" class="nav"></nav>
     </header>

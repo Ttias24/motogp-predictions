@@ -45,6 +45,15 @@ const setPref = (k, v) => {
   } catch {}
 };
 
+/** Ljust eller mörkt läge (läses redan i theme-init.js innan sidan ritas). */
+const isLight = () => document.documentElement.dataset.theme === "light";
+function setTheme(theme) {
+  if (theme === "light") document.documentElement.dataset.theme = "light";
+  else delete document.documentElement.dataset.theme;
+  setPref("theme", theme);
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "light" ? "#ffffff" : "#161b24");
+}
+
 const state = {
   year: null,
   currentSeason: null,
@@ -164,6 +173,10 @@ function renderHeader() {
   document.getElementById("brand-title").textContent = t("appTitle");
   document.getElementById("brand-year").textContent = state.year;
   document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === getLang())));
+  const themeBtn = document.querySelector(".theme-btn");
+  const themeLabel = isLight() ? t("themeDark") : t("themeLight");
+  themeBtn.setAttribute("aria-label", themeLabel);
+  themeBtn.title = themeLabel;
 
   const nav = [...NAV];
   if (storedToken() && remote.isConfigured()) nav.push("predict");
@@ -511,6 +524,10 @@ document.addEventListener("click", async (e) => {
       break;
     case "lang":
       setLang(el.dataset.lang);
+      render();
+      break;
+    case "theme":
+      setTheme(isLight() ? "dark" : "light");
       render();
       break;
     case "select-player":
