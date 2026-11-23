@@ -11,6 +11,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { teamColor, teamKey } from "./team-colors.mjs";
 
 const API_ROOT = "https://api.motogp.pulselive.com/motogp/v1";
 const API = `${API_ROOT}/results`;
@@ -233,19 +234,23 @@ async function teamCategoryIds() {
  * Förarna läggs in i riders-kartan så att namn, nummer, team och färger finns redan före första racet.
  * Returnerar { MotoGP: [förar-id, …], …, published, changed } – "changed" = datum då listan senast ändrades.
  */
-async function fetchEntryList(year, riders, previousList) {
+async function fetchEntryList(year, riders, previousList, teams, previousTeams) {
   const ids = await teamCategoryIds();
   const list = { published: false };
   for (const cls of CLASSES) {
-    let teams = [];
+    let teamList = [];
     try {
-      teams = await get(`${API_ROOT}/teams?categoryUuid=${ids[cls]}&seasonYear=${year}`);
+      teamList = await get(`${API_ROOT}/teams?categoryUuid=${ids[cls]}&seasonYear=${year}`);
     } catch (err) {
       console.warn(`  Kunde inte hämta startlistan för ${cls}: ${err.message}`);
       return previousList ?? list; // behåll förra versionen hellre än att tömma listan
     }
     const keys = [];
-    for (const t of teams ?? []) {
+    teams[cls] = { byTeam: {}, byRider: {} };
+    for (const t of teamList ?? []) {
+      // Teamets färg (ur teamlistan, eller ur teamets bild när listan bara har en platshållare).
+      const tc = await teamColor(t, previousTeams?.[cls]?.byTeam?.[teamKey(t.name)]);
+      teams[cls].byTeam[teamKey(t.name)] = tc;
       for (const r of t.riders ?? []) {
         const step = r.current_career_step ?? {};
         if (step.type && step.type !== "Official") continue;
@@ -258,10 +263,13 @@ async function fetchEntryList(year, riders, previousList) {
           number: step.season === year && step.number != null ? step.number : old.number ?? step.number ?? null,
           country: r.country?.iso ?? old.country ?? "",
           team: (step.season === year && step.sponsored_team) || t.name || old.team || "",
-          teamColor: t.color ?? old.teamColor ?? null,
-          teamTextColor: t.text_color ?? old.teamTextColor ?? null,
+          teamColor: tc.color ?? old.teamColor ?? null,
+          teamTextColor: tc.textColor ?? old.teamTextColor ?? null,
           legacyId: r.legacy_id ?? old.legacyId ?? null,
         };
+        teams[cls].byRider[key] = teamKey(t.name);
+        const sponsored = riders[cls][key].team;
+        if (sponsored && !teams[cls].byTeam[teamKey(sponsored)]) teams[cls].byTeam[teamKey(sponsored)] = tc;
         if (!keys.includes(key)) keys.push(key);
       }
     }
@@ -274,6 +282,23 @@ async function fetchEntryList(year, riders, previousList) {
   list.firstPublished = previousList?.firstPublished ?? (list.published ? new Date().toISOString() : null);
   console.log(`  Startlista ${year}: ${CLASSES.map((c) => `${c} ${list[c].length}`).join(", ")}${same ? "" : " (ändrad)"}`);
   return list;
+}
+
+/**
+ * Ger varje förare sitt teams färg från teamlistan. Förarprofilerna har ibland en gammal färg
+ * (från ett tidigare team) eller platshållaren, så teamlistan går före.
+ */
+function applyTeamColors(riders, teams) {
+  for (const cls of CLASSES) {
+    const t = teams?.[cls];
+    if (!t) continue;
+    for (const [key, r] of Object.entries(riders[cls] ?? {})) {
+      const tc = t.byTeam[t.byRider[key]] ?? t.byTeam[teamKey(r.team)];
+      if (!tc?.color) continue;
+      r.teamColor = tc.color;
+      r.teamTextColor = tc.textColor;
+    }
+  }
 }
 
 /**
@@ -446,8 +471,11 @@ async function main() {
   }
 
   repairMissingPoints(rounds, standings);
-  const entryList = await fetchEntryList(year, riders, previous?.entryList);
+  let teams = {};
+  const entryList = await fetchEntryList(year, riders, previous?.entryList, teams, previous?.teams);
+  if (!CLASSES.some((c) => Object.keys(teams[c]?.byTeam ?? {}).length)) teams = previous?.teams ?? {};
   await addRiderProfiles(riders, year);
+  applyTeamColors(riders, teams);
   await addCareerStats(riders);
   await addPreviousSeason(year, riders, entryList);
 
@@ -460,6 +488,7 @@ async function main() {
     riders,
     standings,
     entryList,
+    teams,
   };
 
   await mkdir(dirname(outFile), { recursive: true });
