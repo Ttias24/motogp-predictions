@@ -4,7 +4,7 @@ import { loadSeasonList, loadResults, loadPicks, loadSavedPicks, saveDraft, clea
 import { esc, playerMeta, roundTitle, setRiderInfo } from "./ui.js";
 import { renderLeaderboard } from "./views/leaderboard.js";
 import { renderPicks } from "./views/picks.js";
-import { renderRiders, renderRiderDialog } from "./views/riders.js";
+import { renderRiders, renderRiderDialog, rolesFor, rolesList } from "./views/riders.js";
 import { renderChampionship } from "./views/championship.js";
 import { renderEdit, normalizePicks, cleanPicks, emptyClassPick } from "./views/edit.js";
 import { renderHistory, seasonNotStarted } from "./views/history.js";
@@ -239,6 +239,30 @@ function render() {
   app.innerHTML = renderBanners() + body;
   if (state.dialog) openDialog(state.dialog.cls, state.dialog.key);
 }
+
+/** Liten ruta vid brickorna: alla som tippat föraren och var. */
+const whoPop = document.getElementById("who-pop");
+function showWho(btn) {
+  if (!whoPop?.showPopover) return;
+  const roles = rolesFor(ctx, btn.dataset.cls, btn.dataset.name);
+  whoPop.innerHTML = `<div class="who-head">${esc(btn.dataset.name)}</div>${rolesList(roles)}`;
+  if (!whoPop.matches(":popover-open")) whoPop.showPopover();
+  const r = btn.getBoundingClientRect();
+  const w = whoPop.offsetWidth;
+  const h = whoPop.offsetHeight;
+  const left = Math.min(Math.max(8, r.left), innerWidth - w - 8);
+  const top = r.bottom + 6 + h > innerHeight - 8 ? Math.max(8, r.top - h - 6) : r.bottom + 6;
+  whoPop.style.left = left + "px";
+  whoPop.style.top = top + "px";
+}
+// Rutan följer inte med när sidan eller tabellen rullas, så den stängs i stället.
+addEventListener(
+  "scroll",
+  (e) => {
+    if (whoPop?.matches(":popover-open") && !whoPop.contains(e.target)) whoPop.hidePopover();
+  },
+  { capture: true, passive: true }
+);
 
 function openDialog(cls, key) {
   state.dialog = { cls, key };
@@ -499,6 +523,9 @@ document.addEventListener("click", async (e) => {
       break;
     case "rider":
       openDialog(el.dataset.cls, el.dataset.key);
+      break;
+    case "who":
+      showWho(el);
       break;
     case "close-dialog":
       closeDialog();

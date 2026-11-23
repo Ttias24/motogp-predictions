@@ -31,12 +31,10 @@ export function playerMeta(players) {
   return meta;
 }
 
-/** Spelarbricka, t.ex. "C" med ett litet tillägg som "1" eller "DNF". */
+/** Liten bricka i spelarens färg med rollen, t.ex. "1", "BU" eller "DNF". */
 export function chip(m, { tag = "", variant = "", title = "" } = {}) {
   if (!m) return "";
-  return `<span class="chip ${variant}" style="--c:${m.color}" title="${esc(title || m.name)}">${esc(m.short)}${
-    tag ? `<sub>${esc(tag)}</sub>` : ""
-  }</span>`;
+  return `<span class="chip ${variant}" style="--c:${m.color}" title="${esc(title || m.name)}">${esc(tag || m.short)}</span>`;
 }
 
 export function playerName(m, name) {
@@ -98,13 +96,25 @@ export function numberBadge(r, size = "") {
   return `<span class="num-plate ${size}"${style} title="#${num} · ${esc(r.team)}">${num}</span>`;
 }
 
+/** "Marc Marquez" → "M Mar", "Fabio Di Giannantonio" → "F DiG" (som tv-grafiken). */
+export function shortRiderName(name) {
+  const words = String(name ?? "").trim().split(/\s+/).filter(Boolean);
+  if (words.length < 2) return [...(words[0] ?? "")].slice(0, 3).join("");
+  return [...words[0]][0] + " " + [...words.slice(1).join("")].slice(0, 3).join("");
+}
+
+/** Namn i två former: hela på stor skärm, kort ("M Mar") på mobil. */
+function nameForms(name) {
+  return `<span class="rn-full">${esc(name)}</span><span class="rn-short" aria-hidden="true">${esc(shortRiderName(name))}</span>`;
+}
+
 /** Förarnamn med flagga; klick öppnar förardialogen. */
 export function riderLink(cls, key, name) {
-  if (!key) return `<span class="unknown" title="?">${esc(name)}</span>`;
+  if (!key) return `<span class="unknown" title="${esc(name)}">${nameForms(name)}</span>`;
   const iso = riderInfo[cls]?.[key]?.country;
   return `<span class="rider">${flag(iso)}<button type="button" class="link" data-action="rider" data-cls="${esc(cls)}" data-key="${esc(
     key
-  )}">${esc(name)}</button></span>`;
+  )}" aria-label="${esc(name)}">${nameForms(name)}</button></span>`;
 }
 
 /** "GRAND PRIX OF THE UNITED STATES" → "United States" */

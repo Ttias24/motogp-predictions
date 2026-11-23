@@ -1,6 +1,6 @@
 import { t, fmt } from "../i18n.js";
 import { CLASSES, rankPlayers } from "../scoring.js";
-import { esc, playerName, segmented, empty } from "../ui.js";
+import { esc, playerName, segmented, empty, riderLink } from "../ui.js";
 
 export function renderLeaderboard(ctx) {
   const { state, score, prev, meta } = ctx;
@@ -52,7 +52,7 @@ export function renderLeaderboard(ctx) {
         <td>${playerName(meta.get(p.id), p.name)}</td>
         ${CLASSES.map((c) => {
           const b = p.byClass[c];
-          return `<td><span class="bk-rider">${esc(b.bowling ?? "–")}</span> <span class="num bk-count">${
+          return `<td><span class="bk-rider">${b.bowling ? riderLink(c, b.bowlingKey, b.bowling) : "–"}</span> <span class="num bk-count">${
             b.bowling ? b.bowlingDnf : ""
           }</span></td>`;
         }).join("")}

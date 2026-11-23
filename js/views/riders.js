@@ -50,8 +50,10 @@ export function roundCells(ctx, cls, stats, mode) {
     .join("");
 }
 
-export function roleChips(roles) {
-  return roles
+/** Brickor för vilka som tippat föraren; klick visar listan med namn och roller. */
+export function roleChips(roles, cls, name) {
+  if (!roles.length) return "";
+  const chips = roles
     .map((r) =>
       chip(r.m, {
         tag: r.tags.join("·"),
@@ -60,6 +62,16 @@ export function roleChips(roles) {
       })
     )
     .join("");
+  return `<button type="button" class="who" data-action="who" data-cls="${esc(cls)}" data-name="${esc(name)}" aria-label="${esc(
+    t("pickedBy") + ": " + roles.map((r) => r.p.name).join(", ")
+  )}">${chips}</button>`;
+}
+
+/** Lista "Spelare – Plats 1, DNF" (förardialogen och tippad-av-rutan). */
+export function rolesList(roles) {
+  return `<ul class="roles">${roles
+    .map((ro) => `<li>${playerName(ro.m, ro.p.name)} <span class="muted">${ro.tags.map((x) => (x === "×" ? t("replaced") : /^\d$/.test(x) ? `${t("slot")} ${x}` : x)).join(", ")}</span></li>`)
+    .join("")}</ul>`;
 }
 
 export function renderRiders(ctx) {
@@ -87,7 +99,7 @@ export function renderRiders(ctx) {
       const stats = key ? riderStats(results, cls, key, { uptoRound: ctx.upto }) : null;
       const roles = rolesFor(ctx, cls, name);
       return `<tr>
-        <td class="sticky c1">${roleChips(roles)}</td>
+        <td class="sticky c1">${roleChips(roles, cls, name)}</td>
         <td class="sticky c2">${riderLink(cls, key, name)}</td>
         <td class="sticky c3 num big">${stats ? fmt(stats.points) : "–"}</td>
         ${roundCells(ctx, cls, stats, mode)}
@@ -199,9 +211,7 @@ export function renderRiderDialog(ctx, cls, key) {
     </table>
     ${
       roles.length
-        ? `<h3>${t("pickedBy")}</h3><ul class="roles">${roles
-            .map((ro) => `<li>${playerName(ro.m, ro.p.name)} <span class="muted">${ro.tags.map((x) => (x === "×" ? t("replaced") : /^\d$/.test(x) ? `${t("slot")} ${x}` : x)).join(", ")}</span></li>`)
-            .join("")}</ul>`
+        ? `<h3>${t("pickedBy")}</h3>${rolesList(roles)}`
         : ""
     }`;
 }

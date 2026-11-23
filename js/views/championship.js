@@ -22,7 +22,7 @@ export function renderChampionship(ctx) {
         <td class="team" title="${esc(r.team)}">${esc(r.team)}</td>
         ${roundCells(ctx, cls, stats, mode)}
         <td class="sticky s-pts num big">${fmt(s.pts)}</td>
-        <td class="picked-by">${roleChips(roles)}</td>
+        <td class="picked-by">${roleChips(roles, cls, r.name)}</td>
       </tr>`;
     })
     .join("");
