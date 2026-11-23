@@ -1,7 +1,7 @@
 import { t, fmt } from "../i18n.js";
 import { SESSION_TYPES, riderStats } from "../scoring.js";
 import { esc, classTabs, segmented, empty, riderLink, numberBadge } from "../ui.js";
-import { rolesFor, roleChips, roundHeads, roundCells } from "./riders.js";
+import { rolesFor, roundHeads, roundCells } from "./riders.js";
 
 export function renderChampionship(ctx) {
   const { state, results } = ctx;
@@ -22,7 +22,6 @@ export function renderChampionship(ctx) {
         <td class="team" title="${esc(r.team)}">${esc(r.team)}</td>
         ${roundCells(ctx, cls, stats, mode)}
         <td class="sticky s-pts num big">${fmt(s.pts)}</td>
-        <td class="picked-by">${roleChips(roles, cls, r.name)}</td>
       </tr>`;
     })
     .join("");
@@ -44,7 +43,6 @@ export function renderChampionship(ctx) {
           <th class="team">${t("team")}</th>
           ${roundHeads(ctx)}
           <th class="sticky s-pts num">${t("points")}</th>
-          <th class="picked-by">${t("picksCol")}</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>

@@ -292,7 +292,8 @@ details.rules ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px
 
 .totals { display: flex; gap: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .totals small { color: var(--muted); font-weight: 500; margin-right: 2px; }
-.class-block + .class-block { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+/* Avdelare mellan klasserna: tydligt kraftigare än den tunna linjen ovanför backup/DNF. */
+.class-block + .class-block { margin-top: 26px; padding-top: 22px; border-top: 3px solid var(--active-bg); }
 .class-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
 table.picks td, table.picks th { padding: 4px 6px; }
 table.picks th.num, table.picks td.num { width: 72px; }
@@ -325,7 +326,6 @@ table.vm-grid .s-rank { left: 0; min-width: 46px; padding-left: 16px; }
 table.vm-grid .s-rider { left: 46px; min-width: 200px; white-space: nowrap; font-weight: 600; box-shadow: 1px 0 0 var(--line); }
 table.vm-grid .s-pts { right: 0; min-width: 60px; padding: 4px 10px; box-shadow: -1px 0 0 var(--line); }
 table.vm-grid .team { color: var(--muted); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 4px 10px; }
-table.vm-grid .picked-by { min-width: 130px; padding: 4px 16px 4px 10px; white-space: nowrap; }
 td.rd { text-align: center; }
 td.rd .res { display: block; }
 td.rd.two .res + .res { margin-top: 2px; }
