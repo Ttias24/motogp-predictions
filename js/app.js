@@ -838,7 +838,7 @@ document.addEventListener(
   "error",
   (e) => {
     const img = e.target;
-    if (img?.tagName !== "IMG" || !img.dataset.fallback) return;
+    if (img?.tagName !== "IMG" || !("fallback" in img.dataset)) return; // tom fallback = ta bort bilden
     img.parentNode?.classList.remove("art");
     img.replaceWith(img.dataset.fallback);
   },
@@ -944,9 +944,9 @@ async function init() {
     if (prevYear && !Object.values(results.riders ?? {}).some((c) => Object.keys(c).length)) {
       const prev = await loadResults(prevYear);
       state.riderSuggestions = prev.riders;
-      setRiderInfo(prev.riders);
+      setRiderInfo(prev.riders, { ...prev.flags, ...results.flags });
     } else {
-      setRiderInfo(results.riders);
+      setRiderInfo(results.riders, results.flags);
     }
     state.picks = picksRes.picks;
     state.isDraft = Boolean(picksRes.isDraft);

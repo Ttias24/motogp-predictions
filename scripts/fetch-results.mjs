@@ -12,6 +12,7 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { teamColor, teamKey } from "./team-colors.mjs";
+import { localizeImages, removeUnusedImages } from "./assets.mjs";
 
 const API_ROOT = "https://api.motogp.pulselive.com/motogp/v1";
 const API = `${API_ROOT}/results`;
@@ -192,7 +193,7 @@ async function addRiderProfiles(riders, year) {
       const art = [...career]
         .filter((s) => s.pictures?.number && s.number === number)
         .sort((a, b) => b.season - a.season)[0]?.pictures?.number;
-      r.numberArt = art ?? null;
+      r.numberArtSrc = art ?? null; // laddas ner till assets/ av localizeImages
       r.legacyId = d.legacy_id ?? r.legacyId ?? null;
       r.birthDate = d.birth_date ?? r.birthDate ?? null;
       r.teamColor = step?.team?.color ?? r.teamColor ?? null;
@@ -234,6 +235,9 @@ async function teamCategoryIds() {
  * Förarna läggs in i riders-kartan så att namn, nummer, team och färger finns redan före första racet.
  * Returnerar { MotoGP: [förar-id, …], …, published, changed } – "changed" = datum då listan senast ändrades.
  */
+// Land → flaggans adress, som förarlistan anger den (används av localizeImages).
+const flagSrc = {};
+
 async function fetchEntryList(year, riders, previousList, teams, previousTeams) {
   const ids = await teamCategoryIds();
   const list = { published: false };
@@ -257,6 +261,7 @@ async function fetchEntryList(year, riders, previousList, teams, previousTeams) 
         const key = r.id;
         const name = `${r.name ?? ""} ${r.surname ?? ""}`.replace(/\s+/g, " ").trim();
         const old = riders[cls][key] ?? {};
+        if (r.country?.iso && r.country?.flag) flagSrc[String(r.country.iso).toUpperCase()] = r.country.flag;
         riders[cls][key] = {
           ...old,
           name: old.name ?? name,
@@ -478,6 +483,8 @@ async function main() {
   applyTeamColors(riders, teams);
   await addCareerStats(riders);
   await addPreviousSeason(year, riders, entryList);
+  // Nummergrafik och flaggor sparas på sidan själv (assets/) i stället för att hämtas från MotoGP.
+  const flags = await localizeImages(ROOT, riders, flagSrc);
 
   const output = {
     season: year,
@@ -489,6 +496,7 @@ async function main() {
     standings,
     entryList,
     teams,
+    flags,
   };
 
   await mkdir(dirname(outFile), { recursive: true });
@@ -498,6 +506,9 @@ async function main() {
     return;
   }
   const json = JSON.stringify(output, null, 1);
+  // Städa bort bilder som varken den här säsongen eller någon annan sparad säsong använder.
+  const usedNow = [...Object.values(flags), ...CLASSES.flatMap((c) => Object.values(riders[c] ?? {}).map((r) => r.numberArt).filter(Boolean))];
+  await removeUnusedImages(ROOT, usedNow).catch((err) => console.warn(`  Kunde inte städa bilder: ${err.message}`));
   // Skriv bara om något annat än tidsstämpeln har ändrats (färre onödiga commits).
   if (previous) {
     const strip = (o) => JSON.stringify({ ...o, updatedAt: null });

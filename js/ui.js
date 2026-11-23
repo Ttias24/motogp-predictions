@@ -94,17 +94,20 @@ export function segmented(key, options, value, label = "") {
 
 export const classTabs = (classes, value) => segmented("cls", classes.map((c) => [c, c]), value, "Klass");
 
-// Förarnas nationalitet (sätts av app.js när resultaten laddats).
+// Förarnas nationalitet och flaggorna (sätts av app.js när resultaten laddats).
 let riderInfo = {};
-export function setRiderInfo(riders) {
+let flagFiles = {};
+export function setRiderInfo(riders, flags = {}) {
   riderInfo = riders ?? {};
+  flagFiles = flags ?? {};
 }
 
-/** Flagga utifrån landskod (ISO 3166-1 alpha-2), via flag-icons. */
+/** Flagga utifrån landskod (ISO 3166-1 alpha-2). Bilden ligger på sidan (assets/flags, hämtad av boten). */
 export function flag(iso) {
-  const code = String(iso ?? "").toLowerCase();
-  if (!/^[a-z]{2}$/.test(code)) return "";
-  return `<span class="fi fi-${code} flag" title="${esc(iso)}" aria-hidden="true"></span>`;
+  const code = String(iso ?? "").toUpperCase();
+  const file = flagFiles[code];
+  if (!/^[A-Z]{2}$/.test(code) || !file) return "";
+  return `<img class="flag" src="${esc(file)}" alt="" title="${esc(code)}" loading="lazy" decoding="async" data-fallback="">`;
 }
 
 /**
@@ -114,9 +117,10 @@ export function flag(iso) {
 export function numberBadge(r, size = "") {
   if (!r || (r.number == null && !r.numberArt)) return "";
   const num = esc(r.number ?? "");
-  if (r.numberArt)
-    return `<span class="num-plate art ${size}" title="#${num} · ${esc(r.team)}"><img src="${esc(r.numberArt)}" alt="${num}" loading="lazy" data-fallback="${num}"></span>`;
+  // Teamfärgerna sätts även på grafiken, så plattan blir rätt färgad om bilden inte laddas.
   const style = r.teamColor ? ` style="--team:${esc(r.teamColor)};--team-text:${esc(r.teamTextColor || "#fff")}"` : "";
+  if (r.numberArt)
+    return `<span class="num-plate art ${size}"${style} title="#${num} · ${esc(r.team)}"><img src="${esc(r.numberArt)}" alt="${num}" loading="lazy" data-fallback="${num}"></span>`;
   return `<span class="num-plate ${size}"${style} title="#${num} · ${esc(r.team)}">${num}</span>`;
 }
 
