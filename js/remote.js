@@ -51,7 +51,7 @@ export const activateMyBackup = (token, cls, replaces) =>
 
 // ---- Alla besökare ----
 export const seasonOverview = (year) => rpc("season_overview", { p_year: year });
-/** Kontrollsumma för säsongens tips efter fristen (null före) – se 003_picks_version.sql. */
+/** Kontrollsumma för säsongens tips när tipsperioden har stängt (null innan) – se 003_picks_version.sql. */
 export const picksVersion = (year) => rpc("season_picks_version", { p_year: year });
 /** Gå med via delad inbjudningslänk → { token, name, season, approved } */
 export const joinSeason = (code, name) => rpc("join_season", { p_code: code, p_name: name });

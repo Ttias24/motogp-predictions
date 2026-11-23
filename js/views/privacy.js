@@ -10,7 +10,7 @@ const TEXT = {
       [
         "Spelare",
         [
-          "Visningsnamn och tips. Efter tipsfristen visas de för alla och sparas i sidans offentliga kodförråd på GitHub, även i dess historik.",
+          "Visningsnamn och tips. När tipsperioden har stängt visas de för alla och sparas i sidans offentliga kodförråd på GitHub, även i dess historik.",
           "Inbjudningskoden, bara som hash (går inte att läsa tillbaka).",
         ],
       ],

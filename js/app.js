@@ -877,7 +877,7 @@ window.addEventListener("hashchange", () => {
 
 // ---- Start ----
 async function loadDbPicks(year) {
-  // Efter tipsfristen finns tipsen som säkerhetskopia på GitHub (data/picks-<år>.json). Då frågas
+  // När tipsperioden har stängt finns tipsen som säkerhetskopia på GitHub (data/picks-<år>.json). Då frågas
   // databasen bara om en kort kontrollsumma; stämmer den används filen. Det håller datatrafiken
   // från databasen (gratisnivån: 5 GB/månad) nära noll även med hundratals besökare.
   const backup = await loadSavedPicks(year);
