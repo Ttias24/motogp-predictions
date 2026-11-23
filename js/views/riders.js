@@ -103,7 +103,7 @@ export function renderRiders(ctx) {
       const roles = rolesFor(ctx, cls, name);
       return `<tr>
         <td class="sticky c1">${roleChips(roles, cls, name)}</td>
-        <td class="sticky c2">${riderLink(cls, key, name)}</td>
+        <td class="sticky c2"><span class="rider-cell">${key ? numberBadge(results.riders[cls][key], "sm") : ""}${riderLink(cls, key, name)}</span></td>
         <td class="sticky c3 num big">${stats ? fmt(stats.points) : "–"}</td>
         ${roundCells(ctx, cls, stats, mode)}
       </tr>`;
