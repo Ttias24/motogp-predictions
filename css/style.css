@@ -196,8 +196,8 @@ th { text-align: left; font-size: var(--fs-xs); text-transform: uppercase; lette
 .pname { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
 /* Spelarens färg: ett smalt streck framför namnet (samma som i Tipsen-listan). */
 .dot { width: 4px; height: 1.15em; border-radius: 0; background: var(--c); flex: none; }
-/* Teamets färg som samma smala streck; svag kontur så mörka teamfärger syns mot bakgrunden. */
-.team-dot { display: inline-block; vertical-align: -0.2em; margin-right: 8px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+/* Teamets färg som samma smala streck som spelarnas. */
+.team-dot { display: inline-block; vertical-align: -0.2em; margin-right: 8px; }
 .bk-rider { color: var(--muted); }
 .bk-count { font-weight: 600; margin-left: 4px; }
 .board tr.picked td { background: rgba(255, 255, 255, 0.025); }
