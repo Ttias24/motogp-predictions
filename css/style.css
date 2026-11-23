@@ -301,8 +301,12 @@ td.slot, th.slot { width: 1%; color: var(--muted); font-family: var(--font-cond)
 .vm { display: inline-block; min-width: 26px; padding: 0 5px; border-radius: 0; text-align: center; }
 .vm.exact { background: rgba(76, 195, 138, 0.22); color: #7ee2b0; font-weight: 700; }
 .vm.top5 { background: rgba(242, 184, 75, 0.16); color: #f5cd7a; }
-.extra { font-size: var(--fs-sm); margin-top: 6px; }
-.extra s { color: var(--muted); }
+/* Backup/DNF-raderna under topp 5, med en tunn avdelare ovanför. */
+table.picks tbody.special tr:first-child td { border-top: 1px solid var(--line); padding-top: 8px; }
+table.picks tbody.special .note { font-size: var(--fs-sm); }
+table.picks tbody.special s { color: var(--muted); }
+table.picks td.slot .tag { font-family: var(--font); }
+table.picks tbody:not(.special) td:nth-child(2) { white-space: nowrap; }
 .unknown { color: var(--warn); border-bottom: 1px dashed var(--warn); }
 
 /* ---------- Förargrid ---------- */

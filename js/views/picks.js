@@ -71,20 +71,25 @@ function classBlock(ctx, p, cls) {
     })
     .join("");
 
-  let buLine = "";
+  // Backup och DNF som egna rader i samma tabell, så flaggor och namn står i linje med topp 5.
+  const special = (tag, cls2, link, note) =>
+    `<tr><td class="slot"><span class="tag ${cls2}">${tag}</span></td><td colspan="4">${link} <span class="muted note">${note}</span></td></tr>`;
+  const specials = [];
   if (c.backup) {
+    const link = riderLink(cls, ctx.riderKey(cls, c.backup), c.backup);
     if (active) {
       const old = c.riders[act.replaces] ?? Object.values(c.riders).find((x) => normalizeName(x.name) === normalizeName(act.replaces));
-      buLine = `<div class="extra"><span class="tag bu">BU</span> ${riderLink(cls, ctx.riderKey(cls, c.backup), c.backup)}
-        <span class="muted">${esc(t("buActive", { r: act.round, name: "" }))}</span>
-        <s>${esc(act.replaces)}</s>${old ? ` <span class="muted">(${t("pShort")} ${fmt(old.placement)} · ${t("sShort")} ${fmt(old.series)})</span>` : ""}</div>`;
-    } else {
-      buLine = `<div class="extra"><span class="tag bu">BU</span> ${riderLink(cls, ctx.riderKey(cls, c.backup), c.backup)} <span class="muted">– ${t("buInactive")}</span></div>`;
-    }
+      specials.push(
+        special(
+          "BU",
+          "bu",
+          link,
+          `${esc(t("buActive", { r: act.round, name: "" }))} <s>${esc(act.replaces)}</s>${old ? ` (${t("pShort")} ${fmt(old.placement)} · ${t("sShort")} ${fmt(old.series)})` : ""}`
+        )
+      );
+    } else specials.push(special("BU", "bu", link, `– ${t("buInactive")}`));
   }
-  const bkLine = c.bowling
-    ? `<div class="extra"><span class="tag bk">DNF</span> ${riderLink(cls, c.bowlingKey, c.bowling)} <span class="muted">– ${t("dnfCount", { n: c.bowlingDnf })}</span></div>`
-    : "";
+  if (c.bowling) specials.push(special("DNF", "bk", riderLink(cls, c.bowlingKey, c.bowling), `– ${t("dnfCount", { n: c.bowlingDnf })}`));
 
   return `<div class="class-block">
     <div class="class-head"><h3>${cls}</h3><span class="muted">${t("pShort")} ${fmt(c.placement)} · ${t("sShort")} ${fmt(c.series)}</span></div>
@@ -96,8 +101,8 @@ function classBlock(ctx, p, cls) {
         <th class="num" title="${esc(t("sTitle"))}">${t("sShort")}</th>
       </tr></thead>
       <tbody>${rows}</tbody>
+      ${specials.length ? `<tbody class="special">${specials.join("")}</tbody>` : ""}
     </table>
-    ${buLine}${bkLine}
   </div>`;
 }
 
