@@ -113,10 +113,10 @@ export function renderRiders(ctx) {
       <h2>${t("ridersTitle")}</h2>
       <div class="controls">
         ${classTabs(ctx.classes, cls)}
-        ${segmented("display", [["points", t("showPoints")], ["pos", t("showPos")]], mode, t("show"))}
+        <div class="hide-sm">${segmented("display", [["points", t("showPoints")], ["pos", t("showPos")]], mode, t("show"))}</div>
       </div>
     </div>
-    ${types.length > 1 ? `<p class="muted small">${t("race")} / ${t("sprint")}</p>` : ""}
+    ${types.length > 1 ? `<p class="muted small hide-sm">${t("race")} / ${t("sprint")}</p>` : ""}
     <div class="table-wrap grid-wrap">
       <table class="grid">
         <thead><tr>

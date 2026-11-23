@@ -196,6 +196,7 @@ const STRINGS = {
     total: "Totalt",
     player: "Spelare",
     lastRound: "Senaste runda",
+    lastRoundShort: "Senast",
     rank: "#",
     rulesTitle: "Så räknas poängen",
     rules: [
@@ -465,6 +466,7 @@ const STRINGS = {
     total: "Total",
     player: "Player",
     lastRound: "Last round",
+    lastRoundShort: "Last",
     rank: "#",
     rulesTitle: "How scoring works",
     rules: [

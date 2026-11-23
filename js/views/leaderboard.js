@@ -36,7 +36,7 @@ export function renderLeaderboard(ctx) {
           <th class="rank">${t("rank")}</th><th>${t("player")}</th>
           <th class="num">${t("total")}</th>
           ${CLASSES.map((c) => `<th class="num">${c}</th>`).join("")}
-          <th class="num" title="${esc(t("lastRound"))}">${t("lastRound")}</th>
+          <th class="num" title="${esc(t("lastRound"))}"><span class="rn-full">${t("lastRound")}</span><span class="rn-short">${t("lastRoundShort")}</span></th>
           <th class="num dim hide-sm">${metric === "placement" ? t("series") : t("placement")}</th>
         </tr></thead>
         <tbody>${rows}</tbody>
@@ -62,7 +62,7 @@ export function renderLeaderboard(ctx) {
     .join("");
 
   return `
-    <section class="card">
+    <section class="card board-card">
       <div class="card-head">
         <h2>${t("nav.leaderboard")}</h2>
         ${segmented("metric", [["placement", t("placement")], ["series", t("series")]], metric)}
@@ -74,7 +74,7 @@ export function renderLeaderboard(ctx) {
       </details>
     </section>
 
-    <section class="card">
+    <section class="card hide-sm">
       <div class="card-head"><h2>${t("bowling")}</h2></div>
       <p class="muted">${t("bowlingDesc")}</p>
       <div class="table-wrap">

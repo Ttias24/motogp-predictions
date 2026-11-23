@@ -178,7 +178,7 @@ function renderHeader() {
     .join("");
 
   const roundSelect = done.length
-    ? `<label class="round-pick">${t("afterRound")}
+    ? `<label class="round-pick sb-move">${t("afterRound")}
         <select data-action="upto">${done
           .map((r) => `<option value="${r.round}" ${r.round === state.upto ? "selected" : ""}>R${r.round} · ${esc(roundTitle(r))}</option>`)
           .join("")}</select>
@@ -186,6 +186,9 @@ function renderHeader() {
       </label>`
     : "";
 
+  const updated = results.updatedAt
+    ? `<span class="muted small sb-move">${t("updated")} ${fmtDate(results.updatedAt, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span>`
+    : "";
   document.getElementById("statusbar").innerHTML = `
     ${roundSelect}
     ${
@@ -195,9 +198,12 @@ function renderHeader() {
         ? `<span class="pill">🏁 ${t("seasonOver")}</span>`
         : ""
     }
-    ${results.updatedAt ? `<span class="muted small">${t("updated")} ${fmtDate(results.updatedAt, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span>` : ""}
+    ${updated}
   `;
+  // På mobil visas de här två längst ner på Ställning i stället (se .page-foot).
+  pageFoot = roundSelect || updated ? `<div class="page-foot">${roundSelect}${updated}</div>` : "";
 }
+let pageFoot = "";
 
 function renderBanners() {
   const parts = [];
@@ -236,7 +242,7 @@ function render() {
   else if (NEEDS_RESULTS.has(view) && !ctx.lastRound) body = seasonNotStarted(ctx);
   else if (view === "picks" && !ctx.score.players.length) body = seasonNotStarted(ctx);
   else body = VIEWS[view](ctx);
-  app.innerHTML = renderBanners() + body;
+  app.innerHTML = renderBanners() + body + (view === "leaderboard" ? pageFoot : "");
   if (state.dialog) openDialog(state.dialog.cls, state.dialog.key);
 }
 

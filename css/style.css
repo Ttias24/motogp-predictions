@@ -390,6 +390,18 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
   .brand { font-size: var(--fs-lg); }
 }
 
+/* Ställning på mobil: rundväljare och uppdaterad-tid längst ner, tätare tabell och kort. */
+.page-foot { display: none; }
+@media (max-width: 640px) {
+  body[data-view="leaderboard"] .statusbar .sb-move { display: none; }
+  body[data-view="leaderboard"] .page-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 4px 4px 0; }
+  .board-card { padding: 10px 6px 8px; }
+  .board-card .card-head { margin: 0 4px 6px; gap: 8px; }
+  .board-card .board th, .board-card .board td { padding: 6px 5px; }
+  .board-card .board .pname { gap: 6px; }
+  .board-card details.rules { margin: 8px 4px 0; padding-top: 6px; }
+}
+
 /* ---------- Tippa / Admin ---------- */
 h3.sub { margin: 18px 0 4px; }
 .ok { color: var(--good); margin: 10px 0 0; }
