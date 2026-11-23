@@ -8,6 +8,7 @@ import { renderRiders, renderRiderDialog, rolesFor, rolesList } from "./views/ri
 import { renderChampionship } from "./views/championship.js";
 import { renderEdit, normalizePicks, cleanPicks, emptyClassPick } from "./views/edit.js";
 import { renderHistory, seasonNotStarted } from "./views/history.js";
+import { renderPrivacy } from "./views/privacy.js";
 import { renderPredict, renderJoin, draftFromPicks, errorText } from "./views/predict.js";
 import { initPicker, newPickerState, picksFromSlots } from "./views/picker.js";
 import { renderAdmin, toLocalInput, fromLocalInput, suggestWindow, inviteUrl } from "./views/admin.js";
@@ -23,6 +24,7 @@ const VIEWS = {
   join: renderJoin,
   edit: renderEdit,
   admin: renderAdmin,
+  privacy: renderPrivacy,
 };
 // Flikar i menyn. "Mina tips" visas bara för den som öppnat sin personliga länk;
 // Redigera och Admin nås via #/edit och #/admin men syns inte i menyn.
@@ -201,7 +203,8 @@ function renderHeader() {
   const nav = [...NAV];
   if (storedToken() && remote.isConfigured()) nav.push("predict");
   if (adminTabVisible() && !nav.includes("admin")) nav.push("admin");
-  if (!nav.includes(view)) nav.push(view); // t.ex. Admin när man är där
+  // T.ex. Admin när man är där. Integritetssidan nås från sidfoten och får ingen flik.
+  if (!nav.includes(view) && view !== "privacy") nav.push(view);
   document.getElementById("nav").innerHTML = nav
     .map((v) => {
       const href = v === view && !NAV.includes(v) ? location.hash : v === "leaderboard" ? "#/" : v === "predict" ? "#/tippa" : `#/${v}`;
@@ -233,7 +236,8 @@ function renderHeader() {
     }
   `;
   // Uppdaterad-tiden står längst ner på varje sida. Rundväljaren visas inte på mobil.
-  pageFoot = updated ? `<div class="page-foot">${updated}</div>` : "";
+  // Sidfoten: uppdaterad-tiden till vänster och integritetslänken i mitten.
+  pageFoot = `<footer class="page-foot"><span class="foot-updated">${updated}</span><a class="foot-link" href="#/privacy">${t("privacyLink")}</a></footer>`;
 }
 let pageFoot = "";
 

@@ -5,8 +5,32 @@ import { DNF_STATUSES } from "./scoring.js";
 export const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-// Spelarfärger – fungerar mot mörk bakgrund och skiljer sig tydligt åt.
-export const PLAYER_COLORS = ["#4fc3f7", "#ffb74d", "#81c784", "#ce93d8", "#f48fb1", "#fff176", "#4db6ac", "#ff8a65", "#9fa8da", "#c5e1a5"];
+// 200 spelarfärger som delas ut i tur och ordning (spelare 1 får den första osv.).
+// De tio första är de ursprungliga. Resten är valda så att varje ny färg ligger så långt som
+// möjligt från alla tidigare (OKLab-avstånd), så de första spelarna får de mest olika färgerna.
+// Inga gråtoner: låg färgmättnad finns bara som ljusa pastellfärger. Fungerar i mörkt och ljust läge.
+export const PLAYER_COLORS = [
+  "#4fc3f7", "#ffb74d", "#81c784", "#ce93d8", "#f48fb1", "#fff176", "#4db6ac", "#ff8a65", "#9fa8da", "#c5e1a5",
+  "#805bfe", "#de1399", "#9c7b22", "#ea2413", "#36fe6a", "#1387cc", "#0aa424", "#f7cdff", "#ab6887", "#d254f5",
+  "#0dfef3", "#34d107", "#409272", "#c0a523", "#c5d203", "#f7537d", "#a8e0f6", "#e4bbb0", "#947fd4", "#fb63cb",
+  "#d86d2b", "#ff9bff", "#b351bd", "#5e9efd", "#04dacb", "#7da55c", "#2a76fe", "#6beba2", "#bbf633", "#d271aa",
+  "#9bc9bf", "#c9bafe", "#12a6d0", "#00bc70", "#d38685", "#e17ffe", "#cc525c", "#91c119", "#6b8e1f", "#c8c26b",
+  "#bb8d52", "#ab41eb", "#fcd6b1", "#a892ff", "#e71a63", "#e68f1b", "#b06c52", "#ff5421", "#737ffd", "#f7d42e",
+  "#c74c8d", "#268fa2", "#e1a975", "#a46bf5", "#f1add7", "#84e33d", "#fe38a1", "#14d782", "#df45c3", "#6a91c9",
+  "#9bf3d6", "#c56fd5", "#51e5f7", "#a9f68f", "#6578d3", "#a3d976", "#69ad0a", "#9170ab", "#fda297", "#9ec2e6",
+  "#989401", "#e76b67", "#b283ba", "#12a49d", "#fe65f6", "#c62fca", "#8867da", "#fa87d9", "#25caa2", "#f2d37e",
+  "#3b9f58", "#e4ac17", "#c5caa5", "#f573ad", "#fdc5cf", "#fc374d", "#1a91fb", "#95d8a9", "#bea4fc", "#6caedc",
+  "#cfe362", "#d15224", "#a2ae68", "#fcbf8e", "#98aa19", "#63c8d2", "#ccb4d3", "#bb6802", "#14b2fa", "#c77185",
+  "#5bffca", "#dd8556", "#c4ccef", "#fe7383", "#19eecc", "#8c98e3", "#f67214", "#85acfd", "#4eac82", "#10bad5",
+  "#2feb75", "#8fdfd5", "#23be34", "#c374fb", "#b864ac", "#d38eb1", "#e2a3ef", "#e07ad8", "#e14fa4", "#e39887",
+  "#59d9a2", "#ff9945", "#bbbe31", "#848f49", "#dfc637", "#72bc57", "#0cfca4", "#646cf4", "#71d4fe", "#c5a05e",
+  "#fd2578", "#7af4fc", "#c27a66", "#e063e2", "#dd4a76", "#72caae", "#c57d08", "#72b88d", "#62d450", "#a768ca",
+  "#5c81b9", "#88f727", "#00d4f3", "#2d97dd", "#84f572", "#ecb7fd", "#c8e8cd", "#9f9a51", "#b884e0", "#dadaff",
+  "#698ae4", "#cb90f8", "#df9eca", "#da63c1", "#e2698d", "#af7c46", "#9482f8", "#c742a7", "#377ee3", "#9756ea",
+  "#ebe62c", "#ba53fd", "#4ae12e", "#e4c0e6", "#ad97e3", "#db2f82", "#b753de", "#eba9b6", "#9af6b6", "#e3c17d",
+  "#1cc6c2", "#e1e58e", "#7e80c0", "#e14e46", "#a0d235", "#d0d57e", "#e88396", "#dcd8b2", "#f54fd7", "#89cb61",
+  "#b8636b", "#b0e24a", "#3a9eb2", "#e181bf", "#abca88", "#599051", "#95d1e1", "#789f1e", "#45961f", "#ca9415",
+];
 
 /** id → { color, short, index } för alla spelare, med unika förkortningar. */
 export function playerMeta(players) {
