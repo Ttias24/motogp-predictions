@@ -1,6 +1,6 @@
 import { t, fmt } from "../i18n.js";
 import { SESSION_TYPES, normalizeName, riderStats } from "../scoring.js";
-import { esc, chip, classTabs, segmented, resultCell, playerName, roundTitle, riderLink, flag, numberBadge } from "../ui.js";
+import { esc, classTabs, segmented, resultCell, playerName, roundTitle, riderLink, flag, numberBadge } from "../ui.js";
 
 
 /** Vilka spelare som valt en förare, och i vilken roll (plats 1–5, BU, DNF, ersatt). */
@@ -50,17 +50,20 @@ export function roundCells(ctx, cls, stats, mode) {
     .join("");
 }
 
-/** Brickor för vilka som tippat föraren; klick visar listan med namn och roller. */
+/** Roller i visningsordning: platserna, sedan backup, DNF och ersatt. */
+const ROLE_ORDER = ["1", "2", "3", "4", "5", "BU", "DNF", "×"];
+const ROLE_CLASS = { "1": "r1", "2": "r2", "3": "r3", "4": "r4", "5": "r5", BU: "rbu", DNF: "rdnf", "×": "rx" };
+
+/**
+ * En bricka per roll som föraren tippats i (t.ex. "1" och "DNF"), färgad efter rollen.
+ * Klick visar vilka spelare som valt honom och var.
+ */
 export function roleChips(roles, cls, name) {
   if (!roles.length) return "";
-  const chips = roles
-    .map((r) =>
-      chip(r.m, {
-        tag: r.tags.join("·"),
-        variant: r.inLineup ? "" : r.replaced ? "struck" : "outline",
-        title: `${r.p.name}: ${r.tags.join(", ")}`,
-      })
-    )
+  const who = new Map();
+  for (const ro of roles) for (const tag of ro.tags) who.set(tag, [...(who.get(tag) ?? []), ro.p.name]);
+  const chips = ROLE_ORDER.filter((tag) => who.has(tag))
+    .map((tag) => `<span class="chip ${ROLE_CLASS[tag]}" title="${esc(who.get(tag).join(", "))}">${esc(tag)}</span>`)
     .join("");
   return `<button type="button" class="who" data-action="who" data-cls="${esc(cls)}" data-name="${esc(name)}" aria-label="${esc(
     t("pickedBy") + ": " + roles.map((r) => r.p.name).join(", ")
@@ -120,7 +123,7 @@ export function renderRiders(ctx) {
     <div class="table-wrap grid-wrap">
       <table class="grid">
         <thead><tr>
-          <th class="sticky c1">${t("pickedBy")}</th>
+          <th class="sticky c1">${t("picksCol")}</th>
           <th class="sticky c2">${t("rider")}</th>
           <th class="sticky c3 num">${t("points")}</th>
           ${head}

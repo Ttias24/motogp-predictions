@@ -44,7 +44,7 @@ export function renderChampionship(ctx) {
           <th class="team">${t("team")}</th>
           ${roundHeads(ctx)}
           <th class="sticky s-pts num">${t("points")}</th>
-          <th class="picked-by">${t("pickedBy")}</th>
+          <th class="picked-by">${t("picksCol")}</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>

@@ -226,7 +226,7 @@ details.rules ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px
 
 /* Spelarbrickor: små rutor i spelarens färg med rollen (1–5, BU, DNF). Hela gruppen är en knapp
    som visar vilka som tippat föraren. */
-.who { display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 2px; margin: -2px; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; }
+.who { display: inline-flex; flex-wrap: wrap; gap: 3px; padding: 2px; margin: -2px; background: none; border: 0; cursor: pointer; font: inherit; color: inherit; }
 .who:hover .chip { filter: brightness(1.25); }
 .chip {
   display: inline-block; min-width: 16px; padding: 0 3px; border-radius: 0; text-align: center;
@@ -235,8 +235,15 @@ details.rules ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px
   border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
   white-space: nowrap;
 }
-.chip.outline { background: none; opacity: 0.75; border-style: dashed; }
-.chip.struck { background: none; opacity: 0.5; text-decoration: line-through; }
+/* Färg efter roll: 1 guld, 2 silver, 3 brons, 4 grön, 5 lila, backup blå, DNF röd, ersatt grå. */
+.chip.r1 { --c: var(--gold); }
+.chip.r2 { --c: var(--silver); }
+.chip.r3 { --c: var(--bronze); }
+.chip.r4 { --c: #4cc38a; }
+.chip.r5 { --c: #b39ddb; }
+.chip.rbu { --c: #4fc3f7; }
+.chip.rdnf { --c: var(--accent); }
+.chip.rx { --c: var(--muted); text-decoration: line-through; }
 .who-pop {
   position: fixed; inset: auto; margin: 0; max-width: min(320px, calc(100vw - 16px));
   padding: 10px 14px; background: var(--surface-2); color: var(--text); border: 1px solid var(--line);
