@@ -200,7 +200,7 @@ function renderHeader() {
     }
     ${updated}
   `;
-  // På mobil visas de här två längst ner på Ställning i stället (se .page-foot).
+  // På mobil visas de här två längst ner på sidan i stället (se .page-foot).
   pageFoot = roundSelect || updated ? `<div class="page-foot">${roundSelect}${updated}</div>` : "";
 }
 let pageFoot = "";
@@ -242,7 +242,7 @@ function render() {
   else if (NEEDS_RESULTS.has(view) && !ctx.lastRound) body = seasonNotStarted(ctx);
   else if (view === "picks" && !ctx.score.players.length) body = seasonNotStarted(ctx);
   else body = VIEWS[view](ctx);
-  app.innerHTML = renderBanners() + body + (view === "leaderboard" ? pageFoot : "");
+  app.innerHTML = renderBanners() + body + pageFoot;
   if (state.dialog) openDialog(state.dialog.cls, state.dialog.key);
 }
 

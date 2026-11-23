@@ -54,7 +54,8 @@ code { background: var(--surface-3); padding: 1px 5px; border-radius: 0; font-si
 .muted { color: var(--muted); }
 .small { font-size: var(--fs-sm); }
 .dim { color: var(--muted); }
-.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Siffror (poäng, placeringar) står centrerade under sina kolumnrubriker. */
+.num { text-align: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .big { font-weight: 600; }
 small { font-size: var(--fs-sm); }
 
@@ -307,7 +308,7 @@ table.grid .future { opacity: 0.35; }
 table.grid .sticky { position: sticky; background: var(--surface); z-index: 1; }
 table.grid .c1 { left: 0; min-width: 76px; max-width: 110px; white-space: normal; padding-left: 16px; }
 table.grid .c2 { left: 76px; min-width: 140px; white-space: nowrap; font-weight: 600; }
-table.grid .c3 { left: 216px; min-width: 54px; padding-right: 10px; box-shadow: 1px 0 0 var(--line); }
+table.grid .c3 { left: 216px; min-width: 54px; box-shadow: 1px 0 0 var(--line); }
 /* VM-tabell: plats + förare fasta till vänster, poäng fast till höger */
 table.vm-grid .s-rank { left: 0; min-width: 46px; padding-left: 16px; }
 table.vm-grid .s-rider { left: 46px; min-width: 200px; white-space: nowrap; font-weight: 600; box-shadow: 1px 0 0 var(--line); }
@@ -390,11 +391,11 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
   .brand { font-size: var(--fs-lg); }
 }
 
-/* Ställning på mobil: rundväljare och uppdaterad-tid längst ner, tätare tabell och kort. */
+/* Mobil: rundväljare och uppdaterad-tid längst ner på alla sidor; tätare tabell och kort på Ställning. */
 .page-foot { display: none; }
 @media (max-width: 640px) {
-  body[data-view="leaderboard"] .statusbar .sb-move { display: none; }
-  body[data-view="leaderboard"] .page-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 4px 4px 0; }
+  .statusbar .sb-move { display: none; }
+  .page-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 4px 4px 0; }
   .board-card { padding: 10px 6px 8px; }
   .board-card .card-head { margin: 0 4px 6px; gap: 8px; }
   .board-card .board th, .board-card .board td { padding: 6px 5px; }
