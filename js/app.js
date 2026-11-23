@@ -178,7 +178,7 @@ function renderHeader() {
     .join("");
 
   const roundSelect = done.length
-    ? `<label class="round-pick sb-move">${t("afterRound")}
+    ? `<label class="round-pick hide-sm">${t("afterRound")}
         <select data-action="upto">${done
           .map((r) => `<option value="${r.round}" ${r.round === state.upto ? "selected" : ""}>R${r.round} · ${esc(roundTitle(r))}</option>`)
           .join("")}</select>
@@ -187,7 +187,7 @@ function renderHeader() {
     : "";
 
   const updated = results.updatedAt
-    ? `<span class="muted small sb-move">${t("updated")} ${fmtDate(results.updatedAt, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span>`
+    ? `<span class="muted small">${t("updated")} ${fmtDate(results.updatedAt, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span>`
     : "";
   document.getElementById("statusbar").innerHTML = `
     ${roundSelect}
@@ -198,10 +198,9 @@ function renderHeader() {
         ? `<span class="pill">🏁 ${t("seasonOver")}</span>`
         : ""
     }
-    ${updated}
   `;
-  // På mobil visas de här två längst ner på sidan i stället (se .page-foot).
-  pageFoot = roundSelect || updated ? `<div class="page-foot">${roundSelect}${updated}</div>` : "";
+  // Uppdaterad-tiden står längst ner på varje sida. Rundväljaren visas inte på mobil.
+  pageFoot = updated ? `<div class="page-foot">${updated}</div>` : "";
 }
 let pageFoot = "";
 

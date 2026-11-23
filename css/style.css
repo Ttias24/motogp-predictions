@@ -398,11 +398,9 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, rg
   .brand { font-size: var(--fs-lg); }
 }
 
-/* Mobil: rundväljare och uppdaterad-tid längst ner på alla sidor; tätare tabell och kort på Ställning. */
-.page-foot { display: none; }
+/* Sidfot med uppdaterad-tid. Mobil: tätare tabell och kort på Ställning. */
+.page-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 4px 4px 0; }
 @media (max-width: 640px) {
-  .statusbar .sb-move { display: none; }
-  .page-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 4px 4px 0; }
   .board-card { padding: 10px 6px 8px; }
   .board-card .card-head { margin: 0 4px 6px; gap: 8px; }
   .board-card .board th, .board-card .board td { padding: 6px 5px; }
