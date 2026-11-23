@@ -19,7 +19,7 @@ export function renderChampionship(ctx) {
       return `<tr class="${roles.some((x) => x.inLineup) ? "picked" : ""}">
         <td class="sticky s-rank rank">${s.pos}</td>
         <td class="sticky s-rider"><span class="rider-cell">${numberBadge(r, "sm")}${riderLink(cls, s.rider, r.name)}</span></td>
-        <td class="team" title="${esc(r.team)}">${esc(r.team)}</td>
+        <td class="team" title="${esc(r.team)}">${r.teamColor ? `<span class="dot team-dot" style="--c:${esc(r.teamColor)}"></span>` : ""}${esc(r.team)}</td>
         ${roundCells(ctx, cls, stats, mode)}
         <td class="sticky s-pts num big">${fmt(s.pts)}</td>
       </tr>`;
