@@ -14,9 +14,12 @@ export function renderPicks(ctx) {
       const on = p.id === selected.id;
       return `<li><button type="button" class="player-row" data-action="select-player" data-id="${esc(p.id)}" aria-pressed="${on}">
         <span class="pr-rank">${rank}</span>
-        ${playerName(m, p.name)}
-        <span class="pr-pts num" title="${esc(t("placement"))}"><small>${t("placementShort")}</small> ${fmt(p.totals.placement)}</span>
-        <span class="pr-pts num" title="${esc(t("series"))}"><small>${t("seriesShort")}</small> ${fmt(p.totals.series)}</span>
+        <span class="pr-swatch" style="--c:${m?.color ?? "#888"}"></span>
+        <span class="pr-name">${esc(p.name)}</span>
+        <small class="pr-lbl" title="${esc(t("placement"))}">${t("placementShort")}</small>
+        <span class="pr-val num" title="${esc(t("placement"))}">${fmt(p.totals.placement)}</span>
+        <small class="pr-lbl" title="${esc(t("series"))}">${t("seriesShort")}</small>
+        <span class="pr-val num" title="${esc(t("series"))}">${fmt(p.totals.series)}</span>
       </button></li>`;
     })
     .join("");
