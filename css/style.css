@@ -11,7 +11,7 @@
   --accent-soft: rgba(229, 52, 58, 0.15);
   --good: #4cc38a;
   --warn: #f2b84b;
-  --bad: #ff6b6b;
+  --bad: var(--accent); /* samma röda som i loggan */
   --gold: #f4c542;
   --silver: #c9d1db;
   --bronze: #d9925b;
@@ -236,7 +236,7 @@ details.rules ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px
 .chip.struck { background: none; opacity: 0.5; text-decoration: line-through; }
 .tag { display: inline-block; font-size: var(--fs-xs); font-weight: 700; padding: 0 5px; border-radius: 0; vertical-align: 1px; }
 .tag.bu { background: rgba(79, 195, 247, 0.18); color: #7fd3f9; }
-.tag.bk { background: rgba(255, 138, 101, 0.18); color: #ffab91; }
+.tag.bk { background: var(--accent-soft); color: var(--accent); }
 
 /* ---------- Tipsen ---------- */
 .picks-layout { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 16px; align-items: start; }
@@ -438,7 +438,7 @@ hr.divider { border: 0; border-top: 1px solid var(--line); margin: 16px 0 4px; }
 .pk-slot .pk-lbl { font-family: var(--font-cond); font-weight: 700; font-size: var(--fs-xl); text-align: center; color: var(--muted); }
 .pk-slot.bu .pk-lbl, .pk-slot.dnf .pk-lbl { font-size: var(--fs-sm); font-family: var(--font); letter-spacing: 0.04em; }
 .pk-slot.bu .pk-lbl, .pk-lbl.bu { color: #7fd3f9; }
-.pk-slot.dnf .pk-lbl, .pk-lbl.dnf { color: #ffab91; }
+.pk-slot.dnf .pk-lbl, .pk-lbl.dnf { color: var(--accent); }
 .pk-empty { color: var(--muted); font-size: var(--fs-sm); }
 .pk-slot.filled { border-style: solid; background: var(--surface-3); }
 .pk-slot.selected { border: 1px solid var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
@@ -479,7 +479,7 @@ hr.divider { border: 0; border-top: 1px solid var(--line); margin: 16px 0 4px; }
 .pk-pv b { color: var(--text); font-weight: 600; }
 .pk-tag { position: absolute; top: 6px; right: 6px; font-size: var(--fs-xs); font-weight: 700; padding: 1px 5px; background: var(--active-bg); }
 .pk-tag.bu { background: #1f3b4b; color: #7fd3f9; }
-.pk-tag.dnf { background: #4a2a22; color: #ffab91; }
+.pk-tag.dnf { background: var(--accent-soft); color: var(--accent); }
 .pk-hint { font-size: var(--fs-sm); color: var(--muted); margin: 10px 0 0; }
 
 .pk-review-wrap { display: grid; gap: 14px; }
