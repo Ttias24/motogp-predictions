@@ -112,39 +112,59 @@ function setAdminFlag(on) {
   } catch {}
 }
 
+// Poängen räknas bara om när resultaten, tipsen eller vald runda ändras – inte vid varje klick
+// (byta klass, visning, spelare). Med hundratals spelare tar en omräkning märkbar tid på mobil.
+let scoreCache = null;
+
 function buildContext() {
   const { results, picks } = state;
   const done = roundsWithResults(results);
   const lastRound = done.at(-1)?.round ?? 0;
   if (state.upto == null || state.upto > lastRound) state.upto = lastRound;
   const upto = state.upto;
-  const score = scoreSeason(picks, results, { uptoRound: upto });
-  const prevRound = done.filter((r) => r.round < upto).at(-1)?.round;
-  const prev = prevRound ? scoreSeason(picks, results, { uptoRound: prevRound }) : null;
-  const index = buildRiderIndex(results);
-  const standings = {};
-  const standingsPos = {};
-  const standingsPts = {};
-  for (const cls of CLASSES) {
-    standings[cls] = computeStandings(results, cls, { uptoRound: upto });
-    standingsPos[cls] = new Map(standings[cls].map((s) => [s.rider, s.pos]));
-    standingsPts[cls] = new Map(standings[cls].map((s) => [s.rider, s.pts]));
+  const c = scoreCache;
+  if (!c || c.results !== results || c.picks !== picks || c.upto !== upto) {
+    const prevRound = done.filter((r) => r.round < upto).at(-1)?.round;
+    const index = buildRiderIndex(results);
+    const standings = {};
+    const standingsPos = {};
+    const standingsPts = {};
+    for (const cls of CLASSES) {
+      standings[cls] = computeStandings(results, cls, { uptoRound: upto });
+      standingsPos[cls] = new Map(standings[cls].map((s) => [s.rider, s.pos]));
+      standingsPts[cls] = new Map(standings[cls].map((s) => [s.rider, s.pts]));
+    }
+    scoreCache = {
+      results,
+      picks,
+      upto,
+      score: scoreSeason(picks, results, { uptoRound: upto }),
+      prev: prevRound ? scoreSeason(picks, results, { uptoRound: prevRound }) : null,
+      meta: playerMeta(picks.players ?? []),
+      standings,
+      standingsPos,
+      standingsPts,
+      riderKey: (cls, name) => resolveRider(index, cls, name),
+      roles: new Map(), // rolesFor: klass|förare → vilka som valt honom
+    };
   }
+  const s = scoreCache;
   return {
     state,
     year: state.year,
     results,
     classes: CLASSES,
-    score,
-    prev,
+    score: s.score,
+    prev: s.prev,
     upto,
     lastRound,
-    meta: playerMeta(picks.players ?? []),
-    standings,
-    standingsPos,
-    standingsPts,
+    meta: s.meta,
+    standings: s.standings,
+    standingsPos: s.standingsPos,
+    standingsPts: s.standingsPts,
     riderSuggestions: state.riderSuggestions ?? results.riders,
-    riderKey: (cls, name) => resolveRider(index, cls, name),
+    riderKey: s.riderKey,
+    roleCache: s.roles,
   };
 }
 
@@ -853,16 +873,40 @@ window.addEventListener("hashchange", () => {
 
 // ---- Start ----
 async function loadDbPicks(year) {
+  // Efter tipsfristen finns tipsen som säkerhetskopia på GitHub (data/picks-<år>.json). Då frågas
+  // databasen bara om en kort kontrollsumma; stämmer den används filen. Det håller datatrafiken
+  // från databasen (gratisnivån: 5 GB/månad) nära noll även med hundratals besökare.
+  const backup = await loadSavedPicks(year);
+  const closedCopy = backup.version && backup.closesAt && Date.parse(backup.closesAt) <= Date.now();
+  if (closedCopy) {
+    try {
+      if ((await remote.picksVersion(year)) === backup.version) return { picks: backup, window: backupWindow(backup, year) };
+    } catch (err) {
+      console.error(err);
+      return { picks: backup, window: null, fromBackup: true };
+    }
+  }
   try {
     const ov = await remote.seasonOverview(year);
     if (ov) return { picks: overviewToPicks(ov, year), window: ov };
   } catch (err) {
     console.error(err);
   }
-  // Databasen svarar inte (eller saknar säsongen): använd säkerhetskopian i data/picks-<år>.json.
-  const backup = await loadSavedPicks(year);
+  // Databasen svarar inte (eller saknar säsongen): använd säkerhetskopian.
   if (backup.players?.length) return { picks: backup, window: null, fromBackup: true };
   return { picks: overviewToPicks(null, year), window: null };
+}
+
+/** Tipsperioden ur säkerhetskopian, i samma form som season_overview. */
+function backupWindow(backup, year) {
+  return {
+    year,
+    opensAt: backup.opensAt ?? null,
+    closesAt: backup.closesAt,
+    scoring: backup.scoring,
+    now: new Date().toISOString(),
+    players: (backup.players ?? []).map((p) => ({ id: p.id, name: p.name, submitted: true, picks: p.picks })),
+  };
 }
 
 async function refreshDbSeason() {

@@ -314,7 +314,11 @@ details.rules ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px
   border-radius: var(--radius); box-shadow: 0 8px 24px var(--shadow);
 }
 .who-head { font-family: var(--font-cond); font-weight: 700; font-size: var(--fs-lg); margin-bottom: 6px; }
-.who-pop .roles { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+/* Vilka som tippat: grupperat per roll. Rutan har en maxhöjd och rullar själv vid många namn. */
+.who-pop { max-height: min(60vh, 440px); overflow-y: auto; overscroll-behavior: contain; }
+.role-groups { display: grid; gap: 10px; }
+.role-head { display: flex; align-items: center; gap: 6px; font-weight: 600; margin-bottom: 4px; }
+.role-names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 3px 14px; }
 /* Förarnamn: hela på stor skärm, kort ("M Mar") på mobil – klicka för att se vem det är. */
 .rn-short { display: none; }
 .tag { display: inline-block; font-size: var(--fs-xs); font-weight: 700; padding: 0 5px; border-radius: 0; vertical-align: 1px; }
@@ -427,7 +431,7 @@ td.rd.half { background: repeating-linear-gradient(135deg, transparent 0 5px, va
 .stat { background: var(--surface-2); border-radius: 0; padding: 8px 4px; text-align: center; }
 .stat b { display: block; font-family: var(--font-cond); font-size: var(--fs-xl); line-height: 1.1; }
 .stat span { font-size: var(--fs-xs); color: var(--muted); text-transform: uppercase; letter-spacing: var(--label-spacing); }
-.roles { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+
 
 /* ---------- Redigera ---------- */
 .edit-player { margin: 0; }

@@ -5,20 +5,35 @@ import { esc, classTabs, segmented, resultCell, playerName, roundTitle, riderLin
 
 /** Vilka spelare som valt en förare, och i vilken roll (plats 1–5, BU, DNF, ersatt). */
 export function rolesFor(ctx, cls, riderName) {
-  const n = normalizeName(riderName);
-  const roles = [];
-  for (const p of ctx.score.players) {
-    const c = p.byClass[cls];
-    const m = ctx.meta.get(p.id);
-    const slot = c.lineupNow.findIndex((x) => normalizeName(x) === n);
-    const tags = [];
-    if (slot >= 0) tags.push(String(slot + 1));
-    else if (c.original.some((x) => normalizeName(x) === n)) tags.push("×");
-    else if (c.backup && normalizeName(c.backup) === n) tags.push("BU");
-    if (c.bowling && normalizeName(c.bowling) === n) tags.push("DNF");
-    if (tags.length) roles.push({ p, m, tags, inLineup: slot >= 0, replaced: tags[0] === "×" });
+  // Alla spelares val i klassen gås igenom en gång och sparas per förare (ctx.roleCache lever
+  // så länge poängen är oförändrade), i stället för en genomgång av alla spelare per förare.
+  let byRider = ctx.roleCache?.get(cls);
+  if (!byRider) {
+    byRider = new Map();
+    for (const p of ctx.score.players) {
+      const c = p.byClass[cls];
+      const m = ctx.meta.get(p.id);
+      const tagsFor = new Map();
+      const add = (name, tag) => {
+        const n = normalizeName(name);
+        if (!n) return;
+        tagsFor.set(n, [...(tagsFor.get(n) ?? []), tag]);
+      };
+      const now = c.lineupNow.map(normalizeName);
+      now.forEach((n, i) => add(n, String(i + 1)));
+      for (const x of c.original) if (!now.includes(normalizeName(x))) add(x, "×");
+      if (c.backup && !now.includes(normalizeName(c.backup)) && !c.original.some((x) => normalizeName(x) === normalizeName(c.backup)))
+        add(c.backup, "BU");
+      if (c.bowling) add(c.bowling, "DNF");
+      for (const [n, tags] of tagsFor) {
+        const list = byRider.get(n) ?? [];
+        list.push({ p, m, tags, inLineup: /^\d$/.test(tags[0]), replaced: tags[0] === "×" });
+        byRider.set(n, list);
+      }
+    }
+    ctx.roleCache?.set(cls, byRider);
   }
-  return roles;
+  return byRider.get(normalizeName(riderName)) ?? [];
 }
 
 /** Rubriker R1…R22 för resultatrutnätet (delas av Förare och VM-tabell). */
@@ -70,11 +85,23 @@ export function roleChips(roles, cls, name) {
   )}">${chips}</button>`;
 }
 
-/** Lista "Spelare – Plats 1, DNF" (förardialogen och tippad-av-rutan). */
+/**
+ * Vilka som valt föraren, grupperat per roll ("Plats 1 · 3" följt av namnen), så listan
+ * håller sig kort även när hundratals spelare valt samma förare.
+ */
 export function rolesList(roles) {
-  return `<ul class="roles">${roles
-    .map((ro) => `<li>${playerName(ro.m, ro.p.name)} <span class="muted">${ro.tags.map((x) => (x === "×" ? t("replaced") : /^\d$/.test(x) ? `${t("slot")} ${x}` : x)).join(", ")}</span></li>`)
-    .join("")}</ul>`;
+  const groups = new Map();
+  for (const ro of roles) for (const tag of ro.tags) groups.set(tag, [...(groups.get(tag) ?? []), ro]);
+  return `<div class="role-groups">${ROLE_ORDER.filter((tag) => groups.has(tag))
+    .map((tag) => {
+      const list = groups.get(tag);
+      const label = tag === "×" ? t("replaced") : /^\d$/.test(tag) ? `${t("slot")} ${tag}` : tag;
+      return `<div class="role-group">
+        <div class="role-head"><span class="chip ${ROLE_CLASS[tag]}">${esc(tag)}</span>${label === tag ? "" : esc(label)} <span class="muted">· ${list.length}</span></div>
+        <ul class="role-names">${list.map((ro) => `<li>${playerName(ro.m, ro.p.name)}</li>`).join("")}</ul>
+      </div>`;
+    })
+    .join("")}</div>`;
 }
 
 export function renderRiders(ctx) {

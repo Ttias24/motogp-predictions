@@ -26,17 +26,24 @@ const from = seasons.databaseFrom;
 if (from == null) process.exit(0);
 const years = [...new Set([seasons.current, ...(seasons.seasons ?? [])])].filter((y) => y >= from).sort();
 
+async function rpc(name, year) {
+  const res = await fetch(`${URL}/rest/v1/rpc/${name}`, {
+    method: "POST",
+    headers: { apikey: KEY, "content-type": "application/json" },
+    body: JSON.stringify({ p_year: year }),
+  });
+  if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
+  return res.json();
+}
+
 let failed = false;
 for (const year of years) {
-  let ov;
+  let ov, version;
   try {
-    const res = await fetch(`${URL}/rest/v1/rpc/season_overview`, {
-      method: "POST",
-      headers: { apikey: KEY, "content-type": "application/json" },
-      body: JSON.stringify({ p_year: year }),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    ov = await res.json();
+    // Versionen hämtas först: ändras något mellan anropen blir versionen äldre än tipsen,
+    // och sidan hämtar då från databasen tills nästa körning – aldrig tvärtom.
+    version = await rpc("season_picks_version", year);
+    ov = await rpc("season_overview", year);
   } catch (err) {
     console.warn(`Kunde inte läsa ${year}: ${err.message}`);
     failed = true;
@@ -46,7 +53,7 @@ for (const year of years) {
     console.log(`${year}: finns inte i databasen.`);
     continue;
   }
-  if (Date.parse(ov.now) < Date.parse(ov.closesAt)) {
+  if (!ov.closesAt || Date.parse(ov.now) < Date.parse(ov.closesAt)) {
     console.log(`${year}: tipsperioden är öppen – sparas när den har stängt.`);
     continue;
   }
@@ -55,7 +62,10 @@ for (const year of years) {
     season: year,
     scoring: ov.scoring,
     source: "supabase",
+    opensAt: ov.opensAt,
     closesAt: ov.closesAt,
+    // Kontrollsumma från databasen: sidan använder filen så länge den stämmer.
+    version,
     players,
   };
   const file = join(DATA, `picks-${year}.json`);

@@ -488,7 +488,7 @@ const STRINGS = {
     backup: "Backup",
     buInactive: "Not activated",
     buActive: "Activated from round {r}, replacing {name}",
-    slot: "Slot",
+    slot: "Position",
     rider: "Rider",
     champPos: "Ch.",
     champPosTitle: "Rider's championship position",
