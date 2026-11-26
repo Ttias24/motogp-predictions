@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-23T12:05:12.798Z",
+ "updatedAt": "2026-11-26T08:25:28.834Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -12236,7 +12236,7 @@
    "circuit": "Circuit Ricardo Tormo",
    "dateStart": "2026-11-27",
    "dateEnd": "2026-11-29",
-   "status": "NOT-STARTED",
+   "status": "CURRENT",
    "results": {}
   }
  ],
@@ -12295,7 +12295,7 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-05-25",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/6/a6bdb0dc-5ffa-4275-a399-30d22ea7ab85/number/37_Pedro_Acosta.png"
@@ -12354,7 +12354,7 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1993-02-17",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/3/8/3877c550-4eba-430c-9022-0b81b0d9b91f/number/93.png"
@@ -12409,7 +12409,7 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2000-10-23",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/e/b/eb938baa-1e25-41a6-ae24-1682217dd94e/number/25.png"
@@ -12465,7 +12465,7 @@
      "pos": 16
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-01-26",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/9/c97f409f-091b-4bb0-84a1-2a5524691eac/number/79_Ai_Ogura.png"
@@ -12523,7 +12523,7 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1998-01-29",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/1/1/11ecf4dc-15ad-4370-8297-5d07e5affa92/number/89.png"
@@ -12580,7 +12580,7 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1995-08-11",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/6/e/6e05cd51-a9e5-433d-98c7-f3868a75e389/number/33.png"
@@ -12635,7 +12635,7 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-09-01",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/d/cd78607d-6bfb-49be-bb76-113e4170be56/number/36.png"
@@ -12688,7 +12688,7 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1998-10-10",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/e/5/e53e3913-315d-42b6-88ef-04284a938ddb/number/49.png"
@@ -12746,7 +12746,7 @@
      "pos": 5
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-01-14",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/2/5/2585fdb8-5fb5-43b6-a12d-ccb5ba31c0a4/number/63_Francesco_Bagnaia.png"
@@ -12796,7 +12796,7 @@
      "pos": 13
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-08-10",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/e/4/e4448080-4f42-4a70-9a12-5f5c77a4e4e5/number/10.png"
@@ -12854,7 +12854,7 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1996-04-23",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/6/d/6d5849a9-5b0d-48f5-ab1d-1245a4e5ecd1/number/73.png"
@@ -12911,7 +12911,7 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1990-07-16",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/0/b/0b1f5c74-5cf4-48e9-a78d-f5d1bee34f2b/number/5.png"
@@ -12963,7 +12963,7 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-04-23",
     "profileFetched": "2026-11-22"
    },
@@ -13014,7 +13014,7 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1994-12-04",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/9/0/90bb67c4-6ff3-4596-a4b7-ddc5870efb50/number/21.png"
@@ -13065,7 +13065,7 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1995-01-18",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/3/4/344f6fc4-253a-4b89-9bc3-51d60ca09db5/number/43.png"
@@ -13120,7 +13120,7 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1999-04-20",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/8/4/8434cc35-07c1-4c44-a73b-76286f6091d8/number/20.png"
@@ -13176,7 +13176,7 @@
      "pos": 14
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-12-30",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/2/a2b905bb-19ff-4092-b4dd-cfb1f2333439/number/23.png"
@@ -13230,7 +13230,7 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1995-12-08",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/2/e/2e07c7da-11af-4fe9-9e50-7872d69a5570/number/42.png"
@@ -13292,7 +13292,7 @@
      "pos": 18
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1995-01-12",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/1/3/13e53141-e4b0-4a27-aaa4-bb5aec9cd3ec/number/12.png"
@@ -13326,7 +13326,7 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1996-10-16",
     "profileFetched": "2026-11-22"
    },
@@ -13365,7 +13365,7 @@
      },
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1986-07-05",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/5/c5664b09-2f93-4b0b-99aa-4575b0d224ce/number/51_Michele_Pirro.png"
@@ -13419,7 +13419,7 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1998-11-12",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/4/e/4ed5e1ab-96d4-413c-87b2-448bbc27f897/number/72.png"
@@ -13468,7 +13468,7 @@
      "pos": 8
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-04-05",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/1/f/1fe651c1-1a97-4f89-ab3a-17272be5671a/number/54_Fermin_Aldeguer.png"
@@ -13511,7 +13511,7 @@
       "Moto2": 11
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-09-23",
     "profileFetched": "2026-11-22"
    },
@@ -13543,7 +13543,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1993-04-04",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/4/f/4f4f825a-16b7-4f57-b654-79e75d757033/number/32-Lorenzo-Savadori.png"
@@ -13594,7 +13594,7 @@
       "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1993-08-13",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/1/c1528a2d-2a88-4551-8942-550228136a94/number/94_Jonas_Folger.png"
@@ -13634,7 +13634,7 @@
       "MotoGP": 4
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1985-10-29",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/5/c/5ce11abc-0f67-4388-90c6-81ffade7da55/number/35_Cal_Crutchlow.png"
@@ -13669,7 +13669,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2000-01-06",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/3/4/349967a7-dd9f-4435-857d-d8d0406c9337/number/27.png"
@@ -13720,7 +13720,7 @@
       "125cc": 5
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1991-06-10",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/e/5/e563aa11-bb8a-44d1-9608-858af403cf04/number/44.png"
@@ -13763,7 +13763,7 @@
       "Moto2": 1
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1992-02-09",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/6/5/6563f20e-22de-488f-a8c8-a1fd3dd11942/number/30.png"
@@ -13805,7 +13805,7 @@
       "Moto2": 3
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1998-12-15",
     "profileFetched": "2026-11-22"
    },
@@ -13848,7 +13848,7 @@
       "MotoGP": 5
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1989-07-30",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/1/7/17ee1483-290a-42c7-a581-b382bc2f7faf/number/41.png"
@@ -13889,7 +13889,7 @@
       "Moto2": 4
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1996-01-15",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/d/ad8b38b7-173e-4fbf-832d-06e2d7e16e41/number/96_Jake_Dixon_01.png"
@@ -13936,7 +13936,7 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-06-09",
     "profileFetched": "2026-11-22"
    },
@@ -13985,7 +13985,7 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-10-13",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/7/a7efba4d-ba4c-4bf6-bf3f-7ed241ae49d6/number/13_Celestino_Vietti.png"
@@ -14037,7 +14037,7 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-06-28",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/4/3/43d453f2-1480-4436-a3a4-bdc4c984d525/number/28_Izan_Guevara.png"
@@ -14089,7 +14089,7 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-04-25",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/4/4/447793df-b2b1-4617-9df9-6d7f9b3ec30c/number/80_David_Alonso.png"
@@ -14134,7 +14134,7 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2002-08-04",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/2/f/2f3f4efc-d727-47e0-9808-7252bd880761/number/18_Manuel_Gonzalez.png"
@@ -14178,7 +14178,7 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-05-03",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/e/3/e347598d-0df8-4695-916f-7d23cc85761c/number/7_Barry_Baltus.png"
@@ -14226,7 +14226,7 @@
      "pos": 18
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-12-21",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/7/f/7fb0eddd-afb0-4b4c-b729-737751468720/number/21_Alonso_Lopez.png"
@@ -14269,7 +14269,7 @@
      "pos": 22
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-02-21",
     "profileFetched": "2026-11-22"
    },
@@ -14313,7 +14313,7 @@
      "pos": 14
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-06-16",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/8/a808cf9f-db18-4553-896a-c8297db50118/number/16_Joe_Roberts.png"
@@ -14363,7 +14363,7 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2000-08-03",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/d/cd19ab2a-0c40-466b-b798-1d78e66e6de6/number/14_Tony_Arbolino.png"
@@ -14413,7 +14413,7 @@
      "pos": 16
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-08-04",
     "profileFetched": "2026-11-22"
    },
@@ -14449,7 +14449,7 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2003-08-21",
     "profileFetched": "2026-11-22"
    },
@@ -14498,7 +14498,7 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1999-09-30",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/7/c/7cef0cd4-4ca0-4334-86c5-3c6ecd635f03/number/_0021_44_Aron_Canet.png"
@@ -14541,7 +14541,7 @@
      "pos": 20
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-04-28",
     "profileFetched": "2026-11-22"
    },
@@ -14588,7 +14588,7 @@
      "pos": 1
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-10-29",
     "profileFetched": "2026-11-22"
    },
@@ -14637,7 +14637,7 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-04-27",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/a/ca923a83-86a6-4f1b-bbd5-f3682f620b41/number/96_Daniel_Holgado.png"
@@ -14683,7 +14683,7 @@
      "pos": 23
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2000-10-04",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/8/c/8c8fcd97-b5dd-4288-b36b-2744dac54c4b/number/71_Ayumu_Sasaki.png"
@@ -14729,7 +14729,7 @@
      "pos": 8
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-07-12",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/7/d/7d24e6c9-54d0-4b01-86c0-b64a51da8fd3/number/72_Taiyo_Furusato.png"
@@ -14770,7 +14770,7 @@
       "Moto3": 4
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-01-07",
     "profileFetched": "2026-11-22"
    },
@@ -14817,7 +14817,7 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2003-07-26",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/6/8/68315d34-175c-48f0-a1b5-0f94835a1b07/number/53_Deniz_Oncu.png"
@@ -14865,7 +14865,7 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-12-12",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/6/d/6d8fdcde-a448-4e27-980e-23ea050e3c7c/number/12_Filip_Salac.png"
@@ -14902,7 +14902,7 @@
      "pos": 25
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-12-01",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/f/5/f52237d5-4b0d-4a49-882e-709e416af713/number/84_Zonta.png"
@@ -14940,7 +14940,7 @@
      "pos": 26
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-03-16",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/4/9/4919d2f3-8807-495a-9fae-9f2c8e1065ec/number/64_Mario_Aji.png"
@@ -14984,7 +14984,7 @@
       "Moto3": 1
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1996-02-03",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/7/e/7e84a5c0-bfa0-42e7-a9bd-32a808ae7aeb/number/9_Jorge_Navarro.png"
@@ -15033,7 +15033,7 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-02-19",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/5/3/5319ebe2-0ea3-48d1-8075-cf67c98a4be4/number/95_Collin_Veijer.png"
@@ -15080,7 +15080,7 @@
      "pos": 2
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-12-01",
     "profileFetched": "2026-11-22"
    },
@@ -15129,7 +15129,7 @@
      "pos": 28
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2003-03-22",
     "profileFetched": "2026-11-22"
    },
@@ -15165,7 +15165,7 @@
      "pos": 36
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-09-02",
     "profileFetched": "2026-11-22"
    },
@@ -15206,7 +15206,7 @@
       "Moto3": 2
      }
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-12-16",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/c/5/c5df0356-4d80-4b19-ad78-f202fd5f03b6/number/24_Marcos_Ramirez_01.png"
@@ -15248,7 +15248,7 @@
      "pos": 12
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-05-27",
     "profileFetched": "2026-11-22"
    },
@@ -15279,7 +15279,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-04-09",
     "profileFetched": "2026-11-22"
    },
@@ -15316,7 +15316,7 @@
      "pos": 35
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-04-07",
     "profileFetched": "2026-11-22"
    },
@@ -15348,7 +15348,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-02-04",
     "profileFetched": "2026-11-22"
    },
@@ -15379,7 +15379,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-04-04",
     "profileFetched": "2026-11-22"
    },
@@ -15411,7 +15411,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "1997-02-12",
     "profileFetched": "2026-11-22"
    }
@@ -15457,7 +15457,7 @@
      "pos": 13
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-01-09",
     "profileFetched": "2026-11-22"
    },
@@ -15503,7 +15503,7 @@
      "pos": 3
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-03-19",
     "profileFetched": "2026-11-22"
    },
@@ -15545,7 +15545,7 @@
      "pos": 4
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-06-05",
     "profileFetched": "2026-11-22"
    },
@@ -15587,7 +15587,7 @@
      "pos": 10
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-12-28",
     "profileFetched": "2026-11-22"
    },
@@ -15631,7 +15631,7 @@
      "pos": 7
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-01-31",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/f/afdb5cdf-90a7-4a89-805e-ce5daa818b5f/number/_0016_31_Adrian_Fernandez.png"
@@ -15667,7 +15667,7 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-02-14",
     "profileFetched": "2026-11-22"
    },
@@ -15711,7 +15711,7 @@
      "pos": 28
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-08-11",
     "profileFetched": "2026-11-22"
    },
@@ -15747,7 +15747,7 @@
      "pos": 26
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-08-09",
     "profileFetched": "2026-11-22"
    },
@@ -15789,7 +15789,7 @@
      "pos": 17
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-02-18",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/a/a/aa2dc4d7-e42f-4a2b-afcc-023da97f3cba/number/18_Matteo_Bertelle.png"
@@ -15828,7 +15828,7 @@
      "pos": 15
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2003-10-16",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/2/a/2a0a6017-97df-46d4-9804-faa5cd373d41/number/19_Scott_Ogden.png"
@@ -15865,7 +15865,7 @@
      "pos": 32
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-09-25",
     "profileFetched": "2026-11-22"
    },
@@ -15905,7 +15905,7 @@
      "pos": 24
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-07-03",
     "profileFetched": "2026-11-22"
    },
@@ -15947,7 +15947,7 @@
      "pos": 31
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-07-30",
     "profileFetched": "2026-11-22"
    },
@@ -15978,7 +15978,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-12-07",
     "profileFetched": "2026-11-22"
    },
@@ -16014,7 +16014,7 @@
      "pos": 30
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-10-29",
     "profileFetched": "2026-11-22"
    },
@@ -16050,7 +16050,7 @@
      "pos": 27
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-12-16",
     "profileFetched": "2026-11-22"
    },
@@ -16086,7 +16086,7 @@
      "pos": 21
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2002-05-21",
     "profileFetched": "2026-11-22"
    },
@@ -16128,7 +16128,7 @@
      "pos": 9
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2001-11-06",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/0/f/0f695703-c300-4349-aff5-74406dbfcb82/number/6_Ryusei_Yamanaka.png"
@@ -16165,7 +16165,7 @@
      "pos": 20
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-08-23",
     "profileFetched": "2026-11-22"
    },
@@ -16198,7 +16198,7 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2004-08-13",
     "profileFetched": "2026-11-22"
    },
@@ -16234,7 +16234,7 @@
      "pos": 38
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-03-27",
     "profileFetched": "2026-11-22"
    },
@@ -16272,7 +16272,7 @@
      "pos": 25
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-08-07",
     "profileFetched": "2026-11-22"
    },
@@ -16312,7 +16312,7 @@
      "pos": 19
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-08-07",
     "profileFetched": "2026-11-22"
    },
@@ -16354,7 +16354,7 @@
      "pos": 6
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2003-06-12",
     "profileFetched": "2026-11-22",
     "numberArtSrc": "https://photos.motogp.com/riders/3/3/339d2550-d068-41a6-a71e-db2ef8d94b42/number/66_Joel_Kelso.png"
@@ -16394,7 +16394,7 @@
     },
     "prev": null,
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-11-23",
     "profileFetched": "2026-11-22"
    },
@@ -16438,7 +16438,7 @@
      "pos": 5
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-05-15",
     "profileFetched": "2026-11-22"
    },
@@ -16482,7 +16482,7 @@
      "pos": 11
     },
     "prevSeason": 2025,
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2006-01-22",
     "profileFetched": "2026-11-22"
    },
@@ -16513,7 +16513,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-05-03",
     "profileFetched": "2026-11-22"
    },
@@ -16544,7 +16544,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-02-11",
     "profileFetched": "2026-11-22"
    },
@@ -16575,7 +16575,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2005-09-05",
     "profileFetched": "2026-11-22"
    },
@@ -16606,7 +16606,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-02-16",
     "profileFetched": "2026-11-22"
    },
@@ -16637,7 +16637,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2008-09-07",
     "profileFetched": "2026-11-22"
    },
@@ -16668,7 +16668,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-11-19",
     "profileFetched": "2026-11-22"
    },
@@ -16699,7 +16699,7 @@
      "polesByClass": {},
      "fastestLapsByClass": {}
     },
-    "careerFetched": "2026-11-22",
+    "careerFetched": "2026-11-26",
     "birthDate": "2007-06-07",
     "profileFetched": "2026-11-22"
    }
