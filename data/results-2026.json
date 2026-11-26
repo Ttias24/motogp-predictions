@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "updatedAt": "2026-11-26T08:25:28.834Z",
+ "updatedAt": "2026-11-26T19:04:01.514Z",
  "source": "https://api.motogp.pulselive.com/motogp/v1/results",
  "classes": [
   "MotoGP",
@@ -14046,7 +14046,7 @@
     "name": "David Alonso",
     "number": 80,
     "country": "CO",
-    "team": "CFMOTO Power Electronics Aspar Team",
+    "team": "CFMOTO Inde Aspar Team",
     "numberArt": "assets/numbers/96d9b2b4-a26b-427f-b76a-6e1294c341c0-80_David_Alonso.png",
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
@@ -14596,7 +14596,7 @@
     "name": "Daniel Holgado",
     "number": 96,
     "country": "ES",
-    "team": "CFMOTO Power Electronics Aspar Team",
+    "team": "CFMOTO Inde Aspar Team",
     "numberArt": "assets/numbers/845c70b2-fe9b-40b6-a558-692cf5f9e6da-96_Daniel_Holgado.png",
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
@@ -15465,7 +15465,7 @@
     "name": "Maximo Quiles",
     "number": 28,
     "country": "ES",
-    "team": "CFMOTO Gaviota Aspar Team",
+    "team": "CFMOTO Valresa Aspar Team",
     "numberArt": null,
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
@@ -15873,7 +15873,7 @@
     "name": "Marco Morelli",
     "number": 97,
     "country": "AR",
-    "team": "CFMOTO Gaviota Aspar Team",
+    "team": "CFMOTO Valresa Aspar Team",
     "numberArt": null,
     "teamColor": "#009bb4",
     "teamTextColor": "#ffffff",
@@ -17441,7 +17441,7 @@
      "textColor": "#ffffff",
      "source": "api"
     },
-    "cfmoto power electronics aspar team": {
+    "cfmoto inde aspar team": {
      "name": "CFMOTO Aspar Team",
      "color": "#009bb4",
      "textColor": "#ffffff",
@@ -17577,7 +17577,7 @@
      "textColor": "#ffffff",
      "source": "api"
     },
-    "cfmoto gaviota aspar team": {
+    "cfmoto valresa aspar team": {
      "name": "CFMOTO Aspar Team",
      "color": "#009bb4",
      "textColor": "#ffffff",
